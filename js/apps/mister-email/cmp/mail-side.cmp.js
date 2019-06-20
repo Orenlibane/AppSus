@@ -8,9 +8,9 @@ export default {
         <div class="flex column side center  "> 
             <ul>    
               <li class="send-mail" @click="showSendMailModal">Send Mail</li>
-                <li @click="sendPickedEmails(1)">Mails</li>
-                <li @click="sendPickedEmails(2)">Sent</li>
-                <li @click="sendPickedEmails(3)">Deleted</li>
+                <li class="flex flex-space-around" @click="sendPickedEmails(1)"><i class="fas fa-inbox"></i>Mails</li>
+                <li class="flex flex-space-around" @click="sendPickedEmails(2)"><i class="fas fa-share"></i>Sent</li>
+                <li class="flex flex-space-around" @click="sendPickedEmails(3)"><i class="fas fa-trash"></i>Deleted</li>
               </ul>
               <div class="send-modal" v-if="sendmodal">
                 <div class="flex space-between send-mail-head"> <span>  New Messege </span> <span><i @click=showSendMailModal class="fas fa-times"></i></span> </div>

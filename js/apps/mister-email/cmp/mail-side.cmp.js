@@ -1,4 +1,5 @@
 import utilService from '../../../main-service/util-service.js';
+import mailService from '../services/mailservice.js';
 import eventBus, { PICKED_EMAIL_STATE } from '../../../event-bus.js';
 
 export default {
@@ -28,12 +29,19 @@ export default {
       sendmodal: false,
       pickedEmails: 1,
       newemail: {
-        id: utilService.makeId(),
+        _id: utilService.makeId(),
         body: '',
         subject: '',
         name: 'oren&lior',
         isRead: true,
-        sendAt: new Date(),
+        sendAt:
+          new Date().getMonth() +
+          '-' +
+          new Date().getDay() +
+          ':' +
+          new Date().getHours() +
+          ':' +
+          new Date().getMinutes(),
         isDeleted: false,
         sendto: '',
         isSent: true
@@ -48,11 +56,12 @@ export default {
       this.sendmodal = !this.sendmodal;
     },
     sendmail() {
-      if (this.newemail.sendto) {
+      if (!this.newemail.sendto) {
         return false;
       }
-      console.log(this.newemail.sendto);
-      console.log(this.newemail);
+
+      mailService.updateDB(this.newemail);
+
       this.newemail = {
         id: '',
         body: '',
@@ -68,7 +77,6 @@ export default {
     },
     sendPickedEmails(emailsType) {
       this.pickedEmails = emailsType;
-      console.log(this.pickedEmails);
       eventBus.$emit(PICKED_EMAIL_STATE, this.pickedEmails);
     }
   },

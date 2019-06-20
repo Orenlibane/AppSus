@@ -1,3 +1,5 @@
+import { SHOW_EMAIL } from "../../../event-bus.js";
+
 export default {
   name: 'mailSide',
   template: `
@@ -7,7 +9,7 @@ export default {
               <li class="send-mail" @click="showSendMailModal">Send Mail</li>
                 <li>Mails</li>
                 <li>Sent</li>
-                <li>Deleted</li>
+                <li @click= "showDeletedEmails">Deleted</li>
               </ul>
               <div class="send-modal" v-if="sendmodal">
                 <div class="flex space-between send-mail-head"> <span>  New Messege </span> <span><button>X</button></span> </div>
@@ -22,7 +24,8 @@ export default {
   props: [],
   data() {
     return {
-      sendmodal: false
+      sendmodal: false,
+      pickedEmail:1
     };
   },
   created() {},
@@ -31,6 +34,12 @@ export default {
   methods: {
     showSendMailModal() {
       this.sendmodal = !this.sendmodal;
+    },
+    showDeletedEmails(){
+      console.log('jhkjhjk');
+      this.pickedEmail = 2
+      eventBus.$emit(SHOW_EMAIL,this.pickedEmail)
+
     }
   },
   components: {}

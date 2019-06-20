@@ -1,4 +1,5 @@
 import mailservice from '../services/mailservice.js';
+import { SHOW_EMAIL } from '../../../event-bus.js';
 
 export default {
   name: 'mailList',
@@ -9,7 +10,7 @@ export default {
         <li v-for= "(email,idx) in emails" :key="idx" class="flex space-between" v-if = "!email.isDeleted">
            <span class="main-mail-spec"><button>Check</button>  <button>Star</button>   
            {{email.name}}               
-</span>  <span class="left subject">{{email.subject}}
+         </span>  <span class="left subject">{{email.subject}}
            </span> <span>{{email.sendAt}}</span><i  @click.stop="deleteEmail(idx)" class="fas fa-trash-alt" ></i>
         </li>
     </ul>
@@ -29,15 +30,15 @@ export default {
     console.log(this.emails);
   },
   destroyed() {},
-  computed: {},
+  computed: {
+   
+  },
   methods: {
     deleteEmail(emailIdx) {
       this.emails[emailIdx].isDeleted = true;
-      // this.emails.splice(emailIdx,1)
       console.log(this.emails[emailIdx]);
-
-      // v -if= "deletedEmail.isDeleted"
     }
   },
   components: {}
+
 };

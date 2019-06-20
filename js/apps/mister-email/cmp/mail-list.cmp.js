@@ -6,8 +6,8 @@ export default {
     <section class="mail-list"> 
 
     <ul>
-        <li v-for= "email in emails">
-           <button>Check</button>  <button>Star</button>  "user"  <span>{{email.subject}}</span> <span>{{email.sendAt}}</span>
+        <li v-for= "(email,idx) in emails" :key="idx" class="flex space-between">
+           <span class="main-mail-spec"><button>Check</button>  <button>Star</button>  {{email.name}}</span>  <span class="left subject">{{email.subject}}</span> <span>{{email.sendAt}}</span><i class="fas fa-trash-alt"></i>
         </li>
     </ul>
 

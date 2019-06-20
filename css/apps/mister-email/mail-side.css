@@ -6,13 +6,14 @@
 }
 
 .side ul {
-    padding-top: 20px;
     list-style-type: none;
 }
 
 .side ul li {
     padding: 10px 0;
-    color: white
+    color: white;
+    border-top: 0.5px white solid;
+    border-bottom: 0.5px white solid;
 }
 
 .side ul li:hover {

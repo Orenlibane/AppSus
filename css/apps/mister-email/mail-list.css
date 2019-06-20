@@ -19,3 +19,15 @@
 .mail-list ul li:hover {
     box-shadow: inset 1px 0 0 #dadce0, inset -1px 0 0 #dadce0, 0 1px 2px 0 rgba(60, 64, 67, .3), 0 1px 3px 1px rgba(60, 64, 67, .15)
 }
+
+.subject {
+    min-width: 50vw;
+}
+
+.main-mail-spec {
+    width: 20vw;
+}
+
+.fa-trash-alt {
+    padding-right: 20px;
+}

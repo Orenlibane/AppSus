@@ -55,6 +55,10 @@
     transform: scale(0);
 }
 
+.left {
+    text-align: left;
+}
+
 .container {
     max-width: 980px;
     margin: 0 auto;

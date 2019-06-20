@@ -1,5 +1,6 @@
 @import "./apps/mister-email/mail-header.css";
 @import "./apps/mister-email/mail-filter.css";
+@import "./apps/mister-email/mail-side.css";
 @import "./helpers-css.css";
 * {
     margin: 0;

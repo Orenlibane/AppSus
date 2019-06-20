@@ -1,11 +1,12 @@
 import mailHeader from '../cmp/mail-header.cmp.js';
+import sideNav from '../cmp/mail-side.cmp.js';
 
 export default {
   name: 'MisterEmail',
   template: `
     <section class="mister-email"> 
       <mail-Header></mail-Header>
-      <!-- <nav-side></nav-side> -->
+      <side-nav></side-nav>
       <!-- <mail-list></mail-list> -->
     </section>
 `,
@@ -19,5 +20,5 @@ export default {
   destroyed() {},
   computed: {},
   methods: {},
-  components: { mailHeader }
+  components: { mailHeader, sideNav }
 };

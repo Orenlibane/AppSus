@@ -1,0 +1,23 @@
+.mail-side {}
+
+.side {
+    background: black;
+    height: 85vh;
+    width: 11vw;
+    font-size: 1.5rem;
+}
+
+.side ul {
+    padding-top: 20px;
+    list-style-type: none;
+}
+
+.side ul li {
+    padding: 10px 0;
+    color: white
+}
+
+.side ul li:hover {
+    /* transform: scale(1.1); */
+    background: rgb(252, 252, 252, 0.5);
+}

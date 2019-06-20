@@ -1,14 +1,13 @@
-import noteheader from '../cmp/note-header.cmp.js';
-import notelist from '../cmp/note-list.cmp.js';
-import noteprev from '../cmp/note-prev.cmp.js';
+import noteHeader from '../cmp/note-header.cmp.js';
+import noteList from '../cmp/note-list.cmp.js';
+import notePrev from '../cmp/note-prev.cmp.js';
 
 export default {
   name: 'Misskeep',
   template: `
       <section class="miss-keep"> 
-        <noteheader> </noteheader>
-        <notelist></notelist>
-        <noteprev></noteprev>
+        <note-header> </note-header>
+        <note-list></note-list>
       </section>
   `,
   props: [],
@@ -19,5 +18,5 @@ export default {
   destroyed() {},
   computed: {},
   methods: {},
-  components: { noteheader, notelist, noteprev  }
+  components: { noteHeader, noteList, notePrev }
 };

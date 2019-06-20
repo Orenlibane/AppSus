@@ -1,24 +1,26 @@
-
+import noteEditor from '../cmp/note-editor.cmp.js';
+import noteEditorColors from '../cmp/note-editor-colors.cmp.js';
 
 export default {
-    name: 'notePrev',
-    template: `
-    <section class="note-prev"> 
-     <div class="flex both-align-center">   
-  <input type="text" placeholder="What's on your mind?"/>
-   <i class="fas fa-font"></i> <i class="fas fa-image"></i><i class="fab fa-youtube"></i><i class="fas fa-volume-up"></i>
-   </div>
+  name: 'notePrev',
+  template: `
+    <section class="note-prev flex column space-between center"> 
+        {{note.content}}
+        <div>
+        <note-Editor></note-Editor>
+        <note-editor-colors></note-editor-colors>
+        </div>
     </section>
 
 
 `,
-    props: [],
-    data() {
-        return {};
-    },
-    created() { },
-    destroyed() { },
-    computed: {},
-    methods: {},
-    components: {}
+  props: ['note'],
+  data() {
+    return {};
+  },
+  created() {},
+  destroyed() {},
+  computed: {},
+  methods: {},
+  components: { noteEditor, noteEditorColors }
 };

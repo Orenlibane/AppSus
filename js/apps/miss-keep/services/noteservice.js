@@ -17,55 +17,56 @@ function query() {
 }
 
 var notesDB = [
-  [
-    {
-      _id: '5d0ba1cd294a125b1db53a05',
-      picture: 'http://placehold.it/32x32',
-      color: 'gray',
-      content: 'qfqfw',
-      type: ''
-    },
-    {
-      _id: '5d0ba1cd6ee22df5fa971acd',
-      picture: 'http://placehold.it/32x32',
-      color: 'gray',
-      content: 'qfqfw',
-      type: ''
-    },
-    {
-      _id: '5d0ba1cdf4c21b8ff339c3dc',
-      picture: 'http://placehold.it/32x32',
-      color: 'gray',
-      content: 'qfqfw',
-      type: ''
-    },
-    {
-      _id: '5d0ba1cd43bde719b80d1727',
-      picture: 'http://placehold.it/32x32',
-      color: 'gray',
-      content: 'qfqfw',
-      type: ''
-    },
-    {
-      _id: '5d0ba1cde9f64eb30819a774',
-      picture: 'http://placehold.it/32x32',
-      color: 'gray',
-      content: 'qfqfw',
-      type: ''
-    },
-    {
-      _id: '5d0ba1cd67e4d3f2c29cd1d6',
-      picture: 'http://placehold.it/32x32',
-      color: 'gray',
-      content: 'qfqfw',
-      type: ''
-    },
-    {
-      _id: '5d0ba1cd7292690ae3ba1a4a',
-      picture: 'http://placehold.it/32x32',
-      color: 'gray',
-      content: 'qfqfw',
-      type: ''
-    }
-  ]
+  {
+    _id: '5d0bb6a54cab31bbd2da13fa',
+    picture: 'http://placehold.it/32x32',
+    color: 'gray',
+    content: 'Dolor excepteur aute nostrud aute ut amet.',
+    type: ''
+  },
+  {
+    _id: '5d0bb6a527776acfdf3d66ef',
+    picture: 'http://placehold.it/32x32',
+    color: 'gray',
+    content: 'Ipsum excepteur veniam ea nostrud adipisicing.',
+    type: ''
+  },
+  {
+    _id: '5d0bb6a55304d6ea02dce1ce',
+    picture: 'http://placehold.it/32x32',
+    color: 'gray',
+    content: 'Et adipisicing ut occaecat aliqua dolore pariatur irure magna.',
+    type: ''
+  },
+  {
+    _id: '5d0bb6a5e6eb588ac8ade55d',
+    picture: 'http://placehold.it/32x32',
+    color: 'gray',
+    content:
+      'Aliqua officia sunt id reprehenderit aliqua est incididunt nostrud.',
+    type: ''
+  },
+  {
+    _id: '5d0bb6a570c979da8649f2b2',
+    picture: 'http://placehold.it/32x32',
+    color: 'gray',
+    content:
+      'Magna ad nisi aliquip nulla nisi proident cupidatat excepteur excepteur labore ut quis.',
+    type: ''
+  },
+  {
+    _id: '5d0bb6a5a6f2bf2ef8dc6d9d',
+    picture: 'http://placehold.it/32x32',
+    color: 'gray',
+    content: 'Excepteur velit mollit officia reprehenderit.',
+    type: ''
+  },
+  {
+    _id: '5d0bb6a5a910732224c94fd6',
+    picture: 'http://placehold.it/32x32',
+    color: 'gray',
+    content:
+      'Enim sit cupidatat deserunt adipisicing dolor consectetur proident aute esse dolor nulla.',
+    type: ''
+  }
 ];

@@ -1,4 +1,7 @@
 import mailservice from '../services/mailservice.js';
+import utilService from '../../../main-service/util-service.js';
+import mailPrev from '../cmp/mail-prev.cmp.js';
+import eventBus, { PICKED_EMAIL_STATE } from '../../../event-bus.js';
 
 export default {
   name: 'mailList',
@@ -6,38 +9,49 @@ export default {
     <section class="mail-list"> 
 
     <ul>
-        <li v-for= "(email,idx) in emails" :key="idx" class="flex space-between" v-if = "!email.isDeleted">
-           <span class="main-mail-spec"><button>Check</button>  <button>Star</button>   
-           {{email.name}}               
-</span>  <span class="left subject">{{email.subject}}
-           </span> <span>{{email.sendAt}}</span><i  @click.stop="deleteEmail(idx)" class="fas fa-trash-alt" ></i>
-        </li>
+      <mail-prev 
+      :idx="idx" 
+      :emails="filterdEmails" 
+      v-for= "(email,idx) in filterdEmails" 
+      :email="email" 
+        :key="idx" class="flex space-between">
+
+      </mail-prev>
+        
     </ul>
 
+  
     </section>
 `,
   props: [],
   data() {
     return {
-      emails: null
-      // deletedEmail: {isDeleted: false}
+      emails: null,
+      currentEmailsState: 1
     };
   },
   created() {
     console.log('loaded the mail-list');
     this.emails = mailservice.query();
     console.log(this.emails);
+    eventBus.$on(PICKED_EMAIL_STATE, state => {
+      this.currentEmailsState = state;
+    });
   },
   destroyed() {},
-  computed: {},
-  methods: {
-    deleteEmail(emailIdx) {
-      this.emails[emailIdx].isDeleted = true;
-      // this.emails.splice(emailIdx,1)
-      console.log(this.emails[emailIdx]);
-
-      // v -if= "deletedEmail.isDeleted"
+  computed: {
+    filterdEmails: function() {
+      if (this.currentEmailsState === 1) {
+        return this.emails.filter(email => !email.isDeleted);
+      } else if (this.currentEmailsState === 2) {
+        return this.emails.filter(email => email.isSent);
+      } else if (this.currentEmailsState === 3) {
+        return this.emails.filter(email => email.isDeleted);
+      }
     }
   },
-  components: {}
+  methods: {
+    pickedEmails(emailsType) {}
+  },
+  components: { mailPrev }
 };

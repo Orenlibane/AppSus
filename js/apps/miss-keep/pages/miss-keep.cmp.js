@@ -1,8 +1,11 @@
+import noteheader from '../cmp/note-header.cmp.js'
+
 export default {
   name: 'Misskeep',
   template: `
       <section class="miss-keep"> 
-        <!-- header -->
+
+                  <noteheader> </noteheader>
       </section>
   `,
   props: [],
@@ -13,5 +16,5 @@ export default {
   destroyed() {},
   computed: {},
   methods: {},
-  components: {}
+  components: {noteheader}
 };

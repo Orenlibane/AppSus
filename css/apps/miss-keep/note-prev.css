@@ -1,0 +1,18 @@
+.note-prev input {
+    background: rgb(255, 254, 254, 0.3);
+    border: 2px pink solid;
+    border-radius: 10px;
+    padding: 5px;
+    padding-right: 300px;
+    color: white;
+    outline: none;
+}
+
+
+.note-prev i {
+    font-weight: bold;
+    font-size: 1.5rem;
+    padding-left: 10px;
+    cursor: pointer;
+
+}

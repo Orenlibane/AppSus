@@ -8,6 +8,7 @@ export default {
             <i class="fas fa-hamburger"></i>
 </div>
         </section>
+        
 `,
   props: [],
   data() {

@@ -1,4 +1,4 @@
-.mail-list ul li {
+.mail-list li {
     background: rgba(242, 245, 245, 0.8);
     padding: 10px 0;
     border-bottom: 0.5px solid rgb(128, 128, 128);
@@ -31,3 +31,4 @@
 .fa-trash-alt {
     padding-right: 20px;
 }
+

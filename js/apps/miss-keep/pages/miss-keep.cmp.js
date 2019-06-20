@@ -2,6 +2,7 @@ export default {
   name: 'Misskeep',
   template: `
       <section class="miss-keep"> 
+        <!-- header -->
       </section>
   `,
   props: [],

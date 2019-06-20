@@ -2,6 +2,5 @@ console.log('testing in event bus');
 var bus = new Vue();
 
 export const PICKED_EMAIL_STATE = 'picked-email-state';
-export const EMAILS_DB = 'emails_db';
 
 export default bus;

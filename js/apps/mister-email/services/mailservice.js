@@ -1128,11 +1128,11 @@ var emailsDB = [
 
 function getById(emailId) {
   const email = emailsDB.find(email => email._id === emailId);
-  return email;
+  return Promise.resolve(email);
 }
 
 function updateDB(newEmail) {
-  emailsDB.push(newEmail);
+  emailsDB.unshift(newEmail);
   storageService.store(MAIL_KEY, emailsDB);
 }
 // FOR LOADING RANDOMS DB

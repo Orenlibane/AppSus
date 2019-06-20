@@ -17,9 +17,8 @@ export default {
         :key="idx" class="flex space-between">
 
       </mail-prev>
-        
-    </ul>
 
+    </ul>
   
     </section>
 `,

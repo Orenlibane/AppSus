@@ -3,7 +3,7 @@
 @import "./apps/miss-keep/note-prev.css";
 @import "./apps/miss-keep/note-header.css";
 @import "./apps/miss-keep/note-filter.css";
-
+@import "./apps/miss-keep/note-editor.css";
 
 @import "./apps/mister-email/mail-header.css";
 @import "./apps/mister-email/mail-filter.css";
@@ -11,10 +11,6 @@
 @import "./apps/mister-email/mail-list.css";
 @import "./apps/mister-email/mail-prev.css";
 @import "./helpers-css.css";
-
-
-
-
 * {
     margin: 0;
     padding: 0;

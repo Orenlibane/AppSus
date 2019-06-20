@@ -1,7 +1,7 @@
 export default {
   name: 'mailSide',
   template: `
-    <section class="mail-side flex flex-end">
+    <section class="mail-side flex">
         <div class="flex column side center  "> 
             <ul>    
                 <li>Mails</li>

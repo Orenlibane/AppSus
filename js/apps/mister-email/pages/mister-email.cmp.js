@@ -1,18 +1,24 @@
 import mailHeader from '../cmp/mail-header.cmp.js';
 import sideNav from '../cmp/mail-side.cmp.js';
+import mailList from '../cmp/mail-list.cmp.js';
+import mailservice from '../services/mailservice.js';
 
 export default {
   name: 'MisterEmail',
   template: `
     <section class="mister-email"> 
-      <mail-Header></mail-Header>
-      <side-nav></side-nav>
-      <!-- <mail-list></mail-list> -->
+       <mail-Header></mail-Header>
+      <div class="flex">
+        <side-nav></side-nav>
+        <mail-list></mail-list>
+      </div>
     </section>
 `,
   props: [],
   data() {
-    return {};
+    return {
+      emails: null
+    };
   },
   created() {
     console.log('loaded main mister-email');
@@ -20,5 +26,5 @@ export default {
   destroyed() {},
   computed: {},
   methods: {},
-  components: { mailHeader, sideNav }
+  components: { mailHeader, sideNav, mailList }
 };

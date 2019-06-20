@@ -6,8 +6,11 @@ export default {
     <section class="mail-list"> 
 
     <ul>
-        <li v-for= "(email,idx) in emails" :key="idx" class="flex space-between">
-           <span class="main-mail-spec"><button>Check</button>  <button>Star</button>  {{email.name}}</span>  <span class="left subject">{{email.subject}}</span> <span>{{email.sendAt}}</span><i class="fas fa-trash-alt"></i>
+        <li v-for= "(email,idx) in emails" :key="idx" class="flex space-between" v-if = "!email.isDeleted">
+           <span class="main-mail-spec"><button>Check</button>  <button>Star</button>   
+           {{email.name}}               
+</span>  <span class="left subject">{{email.subject}}
+           </span> <span>{{email.sendAt}}</span><i  @click.stop="deleteEmail(idx)" class="fas fa-trash-alt" ></i>
         </li>
     </ul>
 
@@ -15,7 +18,10 @@ export default {
 `,
   props: [],
   data() {
-    return { emails: null };
+    return { 
+      emails: null,
+      // deletedEmail: {isDeleted: false}
+    };
   },
   created() {
     console.log('loaded the mail-list');
@@ -24,6 +30,17 @@ export default {
   },
   destroyed() {},
   computed: {},
-  methods: {},
+  methods: {
+    deleteEmail(emailIdx){
+      this.emails[emailIdx].isDeleted = true
+      // this.emails.splice(emailIdx,1)
+      console.log(this.emails[emailIdx]);
+
+
+      // v -if= "deletedEmail.isDeleted"
+
+      
+    },
+  },
   components: {}
 };

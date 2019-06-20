@@ -55,3 +55,7 @@
     width: 450px;
     height: 350px;
 }
+
+.send-modal i {
+    cursor: pointer;
+}

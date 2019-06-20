@@ -1,4 +1,5 @@
-import { SHOW_EMAIL } from "../../../event-bus.js";
+import utilService from '../../../main-service/util-service.js';
+import eventBus, { PICKED_EMAIL_STATE } from '../../../event-bus.js';
 
 export default {
   name: 'mailSide',
@@ -7,16 +8,16 @@ export default {
         <div class="flex column side center  "> 
             <ul>    
               <li class="send-mail" @click="showSendMailModal">Send Mail</li>
-                <li>Mails</li>
-                <li>Sent</li>
-                <li @click= "showDeletedEmails">Deleted</li>
+                <li @click="sendPickedEmails(1)">Mails</li>
+                <li @click="sendPickedEmails(2)">Sent</li>
+                <li @click="sendPickedEmails(3)">Deleted</li>
               </ul>
               <div class="send-modal" v-if="sendmodal">
-                <div class="flex space-between send-mail-head"> <span>  New Messege </span> <span><button>X</button></span> </div>
-               <div><input type="text" placeholder="Enter mail Subject"/>  </div> 
-                <div><input type="text" placeholder="Enter email to send to"/>  </div>
-                <textarea name="" id="" ></textarea>
-                <div> here will come the edit text buttons</div>
+                <div class="flex space-between send-mail-head"> <span>  New Messege </span> <span><i @click=showSendMailModal class="fas fa-times"></i></span> </div>
+               <div><input v-model="newemail.subject" type="text" placeholder="Enter mail Subject"/>  </div> 
+                <div><input v-model="newemail.sendto" type="text" placeholder="Enter email to send to"/>  </div>
+                <textarea name="" id="" v-model="newemail.body"></textarea>
+                <div> here will come the edit text buttons <button @click="sendmail">SEND MAIL</button></div>
               </div>
         </div>
     </section>
@@ -25,7 +26,18 @@ export default {
   data() {
     return {
       sendmodal: false,
-      pickedEmail:1
+      pickedEmails: 1,
+      newemail: {
+        id: utilService.makeId(),
+        body: '',
+        subject: '',
+        name: 'oren&lior',
+        isRead: true,
+        sendAt: new Date(),
+        isDeleted: false,
+        sendto: '',
+        isSent: true
+      }
     };
   },
   created() {},
@@ -35,11 +47,29 @@ export default {
     showSendMailModal() {
       this.sendmodal = !this.sendmodal;
     },
-    showDeletedEmails(){
-      console.log('jhkjhjk');
-      this.pickedEmail = 2
-      eventBus.$emit(SHOW_EMAIL,this.pickedEmail)
-
+    sendmail() {
+      if (this.newemail.sendto) {
+        return false;
+      }
+      console.log(this.newemail.sendto);
+      console.log(this.newemail);
+      this.newemail = {
+        id: '',
+        body: '',
+        subject: '',
+        name: 'oren&lior',
+        isRead: true,
+        sendAt: new Date(),
+        isDeleted: false,
+        sendto: '',
+        isSent: true
+      };
+      this.sendmodal = !this.sendmodal;
+    },
+    sendPickedEmails(emailsType) {
+      this.pickedEmails = emailsType;
+      console.log(this.pickedEmails);
+      eventBus.$emit(PICKED_EMAIL_STATE, this.pickedEmails);
     }
   },
   components: {}

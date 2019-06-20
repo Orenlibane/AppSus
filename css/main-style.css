@@ -2,6 +2,7 @@
 @import "./apps/mister-email/mail-filter.css";
 @import "./apps/mister-email/mail-side.css";
 @import "./apps/mister-email/mail-list.css";
+@import "./apps/mister-email/mail-prev.css";
 @import "./helpers-css.css";
 * {
     margin: 0;

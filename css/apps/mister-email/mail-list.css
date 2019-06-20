@@ -1,8 +1,9 @@
 .mail-list li {
-    background: rgba(242, 245, 245, 0.8);
+    background: rgb(206, 204, 204);
     padding: 10px 0;
     border-bottom: 0.5px solid rgb(128, 128, 128);
     padding-left: 10px;
+    cursor: pointer;
 }
 
 .mail-list ul {
@@ -32,3 +33,10 @@
     padding-right: 20px;
 }
 
+.mail-list .fa-star {
+    color: yellow;
+}
+
+.read {
+    font-weight: bold;
+}

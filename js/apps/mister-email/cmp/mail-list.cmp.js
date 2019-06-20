@@ -18,8 +18,8 @@ export default {
 `,
   props: [],
   data() {
-    return { 
-      emails: null,
+    return {
+      emails: null
       // deletedEmail: {isDeleted: false}
     };
   },
@@ -31,16 +31,13 @@ export default {
   destroyed() {},
   computed: {},
   methods: {
-    deleteEmail(emailIdx){
-      this.emails[emailIdx].isDeleted = true
+    deleteEmail(emailIdx) {
+      this.emails[emailIdx].isDeleted = true;
       // this.emails.splice(emailIdx,1)
       console.log(this.emails[emailIdx]);
 
-
       // v -if= "deletedEmail.isDeleted"
-
-      
-    },
+    }
   },
   components: {}
 };

@@ -1,0 +1,25 @@
+.mail-filter input {
+    background: rgb(255, 254, 254, 0.3);
+    border: 2px pink solid;
+    border-radius: 10px;
+    padding: 5px;
+    padding-right: 300px;
+    color: white;
+    outline: none;
+}
+
+.mail-filter i {
+    color: white;
+    font-weight: bold;
+    font-size: 1.5rem;
+    margin-right: 100px;
+    padding-left: 20px;
+}
+
+.mail-filter i.fa-hamburger {
+    margin-right: 10px;
+}
+
+.mail-filter i.fa-hamburger:hover {
+    color: greenyellow
+}

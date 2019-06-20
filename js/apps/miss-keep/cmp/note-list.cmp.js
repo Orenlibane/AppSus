@@ -5,9 +5,7 @@ export default {
   template: `
     <section class=note-list> 
       <!-- <note-prev></note-prev> -->
-      <section class="note-editor">
-        <div class='note-editor'> <i class="fas fa-trash"></i> <i class="fas fa-palette"></i><i class="fas fa-thumbtack"></i> </div> 
-      </section>
+    
     </section>
 `,
   props: [],

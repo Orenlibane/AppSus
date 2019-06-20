@@ -1,0 +1,10 @@
+.note-editor-colors span {
+    display: inline-block;
+    background: blue;
+    height: 30px;
+    width: 30px;
+}
+
+.note-editor-colors {
+    height: 200px;
+}

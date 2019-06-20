@@ -2,7 +2,7 @@ export default {
   name: 'note-editor',
   template: `
     <section class="note-editor">
-        <div> <i class="fas fa-trash"></i> <i class="fas fa-palette"></i><i class="fas fa-thumbtack"></i> </div> 
+        <div class="editor"> <i class="fas fa-trash"></i> <i class="fas fa-palette"></i><i class="fas fa-thumbtack"></i> </div> 
     </section>
 `,
   props: [],
@@ -15,5 +15,3 @@ export default {
   methods: {},
   components: {}
 };
-
-

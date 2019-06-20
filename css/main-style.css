@@ -1,6 +1,7 @@
 @import "./apps/miss-keep/note-header.css";
 @import "./apps/miss-keep/note-filter.css";
 @import "./apps/miss-keep/note-editor.css";
+@import "./apps/miss-keep/note-editor-colors.css";
 
 @import "./apps/mister-email/mail-header.css";
 @import "./apps/mister-email/mail-filter.css";

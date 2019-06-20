@@ -1129,3 +1129,22 @@ function getById(emailId) {
   const email = emailsDB.find(email => email._id === emailId);
   return email;
 }
+
+// FOR LOADING RANDOMS DB
+// [
+//   '{{repeat(80, 100)}}',
+//   {
+//     _id: '{{objectId()}}',
+
+//     body: '{{lorem(1, "paragraphs")}}',
+//     subject: '{{lorem(1)}}',
+//     name: '{{firstName()}} {{surname()}}',
+
+//     isRead: '{{bool()}}',
+//     sendAt: '{{date(new Date(2014), new Date(), "MM-dd:hh:mm")}}',
+//     isDeleted: '{{bool()}}',
+//     sendto: "",
+//     isSent: '{{bool()}}',
+//     isDone: '{{bool()}}'
+//   }
+// ]

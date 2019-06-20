@@ -1,5 +1,5 @@
 export default {
-  name: 'Mail-filter',
+  name: 'Mailfilter',
   template: `
     <section class="mail-filter">
         <div class="flex align-center row-reverse">

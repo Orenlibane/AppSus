@@ -43,7 +43,8 @@ export default {
           new Date().getMinutes(),
         isDeleted: false,
         sendto: this.email.sendto,
-        isSent: true
+        isSent: true,
+        isFav: false
       };
     });
   },

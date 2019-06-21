@@ -41,7 +41,9 @@ export default {
       //TODO: emit to list so it will delete it - also for toggleRead and togglefav.
     },
     toogleFav() {
+      console.log(this.email.isFav);
       this.email.isFav = !this.email.isFav;
+      console.log(this.email.isFav);
     },
     toggleIsRead(status) {
       // debugger;

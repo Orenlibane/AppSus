@@ -5,7 +5,8 @@ export default {
 
     template: `
     <section class="mail-count"> 
-                <h1>Email Count {{coutEmailRead}}</h1>
+                <h1>Email Count </h1>
+                <p>{{coutEmailRead}}</p>
 
     </section>
 `,
@@ -13,7 +14,7 @@ props: [],
 data() {
     return {
         emails: null,
-        read: null
+        readEmail: null
 
     };
 },

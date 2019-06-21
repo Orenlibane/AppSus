@@ -26,7 +26,7 @@ export default {
       </mail-prev>
 
     </ul>
-  
+
     </section>
 `,
   props: [],
@@ -40,7 +40,7 @@ export default {
   created() {
     console.log('loaded the mail-list');
     this.emails = mailservice.query();
-    console.log(this.emails);
+    // console.log(this.emails);
     eventBus.$on(PICKED_EMAIL_STATE, state => {
       this.currentEmailsState = state;
     });

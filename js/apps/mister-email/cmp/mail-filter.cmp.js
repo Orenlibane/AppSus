@@ -3,20 +3,29 @@ export default {
   template: `
     <section class="mail-filter">
         <div class="flex align-center row-reverse">
-            <input type="text" placeholder="Search for mail"/>
+            <input type="text" v-model="filterBy.txt" @input="emitFilter" placeholder="Search for mail"/>
             <i class="fas fa-search"></i>
             <i class="fas fa-hamburger"></i>
-</div>
+       </div>
         </section>
+        
         
 `,
   props: [],
   data() {
-    return {};
+    return {
+      filterBy: {
+        txt: '',
+      }
+    };
   },
   created() {},
   destroyed() {},
   computed: {},
-  methods: {},
+  methods: {
+    emitFilter() {
+      this.$emit('filterapp', this.filterBy);
+    }
+  },
   components: {}
 };

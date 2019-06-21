@@ -43,8 +43,10 @@ li.emails-titles {
     height: 85vh;
     overflow-y: scroll;
     border: 2px white solid;
-    border: 10px black solid;
-    background: white
+    border-radius: 15px;
+    border: 1px black solid;
+    background: white;
+    /* padding: 10px; */
 }
 
 .mail-list ul li:hover {
@@ -64,7 +66,7 @@ li.emails-titles {
 }
 
 .mail-list .fa-star {
-    color: yellow;
+    color: rgb(223, 161, 46);
     margin-right: 10px;
 }
 

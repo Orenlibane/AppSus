@@ -1,4 +1,5 @@
 import storageService from '../../../main-service/storage.js';
+import eventBus, { EMAILS_DB } from '../../../event-bus.js';
 
 export default {
   name: 'mailPrev',
@@ -56,6 +57,8 @@ export default {
       }
 
       this.email.isRead = !this.email.isRead;
+      eventBus.$emit(EMAILS_DB, this.emails); //TODO: TEST TEST TEST
+
       console.log(this.email.isRead);
       storageService.store('emailsDB', this.emails);
     }

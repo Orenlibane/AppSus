@@ -5,7 +5,7 @@ export default {
   name: 'Mailcount',
 
   template: `
-    <section class="mail-count"> 
+    <section class="mail-count flex column both-align-center"> 
                 <h1>Email Count </h1>
                 <p>{{mailsToReadShow}} / {{emails}}</p>
     </section>
@@ -33,11 +33,7 @@ export default {
     });
   },
   destroyed() {},
-  computed: {
-    // countEmailRead() {
-    //   return (this.mailsToReadShow = this.mailsToRead.length);
-    // }
-  },
+  computed: {},
   methods: {},
   components: {}
 };

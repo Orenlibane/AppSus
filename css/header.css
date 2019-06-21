@@ -4,13 +4,15 @@
     /* background: url('../../../img/texture2.jpg'); */
     /* background-position: center;
     background-size: cover; */
-    /* background: gray; */
     color: black;
-    font-size: 3rem;
+    font-size: 1.5rem;
     padding: 0 20px;
 }
 
 .logo {
+    background: url("../img/logo.png");
+    background-position: center;
+    background-size: cover;
     width: 500px;
     height: 350px;
 }
@@ -39,4 +41,16 @@
     height: 70px;
     width: 70px;
     cursor: pointer;
+}
+
+.counters-container {
+    width: 40vw;
+    background: #ccc;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.counters-container img {
+    width: 50px;
+    height: 50px;
 }

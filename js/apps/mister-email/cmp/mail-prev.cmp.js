@@ -1,12 +1,14 @@
 import storageService from '../../../main-service/storage.js';
 import eventBus, { EMAILS_DB } from '../../../event-bus.js';
 
+//need to add checked to checkbox if its already been read
+
 export default {
   name: 'mailPrev',
   template: `
     <li class="mail-prev flex align-center" :class="{ read: !email.isRead }" > 
         <span class="main-mail-spec flex align-center"> 
-            <input type="checkbox" @click="toggleIsRead"/> 
+            <input type="checkbox" @click="toggleIsRead" />  
             <i 
                 @click="toogleFav" 
                 :class="[email.isFav? 'fas' : 'far']"

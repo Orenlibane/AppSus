@@ -1,17 +1,31 @@
 import mailService from '../services/mailservice.js';
 import utilService from '../../../main-service/util-service.js';
+import headerCmp from '../../../main-cmp/header.cmp.js';
+import sideNav from '../cmp/mail-side.cmp.js';
 
 export default {
   name: 'email-det',
   template: `
+  <div>
+  <header-cmp></header-cmp>
+      <div class="flex">
+        <side-nav></side-nav>
+  
     <section class="email-det">
     <div class="flex space-between send-mail-head"> <span>  New Messege </span> <span><i  @click="backToMails" class="fas fa-times"></i></span> </div>
-               <div><input v-model="newEmail.subject" type="text" placeholder="Enter mail Subject"/>  </div> 
-                <div><input v-model="newEmail.sendto" type="text" placeholder="Enter email to send to"/>  </div>
+    
+    <div class="flex">
+          <button class="replayBtn" v-if="!isReply" @click="replaymail">Reply To MAIL</button>
+          <button class="replayBtn" v-if="isReply" @click="sendmail">Send Mail</button>
+        <div class="flex column inputs-container">
+          <div class="flex"><button>Subject:</button><input v-model="newEmail.subject" type="text" placeholder="Enter mail Subject"/>  </div> 
+          <div class="flex"><button>SendTo:</button><input v-model="newEmail.sendto" type="text" placeholder="Enter email to send to"/>  </div>
+        </div>
+    </div>
                 <textarea name="" id="" v-model="newEmail.body"></textarea>
-                 <button @click="replaymail">Reply To MAIL</button>
-                 <button v-if="isReply" @click="sendmail">Send Mail</button>
-              </div>    </section>
+                 </section>
+              </div>
+</div>
 `,
   props: [],
   data() {
@@ -68,5 +82,5 @@ export default {
       this.$router.push('/misterEmail');
     }
   },
-  components: {}
+  components: { headerCmp, sideNav }
 };

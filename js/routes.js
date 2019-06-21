@@ -11,9 +11,10 @@ export default [
     component: misterEmailCmp
   },
   { path: '/missKeep', component: missKeepCmp },
-  {
-    path: '/missKeep/mails',
-    component: mailList
-  },
-  { path: '/mails/:theMailId', component: emailDet }
+  // {
+  // path: '/misterEmail/mails',
+  // component: mailList
+  // children: [{ path: 'misterEmail/mails/:theMailId', component: emailDet }]
+  // },
+  { path: '/misterEmail/:theMailId', component: emailDet }
 ];

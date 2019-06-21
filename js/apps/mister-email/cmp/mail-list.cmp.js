@@ -1,19 +1,21 @@
 import mailservice from '../services/mailservice.js';
 import utilService from '../../../main-service/util-service.js';
 import mailPrev from '../cmp/mail-prev.cmp.js';
+import mailDet from '../pages/email-det.cmp.js';
 import eventBus, { PICKED_EMAIL_STATE } from '../../../event-bus.js';
 import mailFilter from './mail-filter.cmp.js';
 
 export default {
   name: 'mailList',
   template: `
-    <section class="mail-list"> 
-      <mail-filter @filterapp="setFilterrr"></mail-filter>
+    <section class="mail-list">
 
-    <ul>
-      <li class="flex space-between emails-titles"> 
-         <span> Sent From </span> <span> subject  </span> <span>Date Recived</span>
-                </li>
+      
+      <ul>
+          <mail-filter @filterapp="setFilterrr"></mail-filter>
+        <li class="flex space-between emails-titles"> 
+          <span> Sent From </span> <span> subject  </span> <span>Date Recived</span>
+        </li>
       <mail-prev 
       :idx="idx" 
       :emails="filterdEmails"
@@ -56,12 +58,10 @@ export default {
   destroyed() {},
   computed: {
     filterdEmails: function() {
-
-
-
       if (!this.filter) return this.emails;
-      return this.emails.filter(email => email.subject.includes(this.filter.txt))
-
+      return this.emails.filter(email =>
+        email.subject.includes(this.filter.txt)
+      );
 
       // if (!this.filter) return this.emails;
       // else if (this.filter.isRead === 'Read') {
@@ -73,7 +73,6 @@ export default {
       // } else if (this.filter.isRead === 'All') {
       //   return this.emails.filter(email => email.subject.includes(this.filter.txt))
       // }
-    
 
       // if (this.currentEmailsState === 1) {
       //   return this.emails.filter(email => !email.isDeleted);
@@ -82,18 +81,17 @@ export default {
       // } else if (this.currentEmailsState === 3) {
       //   return this.emails.filter(email => email.isDeleted);
       // }
-    // },
+      // },
 
-    // emailsToShow() {
+      // emailsToShow() {
 
-    //   if (!this.filter) return this.emails;
-    //   console.log('I am here 35', this.filter.txt);
-    //   console.log('I am here 75', this.emails);
+      //   if (!this.filter) return this.emails;
+      //   console.log('I am here 35', this.filter.txt);
+      //   console.log('I am here 75', this.emails);
 
-    //   return this.emails.filter(email => email.subject.includes(this.filter.txt))
-    // }
+      //   return this.emails.filter(email => email.subject.includes(this.filter.txt))
+      // }
     }
-  
   },
   methods: {
     pickedEmails(emailsType) {},
@@ -104,6 +102,7 @@ export default {
   },
   components: {
     mailPrev,
-    mailFilter
+    mailFilter,
+    mailDet
   }
 };

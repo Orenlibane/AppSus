@@ -1,9 +1,9 @@
 .side {
-    /* background: url('../../../img/texture2.jpg'); */
+    background: url('../../../img/texture2.jpg');
     background-position: center;
     background-size: cover;
     height: 85vh;
-    width: 11vw;
+    width: 18vw;
     font-size: 1.5rem;
 }
 

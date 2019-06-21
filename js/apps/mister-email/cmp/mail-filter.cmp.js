@@ -8,11 +8,10 @@ export default {
             <i class="fas fa-hamburger"></i>
    <select v-model="filterBy.isRead" @change="emitFilter($event)">
          <option>All</option>
-                         <option>Read</option>
-                         <option>UnRead</option>
-                     </select>
+         <option>Read</option>
+        <option>UnRead</option>
+  </select>
        </div>
- 
         </section>
         
         

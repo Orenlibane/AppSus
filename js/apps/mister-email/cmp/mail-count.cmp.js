@@ -13,14 +13,22 @@ export default {
 props: [],
 data() {
     return {
-        emails: null,
-        readEmail: null
+        emails: [],
+        readEmail: []
 
     };
 },
 created() {
     this.emails = mailService.query();
     console.log(this.emails);
+
+    // mailService.query()
+    //     .then(email=>{
+    //         console.log(this.email);
+
+    //         this.emails = email
+
+    //     })
 
 },
 destroyed() {},

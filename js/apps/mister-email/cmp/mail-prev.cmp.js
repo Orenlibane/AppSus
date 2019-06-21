@@ -3,8 +3,8 @@ import storageService from '../../../main-service/storage.js';
 export default {
   name: 'mailPrev',
   template: `
-    <li class="mail-prev"> 
-        <span class="main-mail-spec"> 
+    <li class="mail-prev flex align-center" :class="{ read: !email.isRead }" > 
+        <span class="main-mail-spec flex align-center"> 
             <input type="checkbox" @click="toggleIsRead"/> 
             <i 
                 @click="toogleFav" 
@@ -14,7 +14,7 @@ export default {
         </span>  
         <span 
             @click="toggleIsRead('noToggle')" 
-            :class="{ read: !email.isRead }" 
+            
             class="left subject"> 
               <router-link :to="emailUrl">{{email.subject}}</router-link>  
         </span> 

@@ -6,20 +6,31 @@ export default {
   template: `
     <section class="email-det">
     <div class="flex space-between send-mail-head"> <span>  New Messege </span> <span><i  @click="backToMails" class="fas fa-times"></i></span> </div>
-               <div><input v-model="email.subject" type="text" placeholder="Enter mail Subject"/>  </div> 
-                <div><input v-model="email.sendto" type="text" placeholder="Enter email to send to"/>  </div>
-                <textarea name="" id="" v-model="email.body"></textarea>
-                 <button @click="sendmail">SEND MAIL</button>
+               <div><input v-model="newEmail.subject" type="text" placeholder="Enter mail Subject"/>  </div> 
+                <div><input v-model="newEmail.sendto" type="text" placeholder="Enter email to send to"/>  </div>
+                <textarea name="" id="" v-model="newEmail.body"></textarea>
+                 <button @click="replaymail">Reply To MAIL</button>
+                 <button v-if="isReply" @click="sendmail">Send Mail</button>
               </div>    </section>
 `,
   props: [],
   data() {
     return {
       email: null,
-      newemail: {
-        _id: '',
-        body: '',
-        subject: '',
+      isReply: false,
+      newEmail: null
+    };
+  },
+
+  created() {
+    const mailId = this.$route.params.theMailId;
+    mailService.getById(mailId).then(email => {
+      this.email = email;
+      //creating the returning mail
+      this.newEmail = {
+        _id: this.email._id,
+        body: this.email.body,
+        subject: this.email.subject,
         name: 'oren&lior',
         isRead: true,
         sendAt:
@@ -31,39 +42,26 @@ export default {
           ':' +
           new Date().getMinutes(),
         isDeleted: false,
-        sendto: '',
+        sendto: this.email.sendto,
         isSent: true
-      }
-    };
-  },
-  created() {
-    const mailId = this.$route.params.theMailId;
-    mailService.getById(mailId).then(email => {
-      this.email = email;
+      };
     });
   },
   destroyed() {},
   computed: {},
   methods: {
     sendmail() {
-      if (!this.newemail.sendto) {
+      if (!this.newEmail.sendto) {
         return false;
       }
 
-      mailService.updateDB(this.newemail);
+      mailService.updateDB(this.newEmail);
 
-      this.newemail = {
-        id: '',
-        body: '',
-        subject: '',
-        name: 'oren&lior',
-        isRead: true,
-        sendAt: new Date(),
-        isDeleted: false,
-        sendto: '',
-        isSent: true
-      };
-      this.sendmodal = !this.sendmodal;
+      this.$router.push('/misterEmail');
+    },
+    replaymail() {
+      this.isReply = true;
+      this.newEmail.subject = 'RE:' + this.newEmail.subject;
     },
     backToMails() {
       this.$router.push('/misterEmail');

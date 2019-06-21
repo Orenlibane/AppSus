@@ -20,154 +20,162 @@ function query() {
 }
 var emailsDB = [
   {
-    _id: '5d0c90fa49bc241d22541812',
+    _id: '5d0c94ff2f312ed1a4bfa8c0',
     body:
-      'Non ullamco excepteur anim nulla. Adipisicing fugiat proident labore nisi nulla ad laborum pariatur id dolor. Reprehenderit ipsum Lorem elit ex consectetur est nostrud ullamco nostrud Lorem magna officia adipisicing mollit. Do cupidatat aute ut adipisicing mollit. Do aliquip consequat sint dolore. Qui consectetur ad non enim esse minim. Anim id in culpa sint amet quis quis Lorem aliquip dolor culpa cupidatat sint.\r\n',
+      'Labore officia voluptate nostrud sunt ea culpa voluptate. Ipsum enim velit sint magna. Esse voluptate elit cillum occaecat in voluptate voluptate nulla exercitation amet. Aliqua deserunt nisi incididunt cillum Lorem deserunt consequat sunt reprehenderit elit pariatur.\r\n',
     subject:
-      'Non deserunt ipsum esse sit reprehenderit velit do proident id quis aliqua nulla.',
-    name: 'Samantha Richardson',
+      'Quis cupidatat duis anim aute reprehenderit officia aliqua occaecat aute quis tempor.',
+    name: 'Bernadette Graves',
     isRead: false,
-    sendAt: '05-22:09:52',
-    isDeleted: false,
-    sendto: '',
-    isSent: true,
-    isDone: false
-  },
-  {
-    _id: '5d0c90fa7e3c775b3389065b',
-    body:
-      'Cillum deserunt commodo do irure excepteur dolor anim voluptate exercitation aliquip consequat. Adipisicing enim tempor fugiat proident mollit consectetur. Dolore labore excepteur reprehenderit aute do ipsum voluptate pariatur.\r\n',
-    subject:
-      'Consequat voluptate laborum labore ex cillum nisi non aliquip cupidatat tempor.',
-    name: 'Christine Ryan',
-    isRead: false,
-    sendAt: '08-28:02:08',
+    sendAt: '04-29:04:04',
     isDeleted: false,
     sendto: '',
     isSent: false,
-    isDone: true
+    isDone: false,
+    isFav: false
   },
   {
-    _id: '5d0c90fa6d8f0a02eb44d3ad',
+    _id: '5d0c94ffb5a787ded7c48f73',
     body:
-      'Qui consequat cupidatat deserunt esse laborum deserunt tempor. Non officia nostrud cupidatat laborum dolore consectetur commodo consectetur adipisicing laboris. Ad voluptate veniam fugiat officia eiusmod quis fugiat nulla et.\r\n',
-    subject:
-      'Dolor ad non do officia ipsum aliquip aliqua culpa reprehenderit qui.',
-    name: 'Bright Newton',
-    isRead: false,
-    sendAt: '08-23:11:42',
-    isDeleted: true,
-    sendto: '',
-    isSent: false,
-    isDone: true
-  },
-  {
-    _id: '5d0c90faff0b1bae5e0e1a05',
-    body:
-      'Sit ullamco consectetur aliquip labore proident. Commodo fugiat cillum mollit dolor aliquip proident incididunt cupidatat nostrud elit quis. Incididunt minim ex fugiat non. Excepteur velit consectetur ex magna non amet culpa consequat ea.\r\n',
-    subject:
-      'Fugiat quis qui non tempor enim minim laboris sunt irure reprehenderit sit et nisi cupidatat.',
-    name: 'Dale Soto',
-    isRead: false,
-    sendAt: '12-05:04:05',
-    isDeleted: true,
-    sendto: '',
-    isSent: false,
-    isDone: true
-  },
-  {
-    _id: '5d0c90fabb16c58c8e74e7f1',
-    body:
-      'Consequat officia in qui esse nulla anim labore. Sint esse adipisicing nisi culpa sit laborum labore fugiat enim laborum id. Aute duis aliquip ad magna deserunt velit eiusmod ex culpa qui consequat amet. Cupidatat sint excepteur cillum amet. Minim aliqua sunt culpa consequat irure est cillum officia consequat dolor non eu ea veniam. Ullamco amet sunt esse culpa incididunt dolor laborum adipisicing duis consectetur. Proident culpa aliquip cupidatat do officia.\r\n',
-    subject:
-      'Dolor fugiat ad ullamco cillum proident amet nulla eu consectetur commodo cupidatat.',
-    name: 'Wooten Cole',
-    isRead: false,
-    sendAt: '04-23:07:33',
-    isDeleted: true,
-    sendto: '',
-    isSent: true,
-    isDone: false
-  },
-  {
-    _id: '5d0c90fa51fbfb8dd64b6bf0',
-    body:
-      'Tempor consectetur excepteur duis consectetur irure cupidatat enim excepteur minim est tempor. Velit adipisicing culpa minim nisi id enim esse Lorem ad officia. Minim esse in velit est incididunt consequat irure nulla est mollit ipsum.\r\n',
-    subject: 'Et cupidatat labore sint deserunt.',
-    name: 'Larsen Osborne',
-    isRead: false,
-    sendAt: '09-20:07:06',
-    isDeleted: false,
-    sendto: '',
-    isSent: true,
-    isDone: false
-  },
-  {
-    _id: '5d0c90fa9f440c22c82eb8b1',
-    body:
-      'Veniam aliquip mollit occaecat et consectetur quis commodo dolore qui consectetur cillum. Eiusmod nulla esse culpa id amet quis velit sint deserunt amet sunt eu reprehenderit magna. Aliquip exercitation magna eiusmod voluptate quis ipsum occaecat nulla consequat dolor ex culpa magna. Nisi occaecat sint veniam minim aliquip excepteur qui sit cillum.\r\n',
-    subject:
-      'Laboris excepteur id sit magna labore dolore in minim elit ipsum labore.',
-    name: 'Genevieve Howard',
-    isRead: false,
-    sendAt: '05-14:03:36',
-    isDeleted: false,
-    sendto: '',
-    isSent: true,
-    isDone: false
-  },
-  {
-    _id: '5d0c90fa3741c58a3d44f817',
-    body:
-      'Cupidatat cillum non nisi duis nostrud laborum dolore proident. Velit do amet sint amet ullamco sit magna amet aliquip excepteur laboris aliquip tempor ipsum. Sit laboris incididunt do veniam proident officia deserunt sit ullamco pariatur ea voluptate voluptate elit. Adipisicing sint commodo nulla id officia. Minim non exercitation dolore ut irure mollit sunt. Veniam sunt quis occaecat labore. Nostrud ad eu duis laborum consequat quis tempor voluptate et nulla ad exercitation eiusmod.\r\n',
-    subject: 'Id Lorem incididunt ipsum ea occaecat magna.',
-    name: 'Sanford Benson',
-    isRead: false,
-    sendAt: '10-12:01:49',
-    isDeleted: false,
-    sendto: '',
-    isSent: false,
-    isDone: false
-  },
-  {
-    _id: '5d0c90faa9bb7b2bc358f532',
-    body:
-      'Aliquip adipisicing ullamco ipsum irure nulla et do cupidatat dolore ea cillum sunt esse qui. Deserunt excepteur in duis consequat sunt occaecat commodo eu nostrud nisi occaecat qui laborum aliqua. Incididunt elit mollit adipisicing Lorem nostrud eiusmod incididunt ad incididunt adipisicing ut non eu id. Deserunt labore enim cillum voluptate aute ipsum amet cupidatat anim nisi. Esse irure sit qui amet.\r\n',
-    subject: 'Excepteur occaecat consectetur do officia.',
-    name: 'Harvey Blair',
+      'Qui officia consequat eiusmod Lorem id tempor voluptate. Ea eiusmod sit excepteur cupidatat officia non ullamco anim amet voluptate eiusmod. Et irure laborum enim aliquip nulla est eiusmod laboris velit irure enim. Veniam velit tempor mollit quis exercitation exercitation qui consequat officia anim mollit est Lorem commodo.\r\n',
+    subject: 'Qui irure occaecat sunt nostrud magna sit commodo.',
+    name: 'Mattie Rios',
     isRead: true,
-    sendAt: '02-07:10:04',
+    sendAt: '01-09:10:25',
+    isDeleted: false,
+    sendto: '',
+    isSent: true,
+    isDone: true,
+    isFav: false
+  },
+  {
+    _id: '5d0c94ffff75c3cd3b5d3d93',
+    body:
+      'Nostrud nisi deserunt amet et. Velit dolore magna labore commodo elit nulla eiusmod id quis cupidatat qui aute et elit. Aute reprehenderit irure nisi qui aute eu. Anim Lorem enim eu ullamco pariatur occaecat eiusmod fugiat consectetur eiusmod cillum qui eiusmod.\r\n',
+    subject: 'Eiusmod sint nulla veniam aute ullamco.',
+    name: 'Estrada Turner',
+    isRead: false,
+    sendAt: '07-09:07:26',
+    isDeleted: false,
+    sendto: '',
+    isSent: true,
+    isDone: true,
+    isFav: true
+  },
+  {
+    _id: '5d0c94ffbc2df0f5f2b3ce6e',
+    body:
+      'Nostrud reprehenderit veniam ad exercitation officia magna tempor cillum adipisicing. Fugiat eu proident non et laborum duis in. Adipisicing minim ea ea nisi non cillum esse commodo. Pariatur ut nulla et cillum laborum sit cupidatat eu. Laboris pariatur officia anim ad eiusmod exercitation in ad. Amet eu reprehenderit qui elit aliqua dolor incididunt et dolor pariatur anim.\r\n',
+    subject: 'Elit pariatur officia aliqua non aute pariatur eiusmod.',
+    name: 'Carrie Pitts',
+    isRead: true,
+    sendAt: '02-09:05:35',
+    isDeleted: true,
+    sendto: '',
+    isSent: false,
+    isDone: true,
+    isFav: true
+  },
+  {
+    _id: '5d0c94ffe7681cf9a2379982',
+    body:
+      'Officia elit reprehenderit incididunt commodo aliquip eiusmod minim. Pariatur incididunt velit id sunt qui. Ex laboris ex eiusmod amet eu ullamco nostrud id duis fugiat cillum voluptate velit. Ullamco ea deserunt laboris id ad quis incididunt ipsum irure ea ipsum aute.\r\n',
+    subject:
+      'Est consequat dolore anim Lorem ipsum occaecat consectetur duis velit excepteur nisi.',
+    name: 'Herman Knox',
+    isRead: false,
+    sendAt: '08-25:10:00',
     isDeleted: true,
     sendto: '',
     isSent: true,
-    isDone: false
+    isDone: false,
+    isFav: false
   },
   {
-    _id: '5d0c90face9bc48c06afd502',
+    _id: '5d0c94ff8de8749f8e287260',
     body:
-      'Incididunt incididunt eiusmod aliqua reprehenderit laborum esse ullamco. Irure ea aliqua esse ad. Aute commodo sunt tempor duis nulla elit laboris qui pariatur pariatur qui cupidatat. Nulla proident cillum dolor sit eiusmod est aliqua nisi.\r\n',
-    subject:
-      'Consequat adipisicing voluptate fugiat non nisi enim cupidatat sunt incididunt sint.',
-    name: 'Burton Gibson',
-    isRead: false,
-    sendAt: '12-10:04:24',
+      'Ullamco sit fugiat dolore cillum sunt nulla. Qui quis et irure mollit et elit enim excepteur labore anim nostrud sit in. Officia officia aliqua in dolor ut eiusmod occaecat enim aute Lorem consectetur do ex.\r\n',
+    subject: 'Laboris ipsum nostrud amet nulla in consectetur ad culpa.',
+    name: 'Stone Merrill',
+    isRead: true,
+    sendAt: '08-21:09:26',
     isDeleted: false,
     sendto: '',
     isSent: false,
-    isDone: false
+    isDone: false,
+    isFav: true
   },
   {
-    _id: '5d0c90fad1ec086f94c66f35',
+    _id: '5d0c94fffc3988ccf168b0b3',
     body:
-      'Proident qui veniam laboris consequat dolor. Proident sunt id nulla anim Lorem ipsum sunt dolore. Et pariatur mollit amet excepteur anim amet tempor minim duis culpa ex. Quis et laborum adipisicing et voluptate enim eiusmod aliquip exercitation. Do magna occaecat aliquip laboris.\r\n',
-    subject: 'Deserunt mollit sint culpa fugiat sint quis mollit.',
-    name: 'Helen Curtis',
-    isRead: true,
-    sendAt: '04-07:09:17',
+      'Officia ipsum commodo esse qui. Irure eu minim officia incididunt reprehenderit mollit cillum eu. Dolore labore nostrud est do.\r\n',
+    subject: 'Sit amet minim pariatur deserunt eu ut.',
+    name: 'Guzman Sims',
+    isRead: false,
+    sendAt: '07-27:01:04',
     isDeleted: true,
     sendto: '',
     isSent: false,
-    isDone: true
+    isDone: true,
+    isFav: false
+  },
+  {
+    _id: '5d0c94ff387d27dfa0c6eef2',
+    body:
+      'Eiusmod enim nulla proident duis labore tempor. Eu culpa duis esse reprehenderit ullamco exercitation consequat commodo elit labore cillum. Incididunt sunt magna cupidatat anim nulla commodo nostrud tempor deserunt laborum.\r\n',
+    subject: 'Lorem laboris reprehenderit occaecat cillum ipsum.',
+    name: 'Theresa Chase',
+    isRead: true,
+    sendAt: '08-03:10:43',
+    isDeleted: false,
+    sendto: '',
+    isSent: true,
+    isDone: true,
+    isFav: true
+  },
+  {
+    _id: '5d0c94ffed9231b53f6c3996',
+    body:
+      'Labore fugiat consequat cillum elit enim velit ea esse nisi cupidatat ad ipsum excepteur ipsum. Sit commodo laborum laborum ad veniam. Sit consectetur exercitation ullamco enim. Cillum minim officia qui cupidatat ullamco elit voluptate qui proident sint ullamco. Cillum ex minim labore adipisicing do.\r\n',
+    subject:
+      'Nisi esse commodo nulla reprehenderit ullamco occaecat duis nostrud enim.',
+    name: 'Mathews Harrison',
+    isRead: true,
+    sendAt: '01-24:06:33',
+    isDeleted: true,
+    sendto: '',
+    isSent: true,
+    isDone: true,
+    isFav: true
+  },
+  {
+    _id: '5d0c94ffe370bd0116ef0c82',
+    body:
+      'Aute elit sint ex enim. Est minim Lorem in cupidatat amet nulla officia sint reprehenderit aliqua. Proident cupidatat irure esse esse enim elit laborum. Incididunt consequat officia nisi in reprehenderit nisi deserunt. Magna Lorem enim deserunt labore id. Tempor ut sint anim incididunt pariatur est. Ad veniam ex irure id nostrud sint mollit.\r\n',
+    subject:
+      'Exercitation deserunt dolor consectetur incididunt ipsum tempor mollit ex velit non.',
+    name: 'Britney Travis',
+    isRead: true,
+    sendAt: '06-08:08:10',
+    isDeleted: true,
+    sendto: '',
+    isSent: true,
+    isDone: true,
+    isFav: true
+  },
+  {
+    _id: '5d0c94ff510cf956c088d4fa',
+    body:
+      'Incididunt amet magna ullamco ad voluptate veniam amet deserunt elit elit nostrud. Fugiat sit adipisicing amet quis eu minim non id laborum. Voluptate amet deserunt ea consequat dolore pariatur. Veniam duis veniam duis commodo incididunt consequat tempor. Officia proident et pariatur non ipsum aute mollit fugiat fugiat nisi nulla ullamco adipisicing. Eu est laboris in amet et est quis occaecat.\r\n',
+    subject: 'Aliquip cillum cupidatat id nostrud nisi ad cupidatat.',
+    name: 'Jocelyn Blevins',
+    isRead: false,
+    sendAt: '05-21:01:22',
+    isDeleted: false,
+    sendto: '',
+    isSent: true,
+    isDone: true,
+    isFav: true
   }
 ];
 

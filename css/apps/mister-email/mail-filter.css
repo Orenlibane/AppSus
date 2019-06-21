@@ -23,3 +23,9 @@
 .mail-filter i.fa-hamburger:hover {
     color: greenyellow
 }
+
+.mail-filter {
+    background: gray;
+    border-bottom: 2px black solid;
+    padding: 10px 0;
+}

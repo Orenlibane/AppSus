@@ -4,13 +4,23 @@ export default {
   name: 'mailPrev',
   template: `
     <li class="mail-prev"> 
-    <span class="main-mail-spec"> <input type="checkbox" @click="toggleIsRead"/>  <i @click="" class="fas fa-star"></i>   
-    {{email.name}}             
-                </span>  <span @click="toggleIsRead('noToggle')" :class="{ read: !email.isRead }" class="left subject"> <router-link :to="emailUrl">{{email.subject}}</router-link>  
-           </span> <span>{{email.sendAt}}</span><i  @click.stop="deleteEmail(idx)" class="fas fa-trash-alt" ></i>
-   
-   
-          </li>
+        <span class="main-mail-spec"> 
+            <input type="checkbox" @click="toggleIsRead"/> 
+            <i 
+                @click="toogleFav" 
+                :class="[email.isFav? 'fas' : 'far']"
+                class="fa-star"></i>   
+            {{email.name}}             
+        </span>  
+        <span 
+            @click="toggleIsRead('noToggle')" 
+            :class="{ read: !email.isRead }" 
+            class="left subject"> 
+              <router-link :to="emailUrl">{{email.subject}}</router-link>  
+        </span> 
+        <span>{{email.sendAt}}</span>
+        <i  @click.stop="deleteEmail(idx)" class="fas fa-trash-alt" ></i>
+    </li>
 
 `,
   props: ['email', 'idx', 'emails'],
@@ -28,10 +38,11 @@ export default {
     deleteEmail(emailIdx) {
       this.emails[emailIdx].isDeleted = true;
       storageService.store('emailsDB', this.emails);
-      //TODO: emit to list so it will delete it - also for toggleRead.
+      //TODO: emit to list so it will delete it - also for toggleRead and togglefav.
     },
-
-    // maybe to move to mail-list
+    toogleFav() {
+      this.email.isFav = !this.email.isFav;
+    },
     toggleIsRead(status) {
       // debugger;
       if (status === 'noToggle') {

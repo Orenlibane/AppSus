@@ -1,12 +1,18 @@
 .global-header {
     width: 100vw;
     height: 15vh;
-    background: url('../../../img/texture.jpg');
+    background: url('../../../img/texture2.jpg');
     background-position: center;
     background-size: cover;
+    /* background: gray; */
     color: black;
     font-size: 3rem;
     padding: 0 20px;
+}
+
+.logo {
+    width: 500px;
+    height: 350px;
 }
 
 .global-header .appsus-nav {

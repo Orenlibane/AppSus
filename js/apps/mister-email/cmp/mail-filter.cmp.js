@@ -1,7 +1,7 @@
 export default {
   name: 'Mailfilter',
   template: `
-    <section class="mail-filter">
+    <section class="mail-filter flex ">
         <div class="flex align-center row-reverse">
             <input type="text" v-model="filterBy.txt" @input="emitFilter" placeholder="Search for mail"/>
             <i class="fas fa-search"></i>
@@ -15,7 +15,7 @@ export default {
   data() {
     return {
       filterBy: {
-        txt: '',
+        txt: ''
       }
     };
   },

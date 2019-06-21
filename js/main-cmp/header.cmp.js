@@ -2,7 +2,7 @@ export default {
   name: 'Header',
   template: `
     <section class="global-header flex  align-center space-between">
-      <div>APSUS -> some cool logo will come here</div> <span> <i @click="showRoutes" class="fas fa-map-signs"></i> </span>
+      <div class="flex align-center"><img class="logo" src="../../../../img/logo.png" alt=""/> </div> <span> <i @click="showRoutes" class="fas fa-map-signs"></i> </span>
         <transition name="slide-fade">
         <div class="appsus-nav flex both-align-center" v-if="navOpen"> 
           

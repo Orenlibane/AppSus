@@ -32,6 +32,8 @@ li.emails-titles {
     height: 85vh;
     overflow-y: scroll;
     border: 2px white solid;
+    border: 10px black solid;
+    background: rgb(206, 204, 204);
 }
 
 .mail-list ul li:hover {

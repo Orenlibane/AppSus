@@ -11,6 +11,9 @@ export default {
       <mail-filter @filterapp="setFilterrr"></mail-filter>
 
     <ul>
+      <li class="flex space-between emails-titles"> 
+         <span> Sent From </span> <span> subject  </span> <span>Date Recived</span>
+                </li>
       <mail-prev 
       :idx="idx" 
       :emails="filterdEmails"
@@ -48,8 +51,7 @@ export default {
   destroyed() {},
   computed: {
     filterdEmails: function() {
-   
-  // if (!this.filter) return this.emails;
+      // if (!this.filter) return this.emails;
 
       // console.log(this.emails.filter)
       // return this.emails.filter(email => email.subject.includes(this.filter.txt))
@@ -61,9 +63,7 @@ export default {
       } else if (this.currentEmailsState === 3) {
         return this.emails.filter(email => email.isDeleted);
       }
-    
-    },
-
+    }
 
     // emailsToShow() {
     //   if (!this.filter) return this.emails;
@@ -77,10 +77,10 @@ export default {
 
     setFilterrr(filterBy) {
       this.filter = filterBy;
-    },
+    }
   },
-  components: { 
-    mailPrev ,
+  components: {
+    mailPrev,
     mailFilter
   }
 };

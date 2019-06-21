@@ -6,6 +6,18 @@
     cursor: pointer;
 }
 
+.emails-titles span {
+    padding: 0 60px;
+    font-weight: bold;
+    text-transform: capitalize;
+    font-size: 1.5rem;
+}
+
+li.emails-titles {
+    border-bottom: 5px black solid;
+    background: gray;
+}
+
 .mail-list a {
     text-decoration: none;
     color: black;

@@ -40,7 +40,6 @@ export default {
     const mailId = this.$route.params.theMailId;
     mailService.getById(mailId).then(email => {
       this.email = email;
-      console.log(this.email);
     });
   },
   destroyed() {},

@@ -1,0 +1,36 @@
+.global-header {
+    width: 100vw;
+    height: 15vh;
+    background: url('../../../img/texture.jpg');
+    background-position: center;
+    background-size: cover;
+    color: black;
+    font-size: 3rem;
+    padding: 0 20px;
+}
+
+.global-header .appsus-nav {
+    height: 200px;
+    max-width: 200px;
+    position: absolute;
+    right: 10%;
+    top: 5%;
+    border: 2px black solid;
+    background: white;
+    border-radius: 10px;
+}
+
+.global-header .appsus-nav ul {
+    list-style-type: none;
+}
+
+.global-header .appsus-nav li {
+    width: 50%;
+    padding: 5px;
+}
+
+.global-header .appsus-nav li {
+    height: 70px;
+    width: 70px;
+    cursor: pointer;
+}

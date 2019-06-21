@@ -6,6 +6,11 @@
     cursor: pointer;
 }
 
+.mail-list a {
+    text-decoration: none;
+    color: black;
+}
+
 .mail-list ul {
     list-style-type: none;
 }

@@ -1,5 +1,7 @@
 .side {
-    background: black;
+    background: url('../../../img/texture.jpg');
+    background-position: center;
+    background-size: cover;
     height: 85vh;
     width: 11vw;
     font-size: 1.5rem;
@@ -10,10 +12,12 @@
 }
 
 .side ul li {
-    padding: 10px 0;
-    color: white;
-    border-top: 0.5px white solid;
-    border-bottom: 0.5px white solid;
+    padding: 10px 10px;
+    color: black;
+    /* border-top: 2px black solid;
+    border-bottom: 2px black solid; */
+    border: 2px black solid;
+    background: rgb(117, 115, 115, 0.7);
     cursor: pointer;
 }
 
@@ -25,7 +29,7 @@
 .side ul li.send-mail {
     border: none;
     margin-bottom: 50px;
-    border: 2px white solid;
+    border: 4px black solid;
     border-radius: 20px;
 }
 

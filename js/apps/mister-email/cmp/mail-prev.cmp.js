@@ -5,11 +5,13 @@ export default {
   template: `
     <li class="mail-prev"> 
     <span class="main-mail-spec"> <input type="checkbox"/>  <i @click=toggleDone class="fas fa-star"></i>   
-           {{email.name}}               
-                </span>  <span :class="{ read: email.isRead }" class="left subject">{{email.subject}}
+    {{email.name}}             
+                </span>  <span :class="{ read: email.isRead }" class="left subject"> <router-link :to="emailUrl">{{email.subject}}</router-link>  
            </span> <span>{{email.sendAt}}</span><i  @click.stop="deleteEmail(idx)" class="fas fa-trash-alt" ></i>
-        
-    </li>
+   
+   
+          </li>
+
 `,
   props: ['email', 'idx', 'emails'],
   data() {
@@ -17,7 +19,11 @@ export default {
   },
   created() {},
   destroyed() {},
-  computed: {},
+  computed: {
+    emailUrl() {
+      return '/mails/' + this.email._id;
+    }
+  },
   methods: {
     deleteEmail(emailIdx) {
       this.emails[emailIdx].isDeleted = true;

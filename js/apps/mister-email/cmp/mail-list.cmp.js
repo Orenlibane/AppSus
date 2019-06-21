@@ -24,9 +24,8 @@ export default {
 
 
       </mail-prev>
-        
-    </ul>
 
+    </ul>
   
     </section>
 `,

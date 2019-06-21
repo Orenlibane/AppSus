@@ -10,7 +10,7 @@ export default {
        <mail-Header></mail-Header>
       <div class="flex">
         <side-nav></side-nav>
-        <mail-list></mail-list>
+        <mail-list></mail-list>        
       </div>
     </section>
 `,

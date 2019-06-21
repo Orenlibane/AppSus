@@ -1,7 +1,9 @@
 .mailheader {
     width: 100vw;
     height: 15vh;
-    background: black;
-    color: white;
+    background: url('../../../img/texture.jpg');
+    background-position: center;
+    background-size: cover;
+    color: black;
     font-size: 3rem;
 }

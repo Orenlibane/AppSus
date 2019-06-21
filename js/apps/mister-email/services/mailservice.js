@@ -5,7 +5,8 @@ const MAIL_KEY = 'emailsDB';
 
 export default {
   query,
-  getById
+  getById,
+  updateDB
 };
 
 function query() {
@@ -1127,9 +1128,13 @@ var emailsDB = [
 
 function getById(emailId) {
   const email = emailsDB.find(email => email._id === emailId);
-  return email;
+  return Promise.resolve(email);
 }
 
+function updateDB(newEmail) {
+  emailsDB.unshift(newEmail);
+  storageService.store(MAIL_KEY, emailsDB);
+}
 // FOR LOADING RANDOMS DB
 // [
 //   '{{repeat(80, 100)}}',

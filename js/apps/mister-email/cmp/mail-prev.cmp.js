@@ -32,6 +32,9 @@ export default {
     },
     toggleDone() {
       //TODO: need to update the class and adding to props is done
+    },
+    addDone() {
+      console.log('should add done');
     }
   },
   components: {}

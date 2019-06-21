@@ -1,49 +1,43 @@
 import mailService from '../services/mailservice.js';
+import eventBus, { EMAILS_DB } from '../../../event-bus.js';
 
 export default {
-    name: 'Mailcount',
+  name: 'Mailcount',
 
-    template: `
+  template: `
     <section class="mail-count"> 
                 <h1>Email Count </h1>
-                <p>{{coutEmailRead}}</p>
-
+                <p>{{mailsToReadShow}} / {{emails}}</p>
     </section>
 `,
-props: [],
-data() {
+  props: [],
+  data() {
     return {
-        emails: [],
-        readEmail: []
-
+      emails: null,
+      mailsToRead: null,
+      mailsToReadShow: null
     };
-},
-created() {
-    this.emails = mailService.query();
-    console.log(this.emails);
+  },
+  created() {
+    this.emails = mailService.query().length;
+    this.mailsToRead = mailService.query().filter(email => {
+      return !email.isRead;
+    });
+    this.mailsToReadShow = this.mailsToRead.length;
 
-    // mailService.query()
-    //     .then(email=>{
-    //         console.log(this.email);
-
-    //         this.emails = email
-
-    //     })
-
-},
-destroyed() {},
-computed: {
-    coutEmailRead(){
-        const readEmails = this.emails.filter(email => {
-            return email.isRead === true})
-        console.log(readEmails);
-        let allEmails = this.emails.length;
-        console.log(allEmails);
-        let readEmail = readEmails.length;
-        return ( allEmails - readEmail)
-
-    }
-},
-methods: {},
-components: {}
+    eventBus.$on(EMAILS_DB, emails => {
+      this.mailsToRead = emails.filter(email => {
+        return !email.isRead;
+      });
+      this.mailsToReadShow = this.mailsToRead.length;
+    });
+  },
+  destroyed() {},
+  computed: {
+    // countEmailRead() {
+    //   return (this.mailsToReadShow = this.mailsToRead.length);
+    // }
+  },
+  methods: {},
+  components: {}
 };

@@ -1,21 +1,32 @@
 .mail-list li {
     background: rgb(206, 204, 204);
-    padding: 10px 0;
+    padding: 20px 0;
     border-bottom: 0.5px solid rgb(128, 128, 128);
     padding-left: 10px;
-    cursor: pointer;
-}
-
-.emails-titles span {
-    padding: 0 60px;
-    font-weight: bold;
-    text-transform: capitalize;
     font-size: 1.5rem;
 }
 
+/* .mail-list span {
+    display: inline-block;
+    height: 100%;
+    border: 2px black solid;
+} */
+
+.emails-titles span {
+    padding: 5px 60px;
+    font-weight: bold;
+    text-transform: capitalize;
+    font-size: 1.5rem;
+    background: rgb(155, 154, 156);
+    border-radius: 10px;
+    border: 2px black solid;
+    cursor: pointer;
+}
+
 li.emails-titles {
-    border-bottom: 5px black solid;
-    background: gray;
+    border-bottom: 1px black solid;
+    background: white;
+    box-shadow: inset 1px 0 0 #dadce0, inset -1px 0 0 #dadce0, 0 1px 2px 0 rgba(60, 64, 67, .3), 0 1px 3px 1px rgba(60, 64, 67, .15)
 }
 
 .mail-list a {
@@ -32,8 +43,10 @@ li.emails-titles {
     height: 85vh;
     overflow-y: scroll;
     border: 2px white solid;
-    border: 10px black solid;
-    background: rgb(206, 204, 204);
+    border-radius: 15px;
+    border: 1px black solid;
+    background: white;
+    /* padding: 10px; */
 }
 
 .mail-list ul li:hover {
@@ -53,9 +66,11 @@ li.emails-titles {
 }
 
 .mail-list .fa-star {
-    color: yellow;
+    color: rgb(223, 161, 46);
+    margin-right: 10px;
 }
 
-.read {
+.mail-list li.mail-prev.read {
     background: white;
+    font-weight: bold;
 }

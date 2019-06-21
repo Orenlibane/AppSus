@@ -1,9 +1,9 @@
 .global-header {
     width: 100vw;
     height: 15vh;
-    background: url('../../../img/texture2.jpg');
-    background-position: center;
-    background-size: cover;
+    /* background: url('../../../img/texture2.jpg'); */
+    /* background-position: center;
+    background-size: cover; */
     /* background: gray; */
     color: black;
     font-size: 3rem;

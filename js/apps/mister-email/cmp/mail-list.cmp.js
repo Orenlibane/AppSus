@@ -23,13 +23,18 @@ export default {
        
         >
       <!-- :emails="emailsToShow" -->
+            <!-- :emails="filterdEmails" -->
+
+                  <!-- :filterdEmails ="emailsToShow" -->
+
+
 
 
 
       </mail-prev>
 
     </ul>
-  
+
     </section>
 `,
   props: [],
@@ -43,7 +48,7 @@ export default {
   created() {
     console.log('loaded the mail-list');
     this.emails = mailservice.query();
-    console.log(this.emails);
+    // console.log(this.emails);
     eventBus.$on(PICKED_EMAIL_STATE, state => {
       this.currentEmailsState = state;
     });
@@ -51,26 +56,44 @@ export default {
   destroyed() {},
   computed: {
     filterdEmails: function() {
+
+
+
+      if (!this.filter) return this.emails;
+      return this.emails.filter(email => email.subject.includes(this.filter.txt))
+
+
       // if (!this.filter) return this.emails;
+      // else if (this.filter.isRead === 'Read') {
+      //   return this.emails.filter(email => email.subject.includes(this.filter.txt) &&
+      //     email.isRead === true)
+      // } else if (this.filter.isRead === 'UnRead') {
+      //   return this.emails.filter(email => email.subject.includes(this.filter.txt) &&
+      //     email.isRead === false)
+      // } else if (this.filter.isRead === 'All') {
+      //   return this.emails.filter(email => email.subject.includes(this.filter.txt))
+      // }
+    
 
-      // console.log(this.emails.filter)
-      // return this.emails.filter(email => email.subject.includes(this.filter.txt))
-
-      if (this.currentEmailsState === 1) {
-        return this.emails.filter(email => !email.isDeleted);
-      } else if (this.currentEmailsState === 2) {
-        return this.emails.filter(email => email.isSent);
-      } else if (this.currentEmailsState === 3) {
-        return this.emails.filter(email => email.isDeleted);
-      }
-    }
+      // if (this.currentEmailsState === 1) {
+      //   return this.emails.filter(email => !email.isDeleted);
+      // } else if (this.currentEmailsState === 2) {
+      //   return this.emails.filter(email => email.isSent);
+      // } else if (this.currentEmailsState === 3) {
+      //   return this.emails.filter(email => email.isDeleted);
+      // }
+    // },
 
     // emailsToShow() {
+
     //   if (!this.filter) return this.emails;
     //   console.log('I am here 35', this.filter.txt);
+    //   console.log('I am here 75', this.emails);
 
     //   return this.emails.filter(email => email.subject.includes(this.filter.txt))
     // }
+    }
+  
   },
   methods: {
     pickedEmails(emailsType) {},

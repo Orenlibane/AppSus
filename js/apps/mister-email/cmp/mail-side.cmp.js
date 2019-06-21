@@ -1,6 +1,8 @@
 import utilService from '../../../main-service/util-service.js';
 import mailService from '../services/mailservice.js';
 import eventBus, { PICKED_EMAIL_STATE } from '../../../event-bus.js';
+import mailCount from './mail-count.cmp.js';
+
 
 export default {
   name: 'mailSide',
@@ -20,7 +22,9 @@ export default {
                 <textarea name="" id="" v-model="newemail.body"></textarea>
                 <div> here will come the edit text buttons <button @click="sendmail">SEND MAIL</button></div>
               </div>
+              <mail-count> </mail-count>
         </div>
+
     </section>
 `,
   props: [],
@@ -80,5 +84,7 @@ export default {
       eventBus.$emit(PICKED_EMAIL_STATE, this.pickedEmails);
     }
   },
-  components: {}
+  components: {
+    mailCount
+  }
 };

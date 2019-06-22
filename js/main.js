@@ -2,7 +2,7 @@ import mainRoutes from './routes.js';
 const myRouter = new VueRouter({ routes: mainRoutes });
 
 
-// filter
+// filter for email.subject 
 Vue.filter('snippet',function(value){
   return value.slice(0,50);
 });

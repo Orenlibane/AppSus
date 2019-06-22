@@ -26,19 +26,15 @@ export default {
   props: ['note'],
   data() {
     return {
-      showColors: false,
-      noteImg: note.picture
+      showColors: false
     };
   },
   created() {},
   destroyed() {},
   computed: {
-    currentNoteType() {
-      return note.type;
-    },
-    notePicture() {
-      return note.picture;
-    }
+    // currentNoteType() {
+    //   return note.type;
+    // },
   },
   methods: {
     showtype() {

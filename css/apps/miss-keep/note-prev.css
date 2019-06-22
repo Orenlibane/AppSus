@@ -2,19 +2,23 @@
     height: 350px;
     width: 350px;
     margin: 10px 10px;
-    background: url("../../../img/note.png");
+    font-size: 1.3rem;
+    background: rgb(221, 221, 39);
+    /* background: url("../../../img/not-pinned-note.png");
     background-position: center;
     background-size: contain;
+    background-repeat: no-repeat; */
 }
 
 .note-content {
-    margin-top: 35%;
+    margin-top: 25%;
     padding-left: 20%;
-    max-width: 90%;
+    max-width: 80%;
+    margin-bottom: 10px;
 }
 
 .notes-editor {
-    padding-bottom: 10%;
+    padding-bottom: 20%;
     padding-left: 20%
 }
 

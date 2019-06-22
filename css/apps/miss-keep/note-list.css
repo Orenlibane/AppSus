@@ -29,8 +29,9 @@
 }
 
 .note-list {
-    height: 85vh;
-    background: #ccc;
+    height: 100vh;
+    /* overflow: hidden; */
+    background: url('../../../img/corkboard.jpg');
 }
 
 .no-pinned-notes {

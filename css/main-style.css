@@ -4,6 +4,9 @@
 @import "./apps/miss-keep/note-list.css";
 @import "./apps/miss-keep/note-editor.css";
 @import "./apps/miss-keep/note-editor-colors.css";
+@import "./apps/miss-keep/add-note-input.css";
+/* ------------------------------------------- */
+
 @import "./apps/mister-email/mail-filter.css";
 @import "./apps/mister-email/mail-side.css";
 @import "./apps/mister-email/mail-list.css";
@@ -16,6 +19,10 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+* {
+    font-family: sans-serif;
 }
 
 .home-page {

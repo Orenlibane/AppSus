@@ -44,7 +44,7 @@ li.emails-titles {
     height: 85vh;
     overflow-y: scroll;
     border: 2px white solid;
-    border-radius: 15px;
+    /* border-radius: 15px; */
     border: 1px black solid;
     background: white;
     /* padding: 10px; */

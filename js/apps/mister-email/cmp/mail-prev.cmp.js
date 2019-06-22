@@ -35,7 +35,7 @@ export default {
   destroyed() {},
   computed: {
     emailUrl() {
-      return '/mails/' + this.email._id;
+      return '/misterEmail/' + this.email._id;
     }
   },
   methods: {

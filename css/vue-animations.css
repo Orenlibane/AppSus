@@ -10,6 +10,6 @@
 /* .slide-fade-leave-active below version 2.1.8 */
 
     {
-    transform: translateX(50px);
+    transform: translateY(-500px);
     opacity: 0;
 }

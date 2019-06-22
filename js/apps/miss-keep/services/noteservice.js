@@ -24,7 +24,8 @@ var notesDB = [
     content: 'Dolor excepteur aute nostrud aute ut amet.',
     type: 'noteTxt',
     video: '',
-    audio: ''
+    audio: '',
+    isDone: true
   },
   {
     _id: '5d0bb6a527776acfdf3d66ef',
@@ -33,9 +34,8 @@ var notesDB = [
     content: 'Ipsum excepteur veniam ea nostrud adipisicing.',
     type: 'noteTxt',
     video: '',
-    audio: ''
-
-
+    audio: '',
+    isDone: false
   },
   {
     _id: '5d0bb6a55304d6ea02dce1ce',
@@ -44,9 +44,8 @@ var notesDB = [
     content: 'Et adipisicing ut occaecat aliqua dolore pariatur irure magna.',
     type: 'noteTxt',
     video: '',
-    audio: ''
-
-
+    audio: '',
+    isDone: true
   },
   {
     _id: '5d0bb6a5e6eb588ac8ade55d',
@@ -56,9 +55,8 @@ var notesDB = [
       'Aliqua officia sunt id reprehenderit aliqua est incididunt nostrud.',
     type: 'noteTxt',
     video: '',
-    audio: ''
-
-
+    audio: '',
+    isDone: false
   },
   {
     _id: '5d0bb6a570c979da8649f2b2',
@@ -68,9 +66,8 @@ var notesDB = [
       'Magna ad nisi aliquip nulla nisi proident cupidatat excepteur excepteur labore ut quis.',
     type: 'noteTxt',
     video: '',
-    audio: ''
-
-
+    audio: '',
+    isDone: false
   },
   {
     _id: '5d0bb6a5a6f2bf2ef8dc6d9d',
@@ -79,9 +76,8 @@ var notesDB = [
     content: 'Excepteur velit mollit officia reprehenderit.',
     type: 'noteTxt',
     video: '',
-    audio: ''
-
-
+    audio: '',
+    isDone: false
   },
   {
     _id: '5d0bb6a5a910732224c94fd6',
@@ -91,8 +87,7 @@ var notesDB = [
       'Enim sit cupidatat deserunt adipisicing dolor consectetur proident aute esse dolor nulla.',
     type: 'noteTxt',
     video: '',
-    audio: ''
-
-
+    audio: '',
+    isDone: false
   }
 ];

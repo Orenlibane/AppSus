@@ -35,5 +35,7 @@
 }
 
 .no-pinned-notes {
-    max-width: 1500px;
+    height: 60vw;
+    display: flex;
+    justify-content: center;
 }

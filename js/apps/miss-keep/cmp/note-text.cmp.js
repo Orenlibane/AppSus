@@ -4,7 +4,6 @@ import notePrev from '../cmp/note-prev.cmp.js';
 
 export default {
     name: 'noteText',
-
     template: `
     <section class=note-text> 
           <div class="note-content">

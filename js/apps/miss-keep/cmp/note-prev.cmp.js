@@ -5,7 +5,6 @@ export default {
   name: 'notePrev',
   template: `
     <section @click="showtype()" class="note-prev flex column space-between center">
-
     <!-- <component v-bind:is="currentNoteType"></component> -->
 
       <!-- <div class="note-content">

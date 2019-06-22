@@ -3,11 +3,12 @@ import noteEditorColors from '../cmp/note-editor-colors.cmp.js';
 import notePrev from '../cmp/note-prev.cmp.js';
 
 export default {
-  name: 'noteText',
+    name: 'noteVideo',
 
-  template: `
-    <section class=note-text> 
-          <div class="note-content">
+    template: `
+    <section class=note-video> 
+
+            <div class="note-content">
         {{note.content}}
       </div> 
         <div class="notes-editor">
@@ -16,13 +17,13 @@ export default {
 </div>
     </section>
 `,
-  props: ['note'],
-  data() {
+    props: ['note'],
+data() {
     return {};
-  },
-  created() {},
-  destroyed() {},
-  computed: {},
-  methods: {},
-  components: { noteEditor, noteEditorColors, notePrev }
+},
+created() {},
+destroyed() {},
+computed: {},
+methods: {},
+components: { noteEditor, noteEditorColors, notePrev }
 };

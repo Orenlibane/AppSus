@@ -22,13 +22,13 @@ export default {
 
               
                     <transition name="slide-fade">
-    <div v-if='todoModal' class="  todo-model flex both-align-center column space-between">
+    <div v-if='todoModal' class="  todo-model flex column ">
             <h1>TODOS</h1>
                     <input type="text" v-model="newNote.todos.todo1" placeholder="ENTER YOUR TODO">
                     <input type="text" v-model="newNote.todos.todo2" placeholder="ENTER YOUR TODO">
                     <input type="text" v-model="newNote.todos.todo3" placeholder="ENTER YOUR TODO">
                 </div>
-      <transition>
+                </transition>
         </section>
 `,
   props: [],

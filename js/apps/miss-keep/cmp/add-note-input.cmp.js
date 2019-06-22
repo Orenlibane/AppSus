@@ -7,7 +7,7 @@ export default {
                 <input  v-model="newNote.content" v-if="noteTxt" type="text" placeholder="Please enter a text"/>
                 <input   v-model="newNote.picture" v-if="noteImg" type="text" placeholder="Enter Image URL"/>
                 <input   v-model="newNote.video" v-if="noteVideo" type="text" placeholder="Enter Video URL"/>
-                <!-- <input   v-model="audio" v-if="noteAudio" type="text" placeholder="Enter Image Url"/> -->
+                <input   v-model="audio" v-if="noteAudio" type="text" placeholder="Enter Audio"/>
                 <input   v-model="newNote.todos" v-if="noteTodos" type="text" placeholder="Enter Comma Seperated List"/>
                     
                     <i @click="changeNoteState('txt')"   class="fas fa-font"></i> 

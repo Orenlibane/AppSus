@@ -14,9 +14,9 @@ export default {
       <div class="note-content">
         <div v-if="note.content"> {{note.content}} </div>
         <img  v-if="note.picture"   :src='note.picture'/> 
-        <video width="120" height="140" controls v-if="note.video">
+        <video width="120" height="140" controls v-if="note.video" autoplay>
         <source :src='note.video' type="video/mp4">
-        <source :src='note.video' type="video/ogg">
+        <!-- <source :src='note.video' type="video/ogg"> -->
          Your browser does not support the video tag.
         </video>
 

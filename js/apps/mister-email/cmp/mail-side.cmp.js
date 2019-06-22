@@ -18,7 +18,6 @@ export default {
                <div><input v-model="newemail.subject" type="text" placeholder="Enter mail Subject"/>  </div> 
                 <div><input v-model="newemail.sendto" type="text" placeholder="Enter email to send to"/>  </div>
                 <textarea name="" id="" v-model="newemail.body"></textarea>
-                <div> here will come the edit text buttons <button @click="sendmail">SEND MAIL</button></div>
               </div>
         </div>
 

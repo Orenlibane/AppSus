@@ -18,8 +18,9 @@ export default {
         <span 
             @click="toggleIsRead('noToggle')" 
             
+            
             class="left subject"> 
-              <router-link :to="emailUrl">{{email.subject}}</router-link>  
+              <router-link :to="emailUrl">{{email.subject | snippet}}</router-link>  
         </span> 
         <span>{{email.sendAt}}</span>
         <i  @click.stop="deleteEmail(idx)" class="fas fa-trash-alt" ></i>

@@ -15,8 +15,7 @@ export default {
       <note-prev 
         v-for="(note,idx) in notes"
         :key="idx"
-        :note="note">
-
+        :note="note" >
       </note-prev>
         
       </div>

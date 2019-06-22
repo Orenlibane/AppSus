@@ -1,6 +1,13 @@
 import mainRoutes from './routes.js';
 const myRouter = new VueRouter({ routes: mainRoutes });
 
+
+// filter for email.subject 
+Vue.filter('snippet',function(value){
+  return value.slice(0,50);
+});
+
+
 var app = new Vue({
   el: '#app',
   created() {

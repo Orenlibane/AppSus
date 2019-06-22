@@ -1,5 +1,5 @@
 .slide-fade-enter-active {
-    transition: all .3s ease;
+    transition: all .5s ease;
 }
 
 .slide-fade-leave-active {
@@ -11,5 +11,21 @@
 
     {
     transform: translateY(-500px);
+    opacity: 0;
+}
+
+.slide-fade-left-enter-active {
+    transition: all .5s ease;
+}
+
+.slide-fade-left-leave-active {
+    transition: all .4s cubic-bezier(1.0, 0.5, 0.8, 1.0);
+}
+
+.slide-fade-left-enter, .slide-fade-left-leave-to
+/* .slide-fade-leave-active below version 2.1.8 */
+
+    {
+    transform: translateX(-500px);
     opacity: 0;
 }

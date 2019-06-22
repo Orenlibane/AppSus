@@ -7,9 +7,9 @@ export default {
             <i class="fas fa-search"></i>
             <i class="fas fa-hamburger"></i>
    <select v-model="filterBy.isRead" @change="emitFilter($event)">
-         <option>All</option>
-         <option>Read</option>
-        <option>UnRead</option>
+         <option value="All">All</option>
+         <option value="Read">Read</option>
+        <option value="UnRead">UnRead</option>
   </select>
        </div>
         </section>
@@ -30,8 +30,7 @@ export default {
   computed: {},
   methods: {
     emitFilter(event) {
-      this.filterBy.isRead = event.target.value
-      console.log(this.filterBy)
+      console.log(this.filterBy);
       this.$emit('filterapp', this.filterBy);
     }
   },

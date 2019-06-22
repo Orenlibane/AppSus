@@ -30,10 +30,6 @@ export default {
 
                   <!-- :filterdEmails ="emailsToShow" -->
 
-
-
-
-
       </mail-prev>
 
     </ul>
@@ -46,7 +42,7 @@ export default {
       emails: null,
       currentEmailsState: 1,
       filter: null,
-      temp:[]
+      temp: []
     };
   },
   created() {
@@ -62,68 +58,37 @@ export default {
   destroyed() {},
   computed: {
     filterdEmails: function() {
-      // if (!this.filter) return this.emails;
-      // return this.emails.filter(email => email.subject.includes(this.filter.txt))
-      
+      // debugger;
 
-      // if (!this.filter) return this.emails;
+      this.temp = this.emails;
 
-      // else if (this.filter.isRead === 'Read') {
-      //   return this.emails.filter(email => email.isRead === true)
-      // } else if (this.filter.isRead === 'UnRead') {
-      //   return this.emails.filter(email => email.isRead === false)
-      // } else if (this.filter.isRead === 'All') {
-      //   return this.emails.filter(email => email.isRead === false)
-      // }
-    
-      // if (!this.filter) return this.emails;
-
-       if (this.filter.isRead === 'Read') {
-        return this.emails.filter(email => email.isRead === true)
+      if (!this.filter || this.filter.isRead === 'All') {
+        if (!this.filter) {
+          this.temp = this.emails;
+        } else {
+          this.temp = this.emails.filter(email =>
+            email.subject.includes(this.filter.txt)
+          );
+        }
+      } else if (this.filter.isRead === 'Read') {
+        this.temp = this.emails.filter(
+          email => email.isRead && email.subject.includes(this.filter.txt)
+        );
       } else if (this.filter.isRead === 'UnRead') {
-        return this.emails.filter(email => email.isRead === false)
-      } else if (this.filter.isRead === 'All') {
-        return this.emails.filter(email => email.isRead === false)
+        this.temp = this.emails.filter(
+          email => !email.isRead && email.subject.includes(this.filter.txt)
+        );
       }
-
-     
-    //  if(this.filter.isRead === 'All'){
-    //    this.temp = this.temp = this.emails.filter(email => email.subject.includes(this.filter.txt))
-    //  }
-
-      // if (!this.filter) return this.emails;
-
-      // if (this.currentEmailsState === 1) {
-      //   return this.emails.filter(email => (!email.isDeleted) && (email.subject.includes(this.filter.txt)));
-      // } else if (this.currentEmailsState === 2) {
-      //   return this.emails.filter(email => (email.isSent) && (email.subject.includes(this.filter.txt)));
-      // } else if (this.currentEmailsState === 3) {
-      //   return this.emails.filter(email => (email.isDeleted) && (email.subject.includes(this.filter.txt)));
-      // }
-
       if (this.currentEmailsState === 1) {
-        return this.emails.filter(email => !email.isDeleted);
+        return this.temp.filter(email => !email.isDeleted);
       } else if (this.currentEmailsState === 2) {
-        return this.emails.filter(email => email.isSent);
+        return this.temp.filter(email => email.isSent);
       } else if (this.currentEmailsState === 3) {
-        return this.emails.filter(email => email.isDeleted);
+        return this.temp.filter(email => email.isDeleted && !email.isSent);
       }
-    },
-
-      // emailsToShow() {
-
-      //   if (!this.filter) return this.emails;
-      //   console.log('I am here 35', this.filter.txt);
-      //   console.log('I am here 75', this.emails);
-
-    //   return this.emails.filter(email => email.subject.includes(this.filter.txt))
-    // }
-    
-  
+    }
   },
   methods: {
-    pickedEmails(emailsType) {},
-
     setFilterrr(filterBy) {
       this.filter = filterBy;
     }

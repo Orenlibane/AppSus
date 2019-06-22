@@ -1,33 +1,27 @@
+import headerCmp from '../main-cmp/header.cmp.js';
+
 export default {
   name: 'HomePage',
   template: `
     <section class="home-page ">
-     
+    <headerCmp></headerCmp>
     <transition name="slide-fade">
     <h1 v-if="showTitle" class="main-title flex both-align-center"> Welcome to AppSus</h1>
     </transition>
 
-    <transition name="slide-fade">
-
-    <nav v-if="showNav" class="main-routes-nav center">
-                    <router-link exact to="/">Home</router-link> | 
-                    <router-link to="/misterEmail">Mister-Email</router-link> |
-                    <router-link to="/missKeep">Miss-Keep</router-link> 
-                    <!-- <router-link to="/miss-books">Miss-books</router-link>  -->
-    </nav>
-    </transition>
+    
 
 
 
   <div class="apps-icons flex both-align-center">
   <transition name="slide-fade-left">
-    <img v-if="icon1Show" src="../../../../img/gmail.svg"/>
+  <router-link v-if="icon1Show" to="/misterEmail">   <img  src="../../../../img/gmail.svg"/> </router-link>  
     </transition>
     <transition name="slide-fade-left">
-      <img  v-if="icon2Show" src="../../../../img/notepad.svg"/>
+    <router-link v-if="icon2Show"  to="/missKeep"><img  src="../../../../img/notepad.svg"/></router-link> 
     </transition>
       <transition name="slide-fade-left">        
-        <img  v-if="icon3Show" src="../../../../img/books.svg"/>
+      <router-link v-if="icon3Show" to="/miss-books"">  <img   src="../../../../img/books.svg"/></router-link> 
       </transition>
 </div>
 
@@ -38,7 +32,6 @@ export default {
   data() {
     return {
       showTitle: false,
-      showNav: false,
       icon1Show: false,
       icon2Show: false,
       icon3Show: false
@@ -55,19 +48,17 @@ export default {
       setTimeout(() => {
         this.showTitle = true;
       }, 1000);
-      setTimeout(() => {
-        this.showNav = true;
-      }, 1500);
+
       setTimeout(() => {
         this.icon1Show = true;
-      }, 2000);
+      }, 1500);
       setTimeout(() => {
         this.icon2Show = true;
-      }, 2500);
+      }, 2000);
       setTimeout(() => {
         this.icon3Show = true;
-      }, 3000);
+      }, 2500);
     }
   },
-  components: {}
+  components: { headerCmp }
 };

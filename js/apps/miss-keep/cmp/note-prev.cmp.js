@@ -1,6 +1,6 @@
 import noteEditor from '../cmp/note-editor.cmp.js';
 import noteEditorColors from '../cmp/note-editor-colors.cmp.js';
-import noteAudioCmp from './note.audio.cmp.js';
+// import noteAudioCmp from './note.audio.cmp.js';
 
 // import noteImg from './note-img.cmp.js';
 // import noteTxt from './note-text.cmp.js';

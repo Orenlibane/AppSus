@@ -1,6 +1,6 @@
 .global-header {
-    /* width: 100vw; */
-    height: 15vh;
+    width: 90vw;
+    height: 8vh;
     /* background: url('../img/color-panciels.png'); */
     background-position: 100% 5%;
     background-size: cover;
@@ -14,15 +14,15 @@
     background: url("../img/logo.png");
     background-position: center;
     background-size: cover;
-    width: 500px;
-    height: 350px;
+    width: 250px;
+    height: 250px;
 }
 
 .global-header .appsus-nav {
-    height: 100px;
+    height: 75px;
     max-width: 300px;
     position: absolute;
-    right: 4%;
+    right: 6%;
     top: 0;
     border: 2px black solid;
     background: white;

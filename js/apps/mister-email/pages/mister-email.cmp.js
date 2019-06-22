@@ -2,6 +2,7 @@ import headerCmp from '../../../main-cmp/header.cmp.js';
 import sideNav from '../cmp/mail-side.cmp.js';
 import mailList from '../cmp/mail-list.cmp.js';
 import mailDet from '../pages/email-det.cmp.js';
+import footerCmp from '../../../main-cmp/footer.cmp.js';
 
 import mailservice from '../services/mailservice.js';
 
@@ -16,6 +17,7 @@ export default {
         <!-- <router-view></router-view>  -->
         
       </div>
+      <footer-cmp></footer-cmp>
     </section>
 `,
   props: [],
@@ -30,5 +32,5 @@ export default {
   destroyed() {},
   computed: {},
   methods: {},
-  components: { headerCmp, sideNav, mailList, mailDet }
+  components: { headerCmp, sideNav, mailList, mailDet, footerCmp }
 };

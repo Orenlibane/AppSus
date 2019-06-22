@@ -13,6 +13,7 @@
 @import "./apps/mister-email/mail-prev.css";
 @import "./apps/mister-email/mail-det.css";
 @import "./header.css";
+@import "./footer.css";
 @import "./vue-animations.css";
 @import "./helpers-css.css";
 /* @font-face {
@@ -51,9 +52,9 @@
 }
 
 .apps-icons img {
-    width: 100px;
-    height: 100px;
-    margin: 0 20px;
+    width: 300px;
+    height: 300px;
+    margin: 0 100px;
 }
 
 .apps-icons {
@@ -64,6 +65,10 @@
 .main-routes-nav {
     font-size: 2rem;
     padding-top: 50px;
+}
+
+.a {
+    max-width: 300px;
 }
 
 .main-routes-nav a {

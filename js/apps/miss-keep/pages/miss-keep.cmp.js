@@ -1,6 +1,7 @@
 import headerCmp from '../../../main-cmp/header.cmp.js';
 import noteList from '../cmp/note-list.cmp.js';
 import notePrev from '../cmp/note-prev.cmp.js';
+import footerCmp from '../../../main-cmp/footer.cmp.js';
 
 export default {
   name: 'Misskeep',
@@ -8,7 +9,7 @@ export default {
       <section class="miss-keep"> 
       <header-cmp></header-cmp>
         <note-list></note-list>
-        
+        <footerCmp></footerCmp>
       </section>
   `,
   props: [],
@@ -19,5 +20,5 @@ export default {
   destroyed() {},
   computed: {},
   methods: {},
-  components: { headerCmp, noteList, notePrev }
+  components: { headerCmp, noteList, notePrev, footerCmp }
 };

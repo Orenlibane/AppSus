@@ -19,16 +19,37 @@
 }
 
 .home-page {
-    background: black;
+    background: url('../img/texture2.jpg');
+    background-position: center;
+    background-size: cover;
     border: 5px black solid;
     width: 100vw;
     height: 100vh;
 }
 
-.main-title {
+.home-page h1 {
     font-size: 3rem;
     padding-top: 50px;
-    color: white
+    color: black;
+    text-shadow: 2px 2px 2px #FFFFFF;
+    background: rgb(230, 230, 230, 0.7);
+    border-radius: 10px;
+    width: 500px;
+    height: 100px;
+    margin: 10px auto;
+    border: 2px black solid;
+    padding: 0;
+}
+
+.apps-icons img {
+    width: 100px;
+    height: 100px;
+    margin: 0 20px;
+}
+
+.apps-icons {
+    width: 97vw;
+    height: 50vh;
 }
 
 .main-routes-nav {

@@ -29,10 +29,6 @@ export default {
 
                   <!-- :filterdEmails ="emailsToShow" -->
 
-
-
-
-
       </mail-prev>
 
     </ul>

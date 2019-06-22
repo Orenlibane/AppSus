@@ -3,7 +3,7 @@ import noteEditor from '../cmp/note-editor.cmp.js';
 import noteEditorColors from '../cmp/note-editor-colors.cmp.js';
 
 export default {
-  name: 'Imgnote',
+  name: 'NoteImg',
   template: `
     <section class="img-note"> 
 

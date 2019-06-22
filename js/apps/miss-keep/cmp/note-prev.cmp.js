@@ -1,20 +1,23 @@
 import noteEditor from '../cmp/note-editor.cmp.js';
 import noteEditorColors from '../cmp/note-editor-colors.cmp.js';
-import imgNote from './img-note.cmp';
+// import noteImg from './note-img.cmp.js';
+// import noteTxt from './note-text.cmp.js';
 
 export default {
   name: 'notePrev',
   template: `
     <section @click="showtype()" class="note-prev flex column space-between center">
 
-    <component v-bind:is="currentNoteType"></component>
+    <!-- <component :is="currentNoteType"></component> -->
 
-      <!-- <div class="note-content">
-        {{note.content}}
+      <div class="note-content">
+        <div v-if="note.content"> {{note.content}} </div>
+        <img  v-if="note.picture"   :src='note.picture'/> 
       </div> 
-        <div class="notes-editor">
+      
+      <div class="notes-editor">
           <note-Editor></note-Editor>
-          <note-editor-colors v-if="show-colors"></note-editor-colors> -->
+          <note-editor-colors v-if="showColors"></note-editor-colors>
         </div>
     </section>
 
@@ -22,13 +25,19 @@ export default {
 `,
   props: ['note'],
   data() {
-    return {};
+    return {
+      showColors: false,
+      noteImg: note.picture
+    };
   },
   created() {},
   destroyed() {},
   computed: {
     currentNoteType() {
       return note.type;
+    },
+    notePicture() {
+      return note.picture;
     }
   },
   methods: {
@@ -36,5 +45,5 @@ export default {
       console.log(this.note.type);
     }
   },
-  components: { noteEditor, noteEditorColors, imgNote }
+  components: { noteEditor, noteEditorColors }
 };

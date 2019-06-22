@@ -17,3 +17,8 @@
     padding-bottom: 10%;
     padding-left: 20%
 }
+
+.note-prev img {
+    max-height: 150px;
+    max-width: 300px;
+}

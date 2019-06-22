@@ -5,10 +5,10 @@ export default {
     <section class="input-container "> 
         
                 <input  v-model="newNote.content" v-if="noteTxt" type="text" placeholder="Please enter a text"/>
-                <input   v-model="newNote.content" v-if="noteImg" type="text" placeholder="Enter Image URL"/>
-                <input   v-model="newNote.content" v-if="noteVideo" type="text" placeholder="Enter Video URL"/>
-                <!-- <input   v-model="inputValue" v-if="noteAudio" type="text" placeholder="Enter Image Url"/> -->
-                <input   v-model="newNote.content" v-if="noteTodos" type="text" placeholder="Enter Comma Seperated List"/>
+                <input   v-model="newNote.picture" v-if="noteImg" type="text" placeholder="Enter Image URL"/>
+                <input   v-model="newNote.video" v-if="noteVideo" type="text" placeholder="Enter Video URL"/>
+                <!-- <input   v-model="audio" v-if="noteAudio" type="text" placeholder="Enter Image Url"/> -->
+                <input   v-model="newNote.todos" v-if="noteTodos" type="text" placeholder="Enter Comma Seperated List"/>
                     
                     <i @click="changeNoteState('txt')"   class="fas fa-font"></i> 
                     <i @click="changeNoteState('img')"   class="fas fa-image"></i>
@@ -31,7 +31,10 @@ export default {
         content: null,
         type: null,
         color: null,
-        picture: null
+        picture: null,
+        video: null,
+        todos: null,
+        audio: null
       }
     };
   },
@@ -51,25 +54,25 @@ export default {
       this.noteTodos = false;
       if (state === 'txt') {
         this.noteTxt = true;
-        this.newNote.type = 'txt';
+        this.newNote.type = 'noteTxt';
       }
       if (state === 'img') {
         this.noteImg = true;
-        this.newNote.type = 'img';
+        this.newNote.type = 'noteImg';
       }
 
       if (state === 'video') {
         this.noteVideo = true;
-        this.newNote.type = 'video';
+        this.newNote.type = 'noteVideo';
       }
       if (state === 'audio') {
         this.noteAudio = true;
-        this.newNote.type = 'audio';
+        this.newNote.type = 'noteAudio';
       }
 
       if (state === 'todos') {
         this.noteTodos = true;
-        this.newNote.type = 'toods';
+        this.newNote.type = 'noteToods';
       }
     },
     emitNoteValue() {

@@ -8,6 +8,7 @@ export default {
       <section class="miss-keep"> 
       <header-cmp></header-cmp>
         <note-list></note-list>
+        
       </section>
   `,
   props: [],

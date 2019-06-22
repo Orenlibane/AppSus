@@ -1,13 +1,34 @@
 .note-prev {
     height: 350px;
     width: 350px;
-    margin: 10px 10px;
+    margin: 10px 30px;
     font-size: 1.3rem;
     background: rgb(221, 221, 39);
+    transition: all 0.3s ease-out;
     /* background: url("../../../img/not-pinned-note.png");
     background-position: center;
     background-size: contain;
     background-repeat: no-repeat; */
+}
+
+.note-prev:nth-child(even) {
+    background: rgb(156, 105, 156);
+    transform: rotate(4deg);
+    position: relative;
+    top: 5px;
+}
+
+.note-prev:nth-child(odd) {
+    transform: rotate(-10deg);
+    position: relative;
+    top: -5px;
+}
+
+.note-prev:hover {
+    box-shadow: 10px 10px 7px rgba(0, 0, 0, .7);
+    transform: scale(1.15);
+    position: relative;
+    z-index: 5;
 }
 
 .note-content {

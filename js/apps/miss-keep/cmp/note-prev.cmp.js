@@ -14,22 +14,22 @@ export default {
       <div class="note-content">
         <div v-if="note.content"> {{note.content}} </div>
         <img  v-if="note.picture"   :src='note.picture'/> 
-        <video  v-if="note.video" width="120" height="140" controls>
-        <source :src='note.video' type="video/mp4">
+        <video  v-if="note.video" width="120" height="140" controls autoplay>
+        <source  :src='note.video' type="video/mp4">
         <!-- <source :src='note.video' type="video/ogg"> -->
          Your browser does not support the video tag.
         </video>
 
-        <audio controls width="20" height="40" v-if="note.audio">
+        <!-- <audio controls width="20" height="40" v-if="note.audio">
        <source src="horse.ogg" type="audio/ogg">
         <source src="horse.mp3" type="audio/mpeg">
           Your browser does not support the audio element.
-         </audio>
+         </audio> -->
       </div> 
       
       <div class="notes-editor">
-          <note-Editor></note-Editor>
-          <note-editor-colors v-if="showColors"></note-editor-colors>
+          <!-- <note-Editor  ></note-Editor>
+          <note-editor-colors v-if="showColors"></note-editor-colors> -->
         </div>
     </section>
 
@@ -39,26 +39,28 @@ export default {
   data() {
     return {
       showColors: false,
-      noteImg: note.picture,
-      noteVideo: note.video,
-      noteAudio: note.audio
+      // noteImg: note.picture,
+      // noteVideo: note.video,
+      // noteAudio: note.audio,
+      isBold: false,
+      color: null
     };
   },
-  created() { },
-  destroyed() { },
+  created() {},
+  destroyed() {},
   computed: {
     currentNoteType() {
       return note.type;
-    },
-    notePicture() {
-      return note.picture;
-    },
-    noteVideo() {
-      return note.video;
-    },
-    noteAudio(){
-      return note.audio;
     }
+    // notePicture() {
+    //   return note.picture;
+    // },
+    // noteVideo() {
+    //   return note.video;
+    // },
+    // noteAudio() {
+    //   return note.audio;
+    // }
   },
   methods: {
     showtype() {

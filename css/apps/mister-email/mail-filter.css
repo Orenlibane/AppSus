@@ -32,7 +32,8 @@
 }
 
 .mail-filter {
-    background: gray;
+    background: url('../../../img/wood-board.png');
+    background-position: 50% 27%;
     border-bottom: 2px black solid;
     padding: 10px 20px;
 }

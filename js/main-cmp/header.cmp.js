@@ -1,16 +1,19 @@
 import mailCount from '../apps/mister-email/cmp/mail-count.cmp.js';
+import noteCount from '../apps/miss-keep/cmp/note-count.cmp.js';
 
 export default {
   name: 'Header',
   template: `
     <section class="global-header flex  align-center space-between">
-      <div class="flex align-center"><div class="logo"> </div> </div> 
-      <div class="counters-container">
+    <div class="logo"> </div>
+      <div class="flex align-center"> 
+      <div class="counters-container ">
         <ul class="flex clean-list space-between">
-          <li class="flex column align-center">  <img  src="../../../../img/gmail.svg"/><mail-count> </mail-count></li>
-          <li class="flex column align-center"> <img  src="../../../../img/notepad.svg"/><mail-count> </mail-count></li>
-          <li class="flex column align-center">  <img  src="../../../../img/books.svg"/><mail-count> </mail-count></li>
+          <li class="flex  align-center">  <img  src="../../../../img/gmail.svg"/><mail-count> </mail-count></li>
+          <li class="flex  align-center"> <img  src="../../../../img/notepad.svg"/><note-count> </note-count></li>
+          <li class="flex  align-center">  <img  src="../../../../img/books.svg"/>X</li>
         </ul>
+      </div>
       </div>
       
             <transition name="slide-fade">
@@ -43,5 +46,5 @@ export default {
       this.navOpen = !this.navOpen;
     }
   },
-  components: { mailCount }
+  components: { mailCount, noteCount }
 };

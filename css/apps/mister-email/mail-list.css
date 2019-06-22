@@ -64,11 +64,13 @@ li.emails-titles {
 
 .fa-trash-alt {
     padding-right: 20px;
+    cursor: pointer;
 }
 
 .mail-list .fa-star {
     color: rgb(223, 161, 46);
     margin-right: 10px;
+    cursor: pointer;
 }
 
 .mail-list li.mail-prev.read {

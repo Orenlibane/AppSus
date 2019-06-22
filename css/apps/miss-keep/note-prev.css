@@ -1,14 +1,19 @@
 .note-prev {
     height: 350px;
-    width: 350px;
-    margin: 10px 30px;
-    font-size: 1.3rem;
+    width: 300px;
+    margin: 50px 30px;
+    font-size: 1.8rem;
+    font-weight: bold;
     background: rgb(221, 221, 39);
     transition: all 0.3s ease-out;
     /* background: url("../../../img/not-pinned-note.png");
     background-position: center;
     background-size: contain;
     background-repeat: no-repeat; */
+}
+
+.note-prev div {
+    font-family: "Reenie Beanie", arial, sans-serif
 }
 
 .note-prev:nth-child(even) {
@@ -44,6 +49,7 @@
 }
 
 .note-prev img {
-    max-height: 150px;
-    max-width: 300px;
+    max-height: 250px;
+    max-width: 250px;
+    margin: 0 auto;
 }

@@ -1,6 +1,7 @@
 import noteEditor from '../cmp/note-editor.cmp.js';
 import noteEditorColors from '../cmp/note-editor-colors.cmp.js';
 import noteAudioCmp from './note.audio.cmp.js';
+
 // import noteImg from './note-img.cmp.js';
 // import noteTxt from './note-text.cmp.js';
 
@@ -11,10 +12,10 @@ export default {
 
     <!-- <component :is="currentNoteType"></component> -->
 
-      <div class="note-content">
+      <div class="note-content flex both-align-center">
         <div v-if="note.content"> {{note.content}} </div>
         <img  v-if="note.picture"   :src='note.picture'/> 
-        <video  v-if="note.video" width="120" height="140" controls autoplay>
+        <video  v-if="note.video" width="220" height="200" controls autoplay>
         <source  :src='note.video' type="video/mp4">
         <!-- <source :src='note.video' type="video/ogg"> -->
          Your browser does not support the video tag.
@@ -28,8 +29,8 @@ export default {
       </div> 
       
       <div class="notes-editor">
-          <!-- <note-Editor  ></note-Editor>
-          <note-editor-colors v-if="showColors"></note-editor-colors> -->
+          <note-Editor  ></note-Editor>
+          <note-editor-colors v-if="showColors"></note-editor-colors>
         </div>
     </section>
 

@@ -29,13 +29,13 @@
 }
 
 .note-list {
-    height: 100vh;
+    height: 100%;
     /* overflow: hidden; */
     background: url('../../../img/corkboard.jpg');
 }
 
 .no-pinned-notes {
-    height: 60vw;
+    /* height: 100vh; */
     display: flex;
     justify-content: center;
 }

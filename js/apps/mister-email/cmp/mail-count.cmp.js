@@ -6,8 +6,8 @@ export default {
 
   template: `
     <section class="mail-count flex  both-align-center"> 
-                <span>Email Count </span>
-                <span>{{mailsToReadShow}} / {{emails}}</span>
+                <span>Email Count: </span>
+                <span class="count">{{mailsToReadShow}} / {{emails}}</span>
     </section>
 `,
   props: [],

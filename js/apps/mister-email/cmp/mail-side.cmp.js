@@ -13,10 +13,13 @@ export default {
                 <li :class="{picked:state.sent}" class="flex flex-space-around" @click="sendPickedEmails(2)"><i class="fas fa-share"></i>Sent</li>
                 <li :class="{picked:state.deleted}" class="flex flex-space-around" @click="sendPickedEmails(3)"><i class="fas fa-trash"></i>Deleted</li>
               </ul>
+
+              <transition name="slide-fade">
+
               <div class="send-modal" v-if="sendmodal">
                 <div class="flex space-between send-mail-head"> <span>  New Messege </span> <span><i @click=showSendMailModal class="fas fa-times"></i></span> </div>
             <div class="flex">
-              <button>Send Mail:</button>
+              <button @click="sendmail">Send Mail:</button>
               <div class="flex column send-mail-inputs">
                 <div><input v-model="newemail.subject" type="text" placeholder="Enter mail Subject"/>  </div> 
                 <div><input v-model="newemail.sendto" type="text" placeholder="Enter email to send to"/>  </div>
@@ -24,6 +27,8 @@ export default {
                 </div>
                 <textarea name="" id="" v-model="newemail.body" placeholder="Enter your email here:"></textarea>
               </div>
+              
+              </transition>
         </div>
 
     </section>
@@ -44,14 +49,7 @@ export default {
         subject: '',
         name: 'oren&lior',
         isRead: true,
-        sendAt:
-          new Date().getMonth() +
-          '-' +
-          new Date().getDay() +
-          ':' +
-          new Date().getHours() +
-          ':' +
-          new Date().getMinutes(),
+        sendAt: new Date().getHours() + ':' + new Date().getMinutes(),
         isDeleted: false,
         sendto: '',
         isSent: true

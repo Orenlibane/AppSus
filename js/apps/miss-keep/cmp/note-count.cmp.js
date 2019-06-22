@@ -4,8 +4,8 @@ export default {
   name: 'TextCount',
   template: `
        <section class="text-count flex  both-align-center"> 
-                <span>Notes Count </span>
-                <span>{{notesToFinishShow}} / {{notes}}</span>
+                <span>Notes Count: </span>
+                <span class="count">  {{notesToFinishShow}}/{{notes}}</span>
     </section>
 `,
   props: [],

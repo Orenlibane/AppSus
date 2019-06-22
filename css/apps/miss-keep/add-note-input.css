@@ -30,6 +30,20 @@
     margin-top: 20px;
 }
 
+.todo-model img {
+    height: 30px;
+    width: 30px;
+    margin-left: 5px;
+}
+
+.input-container .todo-model button {
+    font-size: 1rem;
+    height: 30px;
+    width: 130px;
+    margin-top: 5px;
+    outline: none;
+}
+
 .todo-model input {
     margin: 0 auto;
     margin-top: 10px;

@@ -15,9 +15,14 @@ export default {
               </ul>
               <div class="send-modal" v-if="sendmodal">
                 <div class="flex space-between send-mail-head"> <span>  New Messege </span> <span><i @click=showSendMailModal class="fas fa-times"></i></span> </div>
-               <div><input v-model="newemail.subject" type="text" placeholder="Enter mail Subject"/>  </div> 
+            <div class="flex">
+              <button>Send Mail:</button>
+              <div class="flex column send-mail-inputs">
+                <div><input v-model="newemail.subject" type="text" placeholder="Enter mail Subject"/>  </div> 
                 <div><input v-model="newemail.sendto" type="text" placeholder="Enter email to send to"/>  </div>
-                <textarea name="" id="" v-model="newemail.body"></textarea>
+                </div>
+                </div>
+                <textarea name="" id="" v-model="newemail.body" placeholder="Enter your email here:"></textarea>
               </div>
         </div>
 

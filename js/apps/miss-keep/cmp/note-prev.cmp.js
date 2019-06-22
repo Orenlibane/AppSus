@@ -4,11 +4,16 @@ import noteEditorColors from '../cmp/note-editor-colors.cmp.js';
 export default {
   name: 'notePrev',
   template: `
-    <section class="note-prev flex column space-between center"> 
+    <section class="note-prev flex column space-between center">
+
+    <component> </component>
+
+      <!-- <div class="note-content">
         {{note.content}}
-        <div>
-        <note-Editor></note-Editor>
-        <note-editor-colors></note-editor-colors>
+      </div> 
+        <div class="notes-editor">
+          <note-Editor></note-Editor>
+          <note-editor-colors v-if="show-colors"></note-editor-colors> -->
         </div>
     </section>
 

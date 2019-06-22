@@ -4,9 +4,9 @@ import noteEditorColors from '../cmp/note-editor-colors.cmp.js';
 export default {
   name: 'notePrev',
   template: `
-    <section class="note-prev flex column space-between center">
+    <section @click="showtype()" class="note-prev flex column space-between center">
 
-    <component> </component>
+    <!-- <component v-bind:is="currentNoteType"></component> -->
 
       <!-- <div class="note-content">
         {{note.content}}
@@ -25,7 +25,15 @@ export default {
   },
   created() {},
   destroyed() {},
-  computed: {},
-  methods: {},
+  computed: {
+    currentNoteType() {
+      return note.type;
+    }
+  },
+  methods: {
+    showtype() {
+      console.log(this.note.type);
+    }
+  },
   components: { noteEditor, noteEditorColors }
 };

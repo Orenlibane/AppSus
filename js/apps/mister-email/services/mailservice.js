@@ -44,7 +44,7 @@ var emailsDB = [
     sendAt: '01-09:10:25',
     isDeleted: false,
     sendto: '',
-    isSent: true,
+    isSent: false,
     isDone: true,
     isFav: false
   },
@@ -58,7 +58,7 @@ var emailsDB = [
     sendAt: '07-09:07:26',
     isDeleted: false,
     sendto: '',
-    isSent: true,
+    isSent: false,
     isDone: true,
     isFav: true
   },
@@ -87,7 +87,7 @@ var emailsDB = [
     sendAt: '08-25:10:00',
     isDeleted: true,
     sendto: '',
-    isSent: true,
+    isSent: false,
     isDone: false,
     isFav: false
   },
@@ -129,7 +129,7 @@ var emailsDB = [
     sendAt: '08-03:10:43',
     isDeleted: false,
     sendto: '',
-    isSent: true,
+    isSent: false,
     isDone: true,
     isFav: true
   },
@@ -144,7 +144,7 @@ var emailsDB = [
     sendAt: '01-24:06:33',
     isDeleted: true,
     sendto: '',
-    isSent: true,
+    isSent: false,
     isDone: true,
     isFav: true
   },
@@ -159,7 +159,7 @@ var emailsDB = [
     sendAt: '06-08:08:10',
     isDeleted: true,
     sendto: '',
-    isSent: true,
+    isSent: false,
     isDone: true,
     isFav: true
   },
@@ -173,7 +173,7 @@ var emailsDB = [
     sendAt: '05-21:01:22',
     isDeleted: false,
     sendto: '',
-    isSent: true,
+    isSent: false,
     isDone: true,
     isFav: true
   }
@@ -186,10 +186,6 @@ function getById(emailId) {
 
 function updateDB(newEmail) {
   emailsDB.unshift(newEmail);
-  storageService.store(MAIL_KEY, emailsDB);
-}
-
-function saveDb() {
   storageService.store(MAIL_KEY, emailsDB);
 }
 

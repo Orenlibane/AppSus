@@ -21,7 +21,7 @@ export default {
     <router-link v-if="icon2Show"  to="/missKeep"><img  src="img/notepad.svg"/></router-link> 
     </transition>
       <transition name="slide-fade-left">        
-      <router-link v-if="icon3Show" to="/miss-books"">  <img   src="img/books.svg"/></router-link> 
+      <router-link v-if="icon3Show" to="/miss-books">  <img   src="img/books.svg"/></router-link> 
       </transition>
 </div>
 

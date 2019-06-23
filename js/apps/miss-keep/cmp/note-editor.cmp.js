@@ -12,8 +12,9 @@ export default {
             <i class="fas fa-palette"></i>
             <i class="fas fa-thumbtack"></i> 
             <i class="fas fa-check"></i>
-            <i @click="updateNote" v-if="note.content" class="fas fa-pencil-alt"></i>
             <i @click="copyNote(note)" class="fas fa-copy"></i>
+            <i v-if="note.content" class="fas fa-envelope-open-text"></i>
+            <i @click="updateNote" v-if="note.content" class="fas fa-pencil-alt"></i>
         </div> 
 
         <transition name="appear">

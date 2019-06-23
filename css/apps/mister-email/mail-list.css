@@ -56,9 +56,15 @@ li.emails-titles {
     width: 20vw;
 }
 
+.fa-envelope-open , .fa-envelope{
+margin-right: 10px;
+}
+
+
 .fa-trash-alt {
     padding-right: 20px;
     cursor: pointer;
+    margin-left: 10px;
 }
 
 .mail-list .fa-star {

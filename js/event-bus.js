@@ -6,7 +6,4 @@ export const EMAILS_DB = 'emails-db';
 
 export const NOTE_EMAIL = 'note-email';
 
-// export const TEST = 'test';
-
-
 export default bus;

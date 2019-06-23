@@ -19,10 +19,10 @@ export default {
   computed: {},
   methods: {
     useColors(ev) {
-    // this.noteColor= true;
-      // var noteColor = ev.target.dataset.color;
-      // console.log(ev.target.dataset.color);
-      // this.$emit('noteColor', noteColor);
+    this.noteColor= true;
+      var noteColor = ev.target.dataset.color;
+      console.log(ev.target.dataset.color);
+      this.$emit('noteColor', noteColor);
     }
   },
   components: {}

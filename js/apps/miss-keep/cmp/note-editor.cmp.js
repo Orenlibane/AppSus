@@ -35,8 +35,6 @@ export default {
   data() {
     return {
       editNote: false,
-      // sendmodal: false,
-
     };
   },
   created() {},
@@ -58,7 +56,6 @@ export default {
     },
     movingNote(note){
       eventBus.$emit(NOTE_EMAIL,note); 
-      console.log('kjhkj',note);
 
       this.$router.push('/misterEmail')
       // note.sendmodal = true;

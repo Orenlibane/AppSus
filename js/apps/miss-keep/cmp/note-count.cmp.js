@@ -23,9 +23,6 @@ export default {
       return !note.isDone;
     });
     this.notesToFinishShow = this.notesToFinish.length;
-
-    console.log(this.notes);
-    console.log(this.notesToFinish);
   },
   destroyed() {},
   computed: {},

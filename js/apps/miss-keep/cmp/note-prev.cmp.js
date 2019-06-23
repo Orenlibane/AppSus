@@ -16,8 +16,6 @@ export default {
     <component :note="note" :idx="idx" :is="currentNoteType"></component>
 
     </section>
-
-
 `,
   props: ['note', 'idx'],
   data() {

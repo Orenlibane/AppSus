@@ -11,8 +11,6 @@ export default {
   name: 'mailList',
   template: `
     <section class="mail-list">
-
-      
       <ul>
           <mail-filter @filterapp="setFilterrr"></mail-filter>
         <li class="flex space-between emails-titles"> 
@@ -45,8 +43,6 @@ export default {
   created() {
     console.log('loaded the mail-list');
     this.emails = mailservice.query();
-    // this.emails =  this.filterdEmails;
-
     console.log(this.emails);
     eventBus.$on(PICKED_EMAIL_STATE, state => {
       this.currentEmailsState = state;
@@ -56,13 +52,6 @@ export default {
   computed: {
     filterdEmails: function () {
       this.temp = this.emails;
-
-      // if (!this.filter || this.filter.isFav === 'false') {
-      //   this.temp = this.emails
-      // } else if (this.filter.isFav === 'true'){
-          
-      // }
-
       if (!this.filter || this.filter.isRead === 'All') {
         if (!this.filter) {
           this.temp = this.emails;
@@ -88,9 +77,6 @@ export default {
         return this.temp.filter(email => email.isDeleted && !email.isSent);
       }
     }
-
-
-
   },
   methods: {
     setFilterrr(filterBy) {

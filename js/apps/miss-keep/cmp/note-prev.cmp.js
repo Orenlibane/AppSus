@@ -10,7 +10,7 @@ export default {
   name: 'notePrev',
   template: `
     <section class="note-prev flex column flex-space-around center">
-   
+
     <component :note="note" :idx="idx" :is="currentNoteType"></component>
 
     </section>

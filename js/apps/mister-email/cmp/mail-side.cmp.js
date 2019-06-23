@@ -1,6 +1,6 @@
 import utilService from '../../../main-service/util-service.js';
 import mailService from '../services/mailservice.js';
-import eventBus, { PICKED_EMAIL_STATE } from '../../../event-bus.js';
+import eventBus, { PICKED_EMAIL_STATE, NOTE_EMAIL } from '../../../event-bus.js';
 // :class="[email.isFav? 'fas' : 'far']"
 export default {
   name: 'mailSide',
@@ -36,7 +36,9 @@ export default {
   props: [],
   data() {
     return {
-      sendmodal: false,
+      sendmodal: true,
+      // sendmodal: false,
+
       pickedEmails: 1,
       state: {
         mails: true,
@@ -56,11 +58,22 @@ export default {
       }
     };
   },
-  created() {},
+  created() {
+    eventBus.$on(NOTE_EMAIL, note => {
+      // console.log(this.sendmodal);
+      // console.log(note);
+      // this.newemail.body = note.content
+      // this.sendmodal = !this.sendmodal
+      // console.log(this.sendmodal);
+      this.newemail.body = note.content;
+      console.log(this.newemail.body);
+
+    })
+  },
   destroyed() {},
   computed: {},
   methods: {
-    showSendMailModal() {
+    showSendMailModal() {      
       this.sendmodal = !this.sendmodal;
     },
     sendmail() {
@@ -91,6 +104,9 @@ export default {
       if (emailsType === 2) this.state.sent = true;
       if (emailsType === 3) this.state.deleted = true;
     }
+  },
+  mounted(){
+ 
   },
   components: {}
 };

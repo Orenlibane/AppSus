@@ -6,6 +6,7 @@ export default {
 
   template: `
     <section class="note-video flex column flex-space-around" > 
+    <i v-if="note.isPin" class="fas fa-thumbtack"></i> 
 
             <div class="note-content ">
             <!-- <iframe width="500" height="299" :src=note.video> </iframe> -->
@@ -18,7 +19,7 @@ export default {
            </div> 
         <div class="notes-editor">
         <note-Editor :note="note" :idx="idx"></note-Editor>
-          <!-- <note-editor-colors ></note-editor-colors> -->
+          <note-editor-colors ></note-editor-colors>
 </div>
     </section>
 `,

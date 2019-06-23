@@ -1,11 +1,12 @@
 import todoService from '../services/todo.service.js';
 
-
 export default {
-    name: "note-todo",
+  name: 'note-todo',
 
-    template: `
+  template: `
     <section class=note-todo> 
+    <i v-if="note.isPin" class="fas fa-thumbtack pinned-note"></i> 
+
             <h3>Todos</h3>
       <ul>
                 <li v-for="(todo, i) in todos" @click="toggleTodo(todo)" :class="{'todo-done' : todo.isDone}">
@@ -21,36 +22,36 @@ export default {
             </div>
     </section>
 `,
-props: [],
-data() {
+  props: [],
+  data() {
     return {
-        todos: todoService.query(),
-        newTodo: todoService.getEmptyTodo()
+      todos: todoService.query(),
+      newTodo: todoService.getEmptyTodo()
     };
-},
-created() {},
-destroyed() {},
-computed: {},
-methods: {
+  },
+  created() {},
+  destroyed() {},
+  computed: {},
+  methods: {
     addTodo() {
-        todoService.add(this.newTodo);
-        this.newTodo = todoService.getEmptyTodo();
-        console.log(this.todos);
+      todoService.add(this.newTodo);
+      this.newTodo = todoService.getEmptyTodo();
+      console.log(this.todos);
     },
     toggleTodo(todo) {
-        console.log('TOGGLING TODO');
-        todoService.toggle(todo);
+      console.log('TOGGLING TODO');
+      todoService.toggle(todo);
     },
 
     deleteTodo(todoIdx) {
-        // console.log('Ev', ev);
-        this.todos.splice(todoIdx, 1)
+      // console.log('Ev', ev);
+      this.todos.splice(todoIdx, 1);
     },
     keyUp(ev) {
-        if (ev.key === 'Enter') {
-            this.addTodo();
-        }
+      if (ev.key === 'Enter') {
+        this.addTodo();
+      }
     }
-},
-components: {}
+  },
+  components: {}
 };

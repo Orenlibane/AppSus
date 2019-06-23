@@ -7,7 +7,8 @@ export default {
   updateDB,
   deleteNote,
   copyNote,
-  saveNotesToDb
+  saveNotesToDb,
+  pinNote
 };
 
 function query() {
@@ -21,7 +22,7 @@ function query() {
 }
 
 function updateDB(newNote) {
-  notesDB.unshift(newNote);
+  notesDB.push(newNote);
   storageService.store(NOTES_KEY, notesDB);
 }
 
@@ -39,6 +40,19 @@ function saveNotesToDb() {
   storageService.store(NOTES_KEY, notesDB);
 }
 
+function pinNote(noteToPin) {
+  if (noteToPin.isPin) {
+    noteToPin.isPin = false;
+    let pinnedNote = noteToPin;
+    notesDB.push(pinnedNote);
+  } else {
+    noteToPin.isPin = true;
+    let pinnedNote = noteToPin;
+    notesDB.unshift(pinnedNote);
+  }
+  storageService.store(NOTES_KEY, notesDB);
+}
+
 var notesDB = [
   {
     _id: '5d0bb6a54cab31bbd2da13fa',
@@ -49,7 +63,8 @@ var notesDB = [
     type: 'noteImg',
     video: '',
     audio: '',
-    isDone: true
+    isDone: true,
+    isPin: false
   },
   {
     _id: '5d0bb6a527776acfdf3d66ef',
@@ -59,7 +74,8 @@ var notesDB = [
     type: 'noteVideo',
     video: 'https://www.youtube.com/watch?v=KlFDwM9GnJI',
     audio: '',
-    isDone: false
+    isDone: false,
+    isPin: false
   },
   {
     _id: '5d0bb6a55304d6ea02dce1ce',
@@ -69,7 +85,8 @@ var notesDB = [
     type: 'noteTxt',
     video: '',
     audio: '',
-    isDone: true
+    isDone: true,
+    isPin: true
   },
   {
     _id: '5d0bb6a5e6eb588ac8ade55d',
@@ -80,7 +97,8 @@ var notesDB = [
     type: 'noteImg',
     video: '',
     audio: '',
-    isDone: false
+    isDone: false,
+    isPin: false
   },
   {
     _id: '5d0bb6a570c979da8649f2b2',
@@ -90,7 +108,8 @@ var notesDB = [
     type: 'noteImg',
     video: '',
     audio: '',
-    isDone: false
+    isDone: false,
+    isPin: false
   },
   {
     _id: '5d0bb6a5a6f2bf2ef8dc6d9d',
@@ -100,7 +119,8 @@ var notesDB = [
     type: 'noteImg',
     video: '',
     audio: '',
-    isDone: false
+    isDone: false,
+    isPin: false
   },
   {
     _id: '5d0bb6a5a910732224c94fd6',
@@ -110,6 +130,7 @@ var notesDB = [
     type: 'noteTxt',
     video: '',
     audio: '',
-    isDone: false
+    isDone: false,
+    isPin: false
   }
 ];

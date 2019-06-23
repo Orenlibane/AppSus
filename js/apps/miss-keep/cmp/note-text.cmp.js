@@ -6,12 +6,14 @@ export default {
 
   template: `
     <section class=note-text> 
-          <div class="note-content flex-space-around">
+    <i v-if="note.isPin" class="fas fa-thumbtack pinned-note"></i> 
+
+          <div :class="{pinned:note.isPin }" class="note-content flex-space-around">
         {{note.content}}
       </div> 
         <div class="notes-editor">
           <note-Editor :note="note" :idx="idx"></note-Editor>
-          <!-- <note-editor-colors ></note-editor-colors> -->
+          <note-editor-colors  ></note-editor-colors>
 </div>
     </section>
 `,
@@ -21,7 +23,9 @@ export default {
   },
   created() {},
   destroyed() {},
-  computed: {},
+  computed: {
+    changeNoteColor() {}
+  },
   methods: {},
   components: { noteEditor, noteEditorColors }
 };

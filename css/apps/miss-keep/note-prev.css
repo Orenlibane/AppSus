@@ -46,3 +46,15 @@
     max-width: 250px;
     margin: 0 auto;
 }
+
+.pinned {
+    color: blue;
+    font-size: 3rem;
+}
+
+.note-prev .pinned-note {
+    font-size: 3rem;
+    position: absolute;
+    top: -5%;
+    left: 40%;
+}

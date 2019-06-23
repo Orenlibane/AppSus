@@ -72,4 +72,11 @@
     background: azure;
     font-weight: bold;
     font-size: 1.4rem;
+    cursor: pointer;
+}
+
+.input-container button:hover {
+    border: 3px black solid;
+    color: white;
+    background: black;
 }

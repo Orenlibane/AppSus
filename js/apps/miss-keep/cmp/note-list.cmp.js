@@ -10,6 +10,8 @@ export default {
       <note-add @noteValue="addNote"></note-add>                     
     </div>
    <div class="no-pinned-notes flex flex-wrap both-align-center">
+
+
       <note-prev 
         v-for="(note,idx) in notes"
         :key="idx"

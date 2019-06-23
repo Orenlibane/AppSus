@@ -1,5 +1,5 @@
 .footer-cmp {
-    background: #ccc;
+    /* background: #ccc; */
     width: 100vw;
     height: 8vh;
     font-weight: bold;
@@ -27,13 +27,14 @@
 }
 
 .footer-cmp img {
-    height: 60px;
+    height: 40px;
     width: 70px;
 }
 
 .footer-cmp i {
     font-size: 3rem;
-    transition: all 0.5s ease-out
+    cursor: pointer;
+    transition: all 0.5s ease-out;
 }
 
 .footer-cmp i:hover {

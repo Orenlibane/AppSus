@@ -1,6 +1,9 @@
 import noteService from '../services/noteservice.js';
 import noteservice from '../services/noteservice.js';
 
+import eventBus, { NOTE_EMAIL } from '../../../event-bus.js';
+
+
 export default {
   name: 'note-editor',
   template: `
@@ -13,9 +16,10 @@ export default {
             <i class="fas fa-thumbtack"></i> 
             <i class="fas fa-check"></i>
             <i @click="copyNote(note)" class="fas fa-copy"></i>
-            <i v-if="note.content" class="fas fa-envelope-open-text"></i>
+            <i @click="movingNote(note)"  v-if="note.content" class="fas fa-envelope-open-text"></i>
             <i @click="updateNote" v-if="note.content" class="fas fa-pencil-alt"></i>
         </div> 
+
 
         <transition name="appear">
     <div v-if='editNote' class="  todo-model flex column ">
@@ -30,7 +34,9 @@ export default {
   props: ['note', 'idx'],
   data() {
     return {
-      editNote: false
+      editNote: false,
+      sendmodal: false,
+
     };
   },
   created() {},
@@ -49,6 +55,15 @@ export default {
     },
     saveNote() {
       noteservice.saveNotesToDb();
+    },
+    movingNote(note){
+      eventBus.$emit(NOTE_EMAIL,note); 
+      console.log('kjhkj',note);
+
+      this.$router.push('/misterEmail')
+      note.sendmodal = true;
+
+      
     }
   },
   components: {}

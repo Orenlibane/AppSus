@@ -3,6 +3,7 @@ import eventBus, { EMAILS_DB } from '../../../event-bus.js';
 
 //need to add checked to checkbox if its already been read
 
+
 export default {
   name: 'mailPrev',
   template: `

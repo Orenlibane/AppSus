@@ -5,6 +5,8 @@ import mailDet from '../pages/email-det.cmp.js';
 import eventBus, { PICKED_EMAIL_STATE } from '../../../event-bus.js';
 import mailFilter from './mail-filter.cmp.js';
 
+
+
 export default {
   name: 'mailList',
   template: `

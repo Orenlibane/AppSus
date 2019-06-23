@@ -1,23 +1,19 @@
 export default {
   name: 'addNoteInput',
   template: `
-    
     <section class="input-container "> 
 
-    
-
-                
                 <input  v-model="newNote.content" v-if="noteTxt" type="text" placeholder="Please enter a text"/>
                 <input   v-model="newNote.picture" v-if="noteImg" type="text" placeholder="Enter Image URL"/>
                 <input   v-model="newNote.video" v-if="noteVideo" type="text" placeholder="Enter Video URL"/>
                 <input   v-model="audio" v-if="noteAudio" type="text" placeholder="Enter Audio"/>
                 <input   v-if="noteTodos" type="text" placeholder="Enter Comma Seperated List"/>
                     
-                    <i @click="changeNoteState('txt')"   class="fas fa-font"></i> 
-                    <i @click="changeNoteState('img')"   class="fas fa-image"></i>
-                    <i @click="changeNoteState('video')" class="fab fa-youtube"></i>
-                    <i @click="changeNoteState('audio')" class="fas fa-volume-up"></i>    
-                    <i @click="changeNoteState('todos')" class="fas fa-list"></i>    
+                    <i @click="changeNoteState('noteTxt')"   class="fas fa-font"></i> 
+                    <i @click="changeNoteState('noteImg')"   class="fas fa-image"></i>
+                    <i @click="changeNoteState('noteVideo')" class="fab fa-youtube"></i>
+                    <i @click="changeNoteState('noteAudio')" class="fas fa-volume-up"></i>    
+                    <i @click="changeNoteState('noteTodos')" class="fas fa-list"></i>    
                     <button @click="emitNoteValue">ADD ME</button>
 
               
@@ -43,7 +39,7 @@ export default {
       newNote: {
         _id: null,
         content: null,
-        type: null,
+        type: 'noteTxt',
         color: null,
         picture: null,
         video: null,
@@ -54,6 +50,7 @@ export default {
           todo3: ''
         }
       },
+      currentState: 'noteTxt',
       todoModal: false
     };
   },
@@ -64,6 +61,7 @@ export default {
   computed: {},
   methods: {
     changeNoteState(state) {
+      this.currentState = state;
       console.log(state);
       this.inputValue = '';
       this.noteTxt = false;
@@ -71,41 +69,50 @@ export default {
       this.noteVideo = false;
       this.noteAudio = false;
       this.noteTodos = false;
-      if (state === 'txt') {
+      if (state === 'noteTxt') {
         this.noteTxt = true;
         this.newNote.type = 'noteTxt';
       }
-      if (state === 'img') {
+      if (state === 'noteImg') {
         this.noteImg = true;
         this.newNote.type = 'noteImg';
       }
 
-      if (state === 'video') {
+      if (state === 'noteVideo') {
         this.noteVideo = true;
         this.newNote.type = 'noteVideo';
       }
-      if (state === 'audio') {
+      if (state === 'noteAudio') {
         this.noteAudio = true;
         this.newNote.type = 'noteAudio';
       }
 
-      if (state === 'todos') {
+      if (state === 'noteTodos') {
         this.noteTodos = true;
         this.newNote.type = 'noteToods';
         this.todoModal = !this.todoModal;
       }
     },
     emitNoteValue() {
+      console.log(this.newNote);
       this.$emit('noteValue', this.newNote);
       this.inputValue = '';
       this.newNote = {
         _id: null,
         content: null,
-        type: null,
+        type: this.currentState,
         color: null,
-        picture: null
+        picture: null,
+        video: null,
+        audio: null,
+        todos: {
+          todo1: '',
+          todo2: '',
+          todo3: ''
+        },
+        isDone: false
       };
-    }
-  },
-  components: {}
+    },
+    components: {}
+  }
 };

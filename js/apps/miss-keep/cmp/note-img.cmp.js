@@ -4,17 +4,17 @@ import noteEditorColors from '../cmp/note-editor-colors.cmp.js';
 export default {
   name: 'NoteImg',
   template: `
-    <section class="img-note note-content flex column" @click="showNote"> 
+    <section class="img-note note-content flex flex-space-around column" @click="showNote"> 
       <div class="flex both-align-center">   
            <img :src="note.picture">
       </div>
     <div class="notes-editor ">
-          <note-Editor></note-Editor>
+    <note-Editor :note="note" :idx="idx"></note-Editor>
           <!-- <note-editor-colors ></note-editor-colors> -->
 </div>
     </section>
 `,
-  props: ['note'],
+  props: ['note', 'idx'],
   data() {
     return {};
   },

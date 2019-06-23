@@ -13,7 +13,8 @@ export default {
       <note-prev 
         v-for="(note,idx) in notes"
         :key="idx"
-        :note="note" >
+        :note="note"
+        :idx="idx" >
       </note-prev>
       </div>
 
@@ -34,8 +35,7 @@ export default {
   computed: {},
   methods: {
     addNote(newNote) {
-      console.log(newNote);
-      this.notes.unshift(newNote);
+      noteService.updateDB(newNote);
     }
   },
   components: { notePrev, noteAdd }

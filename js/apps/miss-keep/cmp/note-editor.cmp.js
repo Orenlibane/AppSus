@@ -1,5 +1,3 @@
-// import notePrev from './note-prev.cmp.js';
-
 export default {
   name: 'note-editor',
   template: `
@@ -15,13 +13,19 @@ export default {
         </div> 
     </section>
 `,
-  props: ['note'],
+  props: ['note', 'idx'],
   data() {
     return {};
   },
   created() {},
   destroyed() {},
   computed: {},
-  methods: {},
+  methods: {
+    deleteNote(idx) {
+      console.log(this.idx);
+      
+
+    }
+  },
   components: {}
 };

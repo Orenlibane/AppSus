@@ -36,7 +36,7 @@ export default {
   props: [],
   data() {
     return {
-      sendmodal: true,
+      sendmodal: false,
       // sendmodal: false,
 
       pickedEmails: 1,
@@ -103,6 +103,8 @@ export default {
       if (emailsType === 1) this.state.mails = true;
       if (emailsType === 2) this.state.sent = true;
       if (emailsType === 3) this.state.deleted = true;
+      this.$router.push('/misterEmail');
+
     }
   },
   mounted(){

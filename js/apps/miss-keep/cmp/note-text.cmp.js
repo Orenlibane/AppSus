@@ -1,6 +1,7 @@
 import noteEditor from '../cmp/note-editor.cmp.js';
 import noteEditorColors from '../cmp/note-editor-colors.cmp.js';
 
+
 export default {
   name: 'noteText',
 

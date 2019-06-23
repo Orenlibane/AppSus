@@ -9,6 +9,8 @@ export default {
          <option value="All">All</option>
          <option value="Read">Read</option>
         <option value="UnRead">UnRead</option>
+        <option value="fav">Favorite</option>
+
   </select>
     
        </div>
@@ -19,7 +21,8 @@ export default {
     return {
       filterBy: {
         txt: '',
-        isRead: 'All'
+        isRead: 'All',
+        isFav: false
       }
     };
   },

@@ -52,10 +52,16 @@ export default {
       this.currentEmailsState = state;
     });
   },
-  destroyed() {},
+  destroyed() { },
   computed: {
-    filterdEmails: function() {
+    filterdEmails: function () {
       this.temp = this.emails;
+
+      // if (!this.filter || this.filter.isFav === 'false') {
+      //   this.temp = this.emails
+      // } else if (this.filter.isFav === 'true'){
+          
+      // }
 
       if (!this.filter || this.filter.isRead === 'All') {
         if (!this.filter) {
@@ -82,6 +88,9 @@ export default {
         return this.temp.filter(email => email.isDeleted && !email.isSent);
       }
     }
+
+
+
   },
   methods: {
     setFilterrr(filterBy) {

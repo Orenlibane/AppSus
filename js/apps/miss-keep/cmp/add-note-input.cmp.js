@@ -7,7 +7,7 @@ export default {
                 <input   v-model="newNote.picture" v-if="noteImg" type="text" placeholder="Enter Image URL"/>
                 <input   v-model="newNote.video" v-if="noteVideo" type="text" placeholder="Enter Video URL"/>
                 <input   v-model="audio" v-if="noteAudio" type="text" placeholder="Enter Audio"/>
-                <input   v-if="noteTodos" type="text" placeholder="Enter Comma Seperated List"/>
+                <input  v-model="newNote.content" v-if="noteTodos" type="text" placeholder="Enter Comma Seperated List"/>
                     
                     <i @click="changeNoteState('noteTxt')"   class="fas fa-font"></i> 
                     <i @click="changeNoteState('noteImg')"   class="fas fa-image"></i>
@@ -23,7 +23,7 @@ export default {
                    <div> <input type="text" v-model="newNote.todos.todo1" placeholder="ENTER YOUR TODO"><img src="../../../../img/push-pin.png" alt=""/></div>
                    <div><input type="text" v-model="newNote.todos.todo2" placeholder="ENTER YOUR TODO"><img src="../../../../img/push-pin.png" alt=""/></div>
                    <div> <input type="text" v-model="newNote.todos.todo3" placeholder="ENTER YOUR TODO"><img src="../../../../img/push-pin.png" alt=""/></div>
-                <div class="flex both-align-center"> <button @click="todoModal=!todoModal">Add </button> </div>
+                <div class="flex both-align-center"> <button  @click="emitNoteValue" >Add </button> <button @click="todoModal=!todoModal"> X </button> </div>
                   </div>
                 </transition>
         </section>

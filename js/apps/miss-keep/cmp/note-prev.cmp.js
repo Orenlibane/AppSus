@@ -6,6 +6,8 @@ import noteImg from './note-img.cmp.js';
 import noteTxt from './note-text.cmp.js';
 import noteVideo from './note-video.cmp.js';
 
+import noteTodo from './note-todo.cmp.js';
+
 export default {
   name: 'notePrev',
   template: `
@@ -38,6 +40,7 @@ export default {
     noteEditorColors,
     noteImg,
     noteTxt,
-    noteVideo
+    noteVideo,
+    noteTodo
   }
 };

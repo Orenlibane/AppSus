@@ -11,7 +11,7 @@ export default {
   template: `
     <section class="mister-email"> 
        <header-cmp></header-cmp>
-      <div class="flex">
+      <div class="flex main-email-container">
         <side-nav></side-nav>
         <mail-list></mail-list>
         <!-- <router-view></router-view>  -->

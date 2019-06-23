@@ -5,3 +5,9 @@
     width: 30px;
     margin: 5px 10px;
 }
+
+.notes-editor .note-editor-colors input {
+    padding: 0;
+    background: white;
+    width: 20%;
+}

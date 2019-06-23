@@ -1,4 +1,3 @@
-
 export default {
   name: 'noteTodo',
 
@@ -13,7 +12,7 @@ export default {
       </div> 
         <div class="notes-editor">
           <note-Editor :note="note" :idx="idx"></note-Editor>
-          <note-editor-colors  ></note-editor-colors>
+          <note-editor-colors :note="note" :idx="idx" ></note-editor-colors>
 </div>
 </li>
 </ul>
@@ -22,14 +21,11 @@ export default {
 `,
   props: [],
   data() {
-    return {
-    };
+    return {};
   },
   created() {},
   destroyed() {},
   computed: {},
-  methods: {
-  
-  },
+  methods: {},
   components: {}
 };

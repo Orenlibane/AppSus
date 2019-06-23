@@ -12,7 +12,7 @@ export default {
         </div> 
         <div class="notes-editor">
         <note-Editor :note="note" :idx="idx"></note-Editor>
-        <note-editor-colors ></note-editor-colors>
+        <note-editor-colors :note="note" :idx="idx" ></note-editor-colors>
         </div>
     </section>
 `,
@@ -20,11 +20,9 @@ export default {
   data() {
     return {};
   },
-  created() { },
-  destroyed() { },
-  computed: {
-
-  },
+  created() {},
+  destroyed() {},
+  computed: {},
   methods: {},
   components: { noteEditor, noteEditorColors }
 };

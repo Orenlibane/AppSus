@@ -6,7 +6,7 @@ export default {
 
   template: `
     <section class=note-text> 
-    <i v-if="note.isPin" class="fas fa-thumbtack"></i> 
+    <i v-if="note.isPin" class="fas fa-thumbtack pinned-note"></i> 
 
           <div :class="{pinned:note.isPin }" class="note-content flex-space-around">
         {{note.content}}

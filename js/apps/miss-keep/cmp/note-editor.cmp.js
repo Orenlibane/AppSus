@@ -8,9 +8,9 @@ export default {
 
         <div class="editor flex"> 
           
-            <i @click="deleteNote(idx)" class="fas fa-trash"></i>
+            <i @click="deleteNote(note,idx)" class="fas fa-trash"></i>
             <i class="fas fa-palette"></i>
-            <i @click="pinNote(note,idx)"class="fas fa-thumbtack"></i> 
+            <i @click="pinTheNote(note,idx)"class="fas fa-thumbtack"></i> 
             <i class="fas fa-check"></i>
             <i @click="copyNote(note)" class="fas fa-copy"></i>
             <i v-if="note.content" class="fas fa-envelope-open-text"></i>
@@ -37,8 +37,8 @@ export default {
   destroyed() {},
   computed: {},
   methods: {
-    deleteNote(idx) {
-      console.log(this.idx);
+    deleteNote(note, idx) {
+      if (note.isPin) return;
       noteService.deleteNote(idx);
     },
     copyNote(noteToCopy) {
@@ -50,11 +50,9 @@ export default {
     saveNote() {
       noteservice.saveNotesToDb();
     },
-    pinNote(noteToPin, idx) {
-      noteToPin.isPin = true;
-      let pinnedNote = noteToPin;
+    pinTheNote(noteToPin, idx) {
       noteService.deleteNote(idx);
-      noteservice.copyNote(pinnedNote);
+      noteService.pinNote(noteToPin);
     }
   },
   components: {}

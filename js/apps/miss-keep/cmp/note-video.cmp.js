@@ -6,6 +6,7 @@ export default {
 
   template: `
     <section class="note-video flex column flex-space-around" > 
+    <i v-if="note.isPin" class="fas fa-thumbtack"></i> 
 
             <div class="note-content ">
             <!-- <iframe width="500" height="299" :src=note.video> </iframe> -->

@@ -48,7 +48,8 @@ export default {
           todo1: '',
           todo2: '',
           todo3: ''
-        }
+        },
+        isPin:false
       },
       currentState: 'noteTxt',
       todoModal: false
@@ -110,6 +111,7 @@ export default {
           todo2: '',
           todo3: ''
         },
+        isPin:false,
         isDone: false
       };
     },

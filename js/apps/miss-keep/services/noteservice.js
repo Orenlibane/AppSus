@@ -7,7 +7,8 @@ export default {
   updateDB,
   deleteNote,
   copyNote,
-  saveNotesToDb
+  saveNotesToDb,
+  pinNote
 };
 
 function query() {
@@ -21,7 +22,7 @@ function query() {
 }
 
 function updateDB(newNote) {
-  notesDB.unshift(newNote);
+  notesDB.push(newNote);
   storageService.store(NOTES_KEY, notesDB);
 }
 
@@ -36,6 +37,19 @@ function copyNote(noteToCopy) {
 }
 
 function saveNotesToDb() {
+  storageService.store(NOTES_KEY, notesDB);
+}
+
+function pinNote(noteToPin) {
+  if (noteToPin.isPin) {
+    noteToPin.isPin = false;
+    let pinnedNote = noteToPin;
+    notesDB.push(pinnedNote);
+  } else {
+    noteToPin.isPin = true;
+    let pinnedNote = noteToPin;
+    notesDB.unshift(pinnedNote);
+  }
   storageService.store(NOTES_KEY, notesDB);
 }
 

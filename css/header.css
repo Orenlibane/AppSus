@@ -1,7 +1,6 @@
 .global-header {
     width: 90vw;
     height: 8vh;
-    /* background: url('../img/color-panciels.png'); */
     background-position: 100% 5%;
     background-size: cover;
     background-repeat: no-repeat;

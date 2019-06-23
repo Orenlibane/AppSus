@@ -1,14 +1,17 @@
-import notePrev from './note-prev.cmp.js';
 import noteEditor from '../cmp/note-editor.cmp.js';
 import noteEditorColors from '../cmp/note-editor-colors.cmp.js';
 
 export default {
   name: 'NoteImg',
   template: `
-    <section class="img-note"> 
-
-    <img src="note.picture">
-
+    <section class="img-note note-content flex column" @click="showNote"> 
+      <div class="flex both-align-center">   
+           <img :src="note.picture">
+      </div>
+    <div class="notes-editor ">
+          <note-Editor></note-Editor>
+          <!-- <note-editor-colors ></note-editor-colors> -->
+</div>
     </section>
 `,
   props: ['note'],
@@ -18,6 +21,10 @@ export default {
   created() {},
   destroyed() {},
   computed: {},
-  methods: {},
-  components: { notePrev, noteEditor, noteEditorColors }
+  methods: {
+    showNote() {
+      console.log(this.note);
+    }
+  },
+  components: { noteEditor, noteEditorColors }
 };

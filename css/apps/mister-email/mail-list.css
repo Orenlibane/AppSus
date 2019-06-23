@@ -3,10 +3,7 @@
     height: 87vh;
     overflow-y: scroll;
     border: 2px white solid;
-    /* border-radius: 15px; */
     border: 1px black solid;
-    /* background: url('../../../img/corkboard.jpg'); */
-    /* padding: 10px; */
 }
 
 .mail-list li {
@@ -16,12 +13,6 @@
     padding-left: 10px;
     font-size: 1.5rem;
 }
-
-/* .mail-list span {
-    display: inline-block;
-    height: 100%;
-    border: 2px black solid;
-} */
 
 .emails-titles span {
     padding: 5px 60px;

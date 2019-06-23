@@ -5,8 +5,6 @@ import mailDet from '../pages/email-det.cmp.js';
 import eventBus, { PICKED_EMAIL_STATE } from '../../../event-bus.js';
 import mailFilter from './mail-filter.cmp.js';
 
-
-
 export default {
   name: 'mailList',
   template: `
@@ -15,8 +13,8 @@ export default {
           <mail-filter @filterapp="setFilterrr"></mail-filter>
         <li class="flex space-between emails-titles"> 
           <span> Sent From </span> 
-          <span @click="sortSubject"> subject <i class="fas fa-sort-up"></i> </span> 
-          <span @click="sortDate">Date Recived <i class="fas fa-sort-up"></i></span>
+          <span :class="{picked:sort.subject }" @click="sortSubject"> subject </span> 
+          <span :class="{picked:sort.date }" @click="sortDate">Date Recived </span>
         </li>
       <mail-prev 
       :idx="idx" 
@@ -37,7 +35,11 @@ export default {
       emails: null,
       currentEmailsState: 1,
       filter: null,
-      temp: []
+      temp: [],
+      sort: {
+        subject: null,
+        date: null
+      }
     };
   },
   created() {
@@ -48,9 +50,9 @@ export default {
       this.currentEmailsState = state;
     });
   },
-  destroyed() { },
+  destroyed() {},
   computed: {
-    filterdEmails: function () {
+    filterdEmails: function() {
       this.temp = this.emails;
       if (!this.filter || this.filter.isRead === 'All') {
         if (!this.filter) {
@@ -83,6 +85,8 @@ export default {
       this.filter = filterBy;
     },
     sortSubject() {
+      this.sort.subject = true;
+      this.sort.date = false;
       this.emails.sort((email1, email2) => {
         if (email1.subject.toLowerCase() > email2.subject.toLowerCase()) {
           return 1;
@@ -96,6 +100,9 @@ export default {
       });
     },
     sortDate() {
+      this.sort.subject = false;
+      this.sort.date = true;
+
       this.emails.sort((email1, email2) => {
         if (email1.sendAt > email2.sendAt) {
           return 1;

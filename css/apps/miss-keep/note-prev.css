@@ -56,3 +56,7 @@
     position: absolute;
     top: 5%;
 }
+
+.note-todo ol {
+    max-width: 180px;
+}

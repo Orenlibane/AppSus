@@ -1,7 +1,6 @@
 .email-det {
     height: 81vh;
     width: 83%;
-    background: green;
     /* position: relative; */
 }
 
@@ -13,11 +12,16 @@
 }
 
 .email-det .inputs-container input {
-    width: 71.6vw;
+    width: 66.4vw;
 }
 
-.email-det button.replayBtn {
+.email-det button.replayBtn, .side button.replayBtn {
     height: inherit;
+    background: rgb(108, 108, 233);
+    font-weight: bold;
+    font-size: 1.5rem;
+    width: 200px;
+    border: 2px black solid;
 }
 
 .email-det textarea {
@@ -36,4 +40,29 @@
     /* width: 150px; */
     height: 30px;
     width: 100px;
+    font-weight: bold;
+    font-size: 1.1rem;
+    position: relative;
+}
+
+.show-mails-adress {
+    position: absolute;
+    top: 20.5%;
+    border: 1px black solid;
+    z-index: 100;
+    background: white;
+    padding: 25px;
+    line-height: 1.5
+}
+
+.sent-from {
+    padding: 10px;
+    /* margin-left: 5%; */
+    font-weight: bold;
+    border: 1px rgb(196, 196, 196) solid;
+    width: 100%;
+}
+
+.fa-times {
+    cursor: pointer;
 }

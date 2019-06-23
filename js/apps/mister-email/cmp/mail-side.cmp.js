@@ -1,6 +1,9 @@
 import utilService from '../../../main-service/util-service.js';
 import mailService from '../services/mailservice.js';
-import eventBus, { PICKED_EMAIL_STATE, NOTE_EMAIL } from '../../../event-bus.js';
+import eventBus, {
+  PICKED_EMAIL_STATE,
+  NOTE_EMAIL
+} from '../../../event-bus.js';
 export default {
   name: 'mailSide',
   template: `
@@ -18,7 +21,7 @@ export default {
               <div class="send-modal" v-if="sendmodal">
                 <div class="flex space-between send-mail-head"> <span>  New Messege </span> <span><i @click=showSendMailModal class="fas fa-times"></i></span> </div>
             <div class="flex">
-              <button @click="sendmail">Send Mail:</button>
+            <button class="replayBtn" @click="sendmail"><i class="fas fa-share"></i>Send</button>
               <div class="flex column send-mail-inputs">
                 <div><input v-model="newemail.subject" type="text" placeholder="Enter mail Subject"/>  </div> 
                 <div><input v-model="newemail.sendto" type="text" placeholder="Enter email to send to"/>  </div>
@@ -52,19 +55,25 @@ export default {
         isDeleted: false,
         sendto: '',
         isSent: true
-      }
+      },
+      note: null
     };
   },
-  created() {
-    eventBus.$on(NOTE_EMAIL, note => {
-      this.newemail.body = note.content;
-
-    })
-  },
+  created() {},
   destroyed() {},
   computed: {},
   methods: {
-    showSendMailModal() {      
+    // checkNoteToMail() {
+    //   eventBus.$on(NOTE_EMAIL, note => {
+    //     console.log(note);
+    //     console.log('before', this.sendmodal);
+    //     this.sendmodal = true;
+    //     this.newemail.body = note.content;
+    //     console.log('after', this.sendmodal);
+    //   });
+    //   console.log('after,after', note);
+    // },
+    showSendMailModal() {
       this.sendmodal = !this.sendmodal;
     },
     sendmail() {
@@ -95,11 +104,8 @@ export default {
       if (emailsType === 2) this.state.sent = true;
       if (emailsType === 3) this.state.deleted = true;
       this.$router.push('/misterEmail');
-
     }
   },
-  mounted(){
- 
-  },
+  mounted() {},
   components: {}
 };

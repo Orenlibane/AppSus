@@ -103,3 +103,9 @@
     border-top-right-radius: 10px;
     border-bottom-right-radius: 10px;
 }
+
+.emails-titles span.picked {
+    background: rgb(3, 3, 240, 0.5);
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}

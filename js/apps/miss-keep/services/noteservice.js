@@ -33,7 +33,7 @@ function deleteNote(idx) {
 
 function copyNote(noteToCopy) {
   var newNoteToCopy = noteToCopy;
-  notesDB.unshift(newNoteToCopy);
+  notesDB.push(newNoteToCopy);
   storageService.store(NOTES_KEY, notesDB);
 }
 

@@ -52,6 +52,11 @@
     font-weight: bold;
 }
 
+.counters-container a {
+    text-decoration: none;
+    color: black;
+}
+
 .counters-container img {
     width: 30px;
     height: 30px;

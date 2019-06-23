@@ -1,16 +1,24 @@
+import noteEditor from '../cmp/note-editor.cmp.js';
+import noteEditorColors from '../cmp/note-editor-colors.cmp.js';
+
 export default {
   name: 'noteTodo',
 
   template: `
-    <section class=note-todo> 
+    <section class="note-todo"> 
     <div class="status-icons flex">
     <i v-if="note.isPin" class="fas fa-thumbtack pinned-note"></i> 
     <i v-if="note.isDone" class="fas fa-check pinned-note"></i> 
     </div>
-<ul>
-<li >
-          <div :class="{pinned:note.isPin }" class="note-content flex-space-around">
-        {{note.content}}
+
+    <div class="flex both-align-center">
+  <ol>
+    <li>{{note.todos.todo1}}</li>
+    <li>{{note.todos.todo2}}</li>
+    <li>{{note.todos.todo3}}</li>
+</ol>
+  </div>
+          
       </div> 
       <div class="notes-editor flex both-align-center ">
           <note-Editor :note="note" :idx="idx"></note-Editor>
@@ -21,7 +29,7 @@ export default {
  
     </section>
 `,
-  props: [],
+  props: ['note', 'idx'],
   data() {
     return {};
   },
@@ -29,5 +37,5 @@ export default {
   destroyed() {},
   computed: {},
   methods: {},
-  components: {}
+  components: { noteEditor, noteEditorColors }
 };

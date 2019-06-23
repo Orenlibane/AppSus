@@ -12,16 +12,28 @@ export default {
         <side-nav></side-nav>
   
     <section class="email-det">
-    <div class="flex space-between send-mail-head"> <span>  New Messege </span> <span><i  @click="backToMails" class="fas fa-times"></i></span> </div>
+    <div class="flex space-between send-mail-head"> <span>  {{subject}} </span> <span><i  @click="backToMails" class="fas fa-times"></i></span> </div>
     
     <div class="flex">
-          <button class="replayBtn" v-if="!isReply" @click="replaymail">Reply To MAIL</button>
-          <button class="replayBtn" v-if="isReply" @click="sendmail">Send Mail</button>
+          <button class="replayBtn" v-if="!isReply" @click="replaymail"><i class="fas fa-reply"></i>Reply</button>
+          <button class="replayBtn" v-if="isReply" @click="sendmail"><i class="fas fa-share"></i>Send</button>
         <div class="flex column inputs-container">
           <div class="flex"><button>Subject:</button><input v-model="newEmail.subject" type="text" placeholder="Enter mail Subject"/>  </div> 
-          <div class="flex"><button>SendTo:</button><input v-model="newEmail.sendto" type="text" placeholder="Enter email to send to"/>  </div>
+          <div class="flex"><button @click="showMailsAdress=!showMailsAdress">SendTo:</button><input v-model="newEmail.sendto" type="text" placeholder="Enter email to send to"/> 
+          <transition name="appear">
+                <div class="show-mails-adress" v-if='showMailsAdress'>
+              <h3>Regular contacts:</h3>  
+              <ol>
+                  <li>orenlibane@gmail.com</li>
+                  <li>liorLila@gmail.com</li>
+                  <li>BarakTal@gmail.com</li>
+                </ol>
+              </div>       
+              </transition>        
+          </div>
         </div>
-    </div>
+      </div>
+      <div class="sent-from"> Sent From: {{email.name}}</div>
                 <textarea name="" id="" v-model="newEmail.body"></textarea>
                  </section>
               </div>
@@ -32,7 +44,9 @@ export default {
     return {
       email: null,
       isReply: false,
-      newEmail: null
+      newEmail: null,
+      subject: '',
+      showMailsAdress: ''
     };
   },
 
@@ -40,6 +54,7 @@ export default {
     const mailId = this.$route.params.theMailId;
     mailService.getById(mailId).then(email => {
       this.email = email;
+      this.subject = this.email.subject;
       //creating the returning mail
       this.newEmail = {
         _id: this.email._id,
@@ -47,14 +62,7 @@ export default {
         subject: this.email.subject,
         name: 'oren&lior',
         isRead: true,
-        sendAt:
-          new Date().getMonth() +
-          '-' +
-          new Date().getDay() +
-          ':' +
-          new Date().getHours() +
-          ':' +
-          new Date().getMinutes(),
+        sendAt: new Date().getHours() + ':' + new Date().getMinutes(),
         isDeleted: false,
         sendto: this.email.sendto,
         isSent: true,

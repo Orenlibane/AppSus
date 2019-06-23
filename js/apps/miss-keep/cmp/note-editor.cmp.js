@@ -11,7 +11,7 @@ export default {
         <div class="editor flex"> 
           
             <i @click="deleteNote(note,idx)" class="fas fa-trash"></i>
-            <i class="fas fa-palette"></i>
+            <!-- <i class="fas fa-palette"></!  -->
             <i @click="pinTheNote(note,idx)"class="fas fa-thumbtack"></i> 
             <i @click="setDone(note)" class="fas fa-check"></i>
             <i @click="copyNote(note)" class="fas fa-copy"></i>
@@ -40,11 +40,12 @@ export default {
   destroyed() {},
   computed: {},
   methods: {
-    deleteNote(note, idx) {
-      if (note.isPin) return;
+    deleteNote(noteTodelete, idx) {
+      if (noteTodelete.isPin) return;
       noteService.deleteNote(idx);
     },
     copyNote(noteToCopy) {
+      if (noteToCopy.isPin) return;
       noteservice.copyNote(noteToCopy);
     },
     updateNote() {
@@ -57,7 +58,6 @@ export default {
       eventBus.$emit(NOTE_EMAIL, note);
 
       this.$router.push('/misterEmail');
-      // note.sendmodal = true;
     },
     setDone(noteToSetAsDone) {
       noteToSetAsDone.isDone = !noteToSetAsDone.isDone;

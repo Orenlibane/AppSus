@@ -7,13 +7,13 @@ export default {
                 <input   v-model="newNote.picture" v-if="noteImg" type="text" placeholder="Enter Image URL"/>
                 <input   v-model="newNote.video" v-if="noteVideo" type="text" placeholder="Enter Video URL"/>
                 <input   v-model="audio" v-if="noteAudio" type="text" placeholder="Enter Audio"/>
-                <input  v-model="newNote.content" v-if="noteTodos" type="text" placeholder="Enter Comma Seperated List"/>
+                <input  v-model="newNote.content" v-if="noteTodo" type="text" placeholder="Enter Comma Seperated List"/>
                     
                     <i @click="changeNoteState('noteTxt')"   class="fas fa-font"></i> 
                     <i @click="changeNoteState('noteImg')"   class="fas fa-image"></i>
                     <i @click="changeNoteState('noteVideo')" class="fab fa-youtube"></i>
                     <i @click="changeNoteState('noteAudio')" class="fas fa-volume-up"></i>    
-                    <i @click="changeNoteState('noteTodos')" class="fas fa-list"></i>    
+                    <i @click="changeNoteState('noteTodo')" class="fas fa-list"></i>    
                     <button @click="emitNoteValue">ADD ME</button>
 
               
@@ -23,7 +23,7 @@ export default {
                    <div> <input type="text" v-model="newNote.todos.todo1" placeholder="ENTER YOUR TODO"><img src="../../../../img/push-pin.png" alt=""/></div>
                    <div><input type="text" v-model="newNote.todos.todo2" placeholder="ENTER YOUR TODO"><img src="../../../../img/push-pin.png" alt=""/></div>
                    <div> <input type="text" v-model="newNote.todos.todo3" placeholder="ENTER YOUR TODO"><img src="../../../../img/push-pin.png" alt=""/></div>
-                <div class="flex both-align-center"> <button  @click="emitNoteValue" >Add </button> <button @click="todoModal=!todoModal"> X </button> </div>
+                  <div class="flex both-align-center"> <button  @click="emitNoteValue" >Add </button>  </div>
                   </div>
                 </transition>
         </section>
@@ -35,7 +35,7 @@ export default {
       noteImg: false,
       noteVideo: false,
       noteAudio: false,
-      noteTodos: false,
+      noteTodo: false,
       newNote: {
         _id: null,
         content: null,
@@ -49,7 +49,7 @@ export default {
           todo2: '',
           todo3: ''
         },
-        isPin:false
+        isPin: false
       },
       currentState: 'noteTxt',
       todoModal: false
@@ -88,31 +88,32 @@ export default {
         this.newNote.type = 'noteAudio';
       }
 
-      if (state === 'noteTodos') {
+      if (state === 'noteTodo') {
         this.noteTodos = true;
-        this.newNote.type = 'noteToods';
+        this.newNote.type = 'noteTodo';
         this.todoModal = !this.todoModal;
       }
     },
     emitNoteValue() {
       console.log(this.newNote);
+      this.todoModal = !this.todoModal;
       this.$emit('noteValue', this.newNote);
       this.inputValue = '';
       this.newNote = {
         _id: null,
         content: null,
         type: this.currentState,
-        color: null,
+        color: 'yellow',
         picture: null,
         video: null,
         audio: null,
+        isPin: false,
+        isDone: false,
         todos: {
           todo1: '',
           todo2: '',
           todo3: ''
-        },
-        isPin:false,
-        isDone: false
+        }
       };
     },
     components: {}

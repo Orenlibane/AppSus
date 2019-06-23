@@ -15,13 +15,13 @@ export default {
 
   <div class="apps-icons flex both-align-center">
   <transition name="slide-fade-left">
-  <router-link v-if="icon1Show" to="/misterEmail">   <img  src="../../img/gmail.svg"/> </router-link>  
+  <router-link v-if="icon1Show" to="/misterEmail">   <img  src="img/gmail.svg"/> </router-link>  
     </transition>
     <transition name="slide-fade-left">
-    <router-link v-if="icon2Show"  to="/missKeep"><img  src="../../img/notepad.svg"/></router-link> 
+    <router-link v-if="icon2Show"  to="/missKeep"><img  src="img/notepad.svg"/></router-link> 
     </transition>
       <transition name="slide-fade-left">        
-      <router-link v-if="icon3Show" to="/miss-books"">  <img   src="../../img/books.svg"/></router-link> 
+      <router-link v-if="icon3Show" to="/miss-books"">  <img   src="img/books.svg"/></router-link> 
       </transition>
 </div>
 

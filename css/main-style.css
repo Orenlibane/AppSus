@@ -79,3 +79,8 @@
 .router-link-active {
     color: white;
 }
+
+video {
+    height: 200px;
+    width: 220px;
+}

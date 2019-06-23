@@ -3,7 +3,8 @@ import storageService from '../../../main-service/storage.js';
 const NOTES_KEY = 'notesDB';
 
 export default {
-  query
+  query,
+  updateDB
 };
 
 function query() {
@@ -14,6 +15,11 @@ function query() {
   }
   notesDB = notes;
   return notesDB;
+}
+
+function updateDB(newNote) {
+  notesDB.unshift(newNote);
+  storageService.store(NOTES_KEY, notesDB);
 }
 
 var notesDB = [

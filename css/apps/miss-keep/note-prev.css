@@ -6,10 +6,6 @@
     font-weight: bold;
     background: rgb(221, 221, 39);
     transition: all 0.3s ease-out;
-    /* background: url("../../../img/not-pinned-note.png");
-    background-position: center;
-    background-size: contain;
-    background-repeat: no-repeat; */
 }
 
 .note-prev div {
@@ -37,10 +33,8 @@
 }
 
 .note-content {
-    margin-top: 25%;
-    padding-left: 20%;
-    max-width: 80%;
-    margin-bottom: 10px;
+    height: 100%;
+    width: 100%;
 }
 
 .notes-editor {

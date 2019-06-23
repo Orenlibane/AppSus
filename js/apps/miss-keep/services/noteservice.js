@@ -4,7 +4,10 @@ const NOTES_KEY = 'notesDB';
 
 export default {
   query,
-  updateDB
+  updateDB,
+  deleteNote,
+  copyNote,
+  saveNotesToDb
 };
 
 function query() {
@@ -19,6 +22,20 @@ function query() {
 
 function updateDB(newNote) {
   notesDB.unshift(newNote);
+  storageService.store(NOTES_KEY, notesDB);
+}
+
+function deleteNote(idx) {
+  notesDB.splice(idx, 1);
+  storageService.store(NOTES_KEY, notesDB);
+}
+
+function copyNote(noteToCopy) {
+  notesDB.unshift(noteToCopy);
+  storageService.store(NOTES_KEY, notesDB);
+}
+
+function saveNotesToDb() {
   storageService.store(NOTES_KEY, notesDB);
 }
 

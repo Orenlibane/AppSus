@@ -1,9 +1,13 @@
-.slide-fade-enter-active {
+.slide-fade-enter-active, .appear-enter-active {
     transition: all .5s ease;
 }
 
-.slide-fade-leave-active {
+.slide-fade-leave-active, .appear-leave-active {
     transition: all .4s cubic-bezier(1.0, 0.5, 0.8, 1.0);
+}
+
+.appear-enter, .appear-leave-to {
+    transform: scale(0.5)
 }
 
 .slide-fade-enter, .slide-fade-leave-to

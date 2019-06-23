@@ -34,7 +34,7 @@
     background-size: cover;
     border: 5px black solid;
     width: 100vw;
-    height: 100vh;
+    height: 84vh;
 }
 
 .home-page h1 {
@@ -80,7 +80,12 @@
     color: white;
 }
 
-video {
-    height: 200px;
-    width: 220px;
+.under-construction {
+    height: 84vh;
+    border-top: 2px black solid;
+    border-bottom: 2px black solid;
+}
+
+.under-construction img {
+    height: 100%;
 }

@@ -3,12 +3,12 @@ export default {
   template: `
     <section class="mail-filter flex ">
         <div class="flex align-center row-reverse">
-            <input type="text" v-model="filterBy.txt" @input="emitFilter" placeholder="Search for mail" />
+            <input type="text" v-model="filterBy.txt" @input="emitFilter" placeholder="🔍Search for mail" />
    <select v-model="filterBy.isRead" @change="emitFilter($event)">
          <option value="All">All</option>
          <option value="Read">Read</option>
         <option value="UnRead">UnRead</option>
-        <option value="fav">⭐</option>
+        <option value="fav">Favorites⭐</option>
   </select>
 
        </div>
@@ -24,8 +24,8 @@ export default {
       }
     };
   },
-  created() { },
-  destroyed() { },
+  created() {},
+  destroyed() {},
   computed: {},
   methods: {
     emitFilter(event) {

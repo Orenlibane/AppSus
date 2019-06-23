@@ -52,9 +52,7 @@
     font-size: 3rem;
 }
 
-.note-prev .pinned-note {
-    font-size: 3rem;
+.status-icons {
     position: absolute;
-    top: -5%;
-    left: 40%;
+    top: 5%;
 }

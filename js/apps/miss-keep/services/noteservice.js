@@ -60,7 +60,7 @@ var notesDB = [
     picture:
       'https://media.licdn.com/dms/image/C4E03AQGYu3yXuPPVRA/profile-displayphoto-shrink_800_800/0?e=1566432000&v=beta&t=vIUzQvoIcGcINvqf_nlQXu0lZXjcvVgxdx0ZGYVlCJQ',
     color: 'red',
-    content: 'HOT STUFF ("lior")',
+    content: '',
     type: 'noteImg',
     video: '',
     audio: '',

@@ -1,5 +1,7 @@
 .note-editor {
     max-width: 200px;
+    position: absolute;
+    bottom: 15%;
 }
 
 .note-editor i {

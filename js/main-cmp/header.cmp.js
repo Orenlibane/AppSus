@@ -11,7 +11,7 @@ export default {
         <ul class="flex clean-list space-between">
           <li class="flex  align-center"> <router-link to="/misterEmail">   <img  src="img/gmail.svg"/><mail-count> </mail-count> </router-link></li>
           <li class="flex  align-center"> <router-link to="/missKeep"> <img  src="img/notepad.svg"/><note-count> </note-count></router-link></li>
-          <li class="flex  align-center"> <router-link to="/missBooks"><img  src="img/books.svg"/></router-link></li>
+          <li class="flex  align-center"> <router-link to="/missBook"><img  title="Under-construction" src="img/books.svg"/></router-link></li>
         </ul>
       </div>
       </div>
@@ -23,7 +23,7 @@ export default {
                   <li><router-link to="/"> <img  src="img/house.svg" /> </router-link></li>
                   <li><router-link to="/misterEmail"> <img  src="img/gmail.svg"/> </router-link></li>
                   <li><router-link to="/missKeep"> <img  src="img/notepad.svg"/> </router-link></li>
-                  <li><router-link to="/"> <img  src="img/books.svg" /> </router-link></li>
+                  <li><router-link to="/missBook"> <img  src="img/books.svg" /> </router-link></li>
                 </ul>
                 
               </div>

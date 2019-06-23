@@ -1,10 +1,12 @@
 import headerCmp from '../main-cmp/header.cmp.js';
+import footerCmp from '../main-cmp/footer.cmp.js';
 
 export default {
   name: 'HomePage',
   template: `
-    <section class="home-page ">
+    <section >
     <headerCmp></headerCmp>
+    <div class="home-page">
     <transition name="slide-fade">
     <h1 v-if="showTitle" class="main-title flex both-align-center"> Welcome to AppSus</h1>
     </transition>
@@ -24,7 +26,9 @@ export default {
       <router-link v-if="icon3Show" to="/miss-books">  <img   src="img/books.svg"/></router-link> 
       </transition>
 </div>
+</div>
 
+<footer-cmp></footer-cmp>
 
     </section>
 `,
@@ -47,18 +51,18 @@ export default {
     showAnimations() {
       setTimeout(() => {
         this.showTitle = true;
-      }, 1000);
+      }, 500);
 
       setTimeout(() => {
         this.icon1Show = true;
-      }, 1500);
+      }, 750);
       setTimeout(() => {
         this.icon2Show = true;
-      }, 2000);
+      }, 1100);
       setTimeout(() => {
         this.icon3Show = true;
-      }, 2500);
+      }, 1450);
     }
   },
-  components: { headerCmp }
+  components: { headerCmp, footerCmp }
 };

@@ -18,7 +18,7 @@ export default {
 
               
                     <transition name="slide-fade">
-    <div v-if='todoModal' class="  todo-model flex column ">
+    <div v-if='todoModal' class="todo-model flex column">
             <h1>TODOS</h1>
                    <div> <input type="text" v-model="newNote.todos.todo1" placeholder="ENTER YOUR TODO"><img src="../../../../img/push-pin.png" alt=""/></div>
                    <div><input type="text" v-model="newNote.todos.todo2" placeholder="ENTER YOUR TODO"><img src="../../../../img/push-pin.png" alt=""/></div>

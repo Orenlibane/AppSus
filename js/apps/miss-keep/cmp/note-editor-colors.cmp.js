@@ -3,14 +3,15 @@ export default {
   template: `
     <section class=notes-editor-colors> 
     <section class="note-editor-colors">
-        <span v-for="(color,idx) in colors" :style={background:color} :data-color=color @click="useColors"  class="circle"></span>
+        <span v-if="noteColor"v-for="(color,idx) in colors" :style={background:color} :data-color=color @click="useColors"  class="circle"></span>
       </section>
     </section>
 `,
   props: [],
   data() {
     return {
-      colors: ['red', 'blue', 'green', 'teal', 'purple']
+      colors: ['red', 'blue', 'green', 'teal', 'purple'],
+      noteColor: false
     };
   },
   created() {},
@@ -18,9 +19,10 @@ export default {
   computed: {},
   methods: {
     useColors(ev) {
-      var noteColor = ev.target.dataset.color;
-      console.log(ev.target.dataset.color);
-      this.$emit('noteColor', noteColor);
+    // this.noteColor= true;
+      // var noteColor = ev.target.dataset.color;
+      // console.log(ev.target.dataset.color);
+      // this.$emit('noteColor', noteColor);
     }
   },
   components: {}

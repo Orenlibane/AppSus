@@ -9,7 +9,9 @@ export default {
   template: `
     <li class="mail-prev flex align-center" :class="{ read: !email.isRead }" > 
         <span class="main-mail-spec flex align-center"> 
-            <input type="checkbox" @click="toggleIsRead" />  
+            <!-- <input type="checkbox" @click="toggleIsRead" />   -->
+            
+            
             <i 
                 @click="toogleFav" 
                 :class="[email.isFav? 'fas' : 'far']"
@@ -24,8 +26,13 @@ export default {
               <router-link :to="emailUrl">{{email.subject | snippet}}</router-link>  
         </span> 
         <span>{{email.sendAt}}</span>
+        
         <i  @click.stop="deleteEmail(idx)" class="fas fa-trash-alt" ></i>
-    </li>
+     <span @click="toggleIsRead">
+                      <i class="far fa-envelope-open" v-if="email.isRead"></i>
+                      <i class="fas fa-envelope" v-else></i>
+                    </span>
+      </li>
 
 `,
   props: ['email', 'idx', 'emails'],

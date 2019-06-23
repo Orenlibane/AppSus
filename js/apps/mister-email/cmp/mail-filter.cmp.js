@@ -1,3 +1,5 @@
+import countersCmp from '../../../main-cmp/counters.cmp.js';
+
 export default {
   name: 'Mailfilter',
   template: `
@@ -12,7 +14,9 @@ export default {
   </select>
 
        </div>
+       <counters-cmp></counters-cmp>
         </section>      
+
 `,
   props: [],
   data() {
@@ -33,5 +37,5 @@ export default {
       this.$emit('filterapp', this.filterBy);
     }
   },
-  components: {}
+  components: { countersCmp }
 };

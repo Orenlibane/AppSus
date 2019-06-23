@@ -1,20 +1,9 @@
-import mailCount from '../apps/mister-email/cmp/mail-count.cmp.js';
-import noteCount from '../apps/miss-keep/cmp/note-count.cmp.js';
-
 export default {
   name: 'Header',
   template: `
     <section class="global-header flex  align-center space-between">
     <div class="logo"> </div>
-      <div class="flex align-center"> 
-      <div class="counters-container ">
-        <ul class="flex clean-list space-between">
-          <li class="flex  align-center"> <router-link class="flex" to="/misterEmail">   <img  src="img/gmail.svg"/><mail-count> </mail-count> </router-link></li>
-          <li class="flex  align-center"> <router-link class="flex" to="/missKeep"> <img  src="img/notepad.svg"/><note-count> </note-count></router-link></li>
-          <li class="flex  align-center"> <router-link class="flex" to="/missBook"><img  title="Under-construction" src="img/books.svg"/></router-link></li>
-        </ul>
-      </div>
-      </div>
+     
       
             <transition name="slide-fade">
               <div class="appsus-nav flex both-align-center" v-if="navOpen"> 
@@ -46,5 +35,5 @@ export default {
       this.navOpen = !this.navOpen;
     }
   },
-  components: { mailCount, noteCount }
+  components: {}
 };

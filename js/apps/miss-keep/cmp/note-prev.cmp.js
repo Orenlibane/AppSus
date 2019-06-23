@@ -5,7 +5,6 @@ import noteEditorColors from '../cmp/note-editor-colors.cmp.js';
 import noteImg from './note-img.cmp.js';
 import noteTxt from './note-text.cmp.js';
 import noteVideo from './note-video.cmp.js';
-
 import noteTodo from './note-todo.cmp.js';
 
 export default {

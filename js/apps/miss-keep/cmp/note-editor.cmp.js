@@ -1,5 +1,4 @@
 import noteService from '../services/noteservice.js';
-import noteservice from '../services/noteservice.js';
 
 import eventBus, { NOTE_EMAIL } from '../../../event-bus.js';
 
@@ -46,13 +45,14 @@ export default {
     },
     copyNote(noteToCopy) {
       if (noteToCopy.isPin) return;
-      noteservice.copyNote(noteToCopy);
+      noteService.copyNote(noteToCopy);
     },
     updateNote() {
       this.editNote = !this.editNote;
     },
     saveNote() {
-      noteservice.saveNotesToDb();
+      noteService.saveNotesToDb();
+      this.editNote = !this.editNote;
     },
     movingNote(note) {
       eventBus.$emit(NOTE_EMAIL, note);
@@ -61,7 +61,7 @@ export default {
     },
     setDone(noteToSetAsDone) {
       noteToSetAsDone.isDone = !noteToSetAsDone.isDone;
-      noteservice.saveNotesToDb();
+      noteService.saveNotesToDb();
     },
     pinTheNote(noteToPin, idx) {
       noteService.deleteNote(idx);

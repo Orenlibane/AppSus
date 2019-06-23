@@ -1,8 +1,9 @@
+import countersCmp from '../../../main-cmp/counters.cmp.js';
+
 export default {
   name: 'addNoteInput',
   template: `
-    <section class="input-container "> 
-
+    <section class="input-container"> 
                 <input  v-model="newNote.content" v-if="noteTxt" type="text" placeholder="Please enter a text"/>
                 <input   v-model="newNote.picture" v-if="noteImg" type="text" placeholder="Enter Image URL"/>
                 <input   v-model="newNote.video" v-if="noteVideo" type="text" placeholder="Enter Video URL"/>
@@ -14,7 +15,7 @@ export default {
                     <i @click="changeNoteState('noteVideo')" class="fab fa-youtube"></i>
                     <i @click="changeNoteState('noteAudio')" class="fas fa-volume-up"></i>    
                     <i @click="changeNoteState('noteTodo')" class="fas fa-list"></i>    
-                    <button @click="emitNoteValue">ADD ME</button>
+                    <button @click="emitNoteValue('dontCloseModal')">ADD ME</button>
 
               
                     <transition name="slide-fade">
@@ -23,9 +24,11 @@ export default {
                    <div> <input type="text" v-model="newNote.todos.todo1" placeholder="ENTER YOUR TODO"><img src="../../../../img/push-pin.png" alt=""/></div>
                    <div><input type="text" v-model="newNote.todos.todo2" placeholder="ENTER YOUR TODO"><img src="../../../../img/push-pin.png" alt=""/></div>
                    <div> <input type="text" v-model="newNote.todos.todo3" placeholder="ENTER YOUR TODO"><img src="../../../../img/push-pin.png" alt=""/></div>
-                  <div class="flex both-align-center"> <button  @click="emitNoteValue" >Add </button>  </div>
+                  <div class="flex both-align-center"> <button  @click="emitNoteValue('closeModal')" >Add </button>  </div>
                   </div>
                 </transition>
+                <!-- <counters-cmp></counters-cmp> -->
+
         </section>
 `,
   props: [],
@@ -94,9 +97,9 @@ export default {
         this.todoModal = !this.todoModal;
       }
     },
-    emitNoteValue() {
+    emitNoteValue(indicator) {
       console.log(this.newNote);
-      this.todoModal = !this.todoModal;
+      if (indicator === 'closeModal') this.todoModal = !this.todoModal;
       this.$emit('noteValue', this.newNote);
       this.inputValue = '';
       this.newNote = {
@@ -115,7 +118,7 @@ export default {
           todo3: ''
         }
       };
-    },
-    components: {}
-  }
+    }
+  },
+  components: { countersCmp }
 };

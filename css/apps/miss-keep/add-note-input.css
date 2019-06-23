@@ -40,8 +40,17 @@
     font-size: 1rem;
     height: 30px;
     width: 130px;
+    margin: 0 auto;
     margin-top: 5px;
     outline: none;
+}
+
+.todo-model button {
+    width: 150px;
+    margin: 10px auto;
+    border-radius: 10px;
+    padding: 5px;
+    border: 2px black solid;
 }
 
 .todo-model input {

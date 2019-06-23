@@ -4,7 +4,7 @@ import noteEditorColors from '../cmp/note-editor-colors.cmp.js';
 export default {
   name: 'NoteImg',
   template: `
-    <section class="img-note note-content flex flex-space-around column" @click="showNote"> 
+    <section class="img-note note-content flex flex-space-around column"> 
     <div class="status-icons flex">
     <i v-if="note.isPin" class="fas fa-thumbtack pinned-note"></i> 
     <i v-if="note.isDone" class="fas fa-check pinned-note"></i> 
@@ -25,10 +25,6 @@ export default {
   created() {},
   destroyed() {},
   computed: {},
-  methods: {
-    showNote() {
-      console.log(this.note);
-    }
-  },
+  methods: {},
   components: { noteEditor, noteEditorColors }
 };

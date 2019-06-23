@@ -87,7 +87,7 @@ var notesDB = [
     video: '',
     audio: '',
     isDone: true,
-    isPin: true
+    isPin: false
   },
   {
     _id: '5d0bb6a5e6eb588ac8ade55d',

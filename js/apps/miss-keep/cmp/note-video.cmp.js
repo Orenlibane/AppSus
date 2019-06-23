@@ -9,27 +9,30 @@ export default {
     <i v-if="note.isPin" class="fas fa-thumbtack"></i> 
 
             <div class="note-content ">
-            <!-- <iframe width="500" height="299" :src=note.video> </iframe> -->
-              <video width="320" height="240" controls>
-                <source :src=note.video type="video/mp4">
+
+            <iframe width="300" height="209" :src="note.video"></iframe>
+              <!-- <video width="320" height="240" controls>
+                <source :src="note.video" type="video/mp4">
                 <source :src=note.video type="video/ogg">
                 Your browser does not support the video tag.
-
-              </video>
-           </div> 
+              </video> -->
+          
+        </div> 
         <div class="notes-editor">
         <note-Editor :note="note" :idx="idx"></note-Editor>
-          <note-editor-colors ></note-editor-colors>
-</div>
+        <note-editor-colors ></note-editor-colors>
+        </div>
     </section>
 `,
   props: ['note', 'idx'],
   data() {
     return {};
   },
-  created() {},
-  destroyed() {},
-  computed: {},
+  created() { },
+  destroyed() { },
+  computed: {
+
+  },
   methods: {},
   components: { noteEditor, noteEditorColors }
 };

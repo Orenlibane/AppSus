@@ -10,7 +10,7 @@ export default {
           
             <i @click="deleteNote(idx)" class="fas fa-trash"></i>
             <i class="fas fa-palette"></i>
-            <i class="fas fa-thumbtack"></i> 
+            <i @click="pinNote(note,idx)"class="fas fa-thumbtack"></i> 
             <i class="fas fa-check"></i>
             <i @click="copyNote(note)" class="fas fa-copy"></i>
             <i v-if="note.content" class="fas fa-envelope-open-text"></i>
@@ -49,6 +49,12 @@ export default {
     },
     saveNote() {
       noteservice.saveNotesToDb();
+    },
+    pinNote(noteToPin, idx) {
+      noteToPin.isPin = true;
+      let pinnedNote = noteToPin;
+      noteService.deleteNote(idx);
+      noteservice.copyNote(pinnedNote);
     }
   },
   components: {}

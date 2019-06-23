@@ -46,3 +46,8 @@
     max-width: 250px;
     margin: 0 auto;
 }
+
+.pinned {
+    color: blue;
+    font-size: 3rem;
+}

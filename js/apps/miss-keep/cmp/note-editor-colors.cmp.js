@@ -3,27 +3,25 @@ export default {
   template: `
     <section class=notes-editor-colors> 
     <section class="note-editor-colors">
-        <span @click="useColors()" class="circle circle1"></span>
-        <span @click="useColors()"  class="circle circle2"></span>
-        <span @click="useColors()"  class="circle circle3"></span>
-        <span @click="useColors()"  class="circle circle4"></span>
-        <span @click="useColors()"  class="circle circle5"></span>
-        <span @click="useColors()"  class="circle circle6"></span>
-        <span @click="useColors()"  class="circle circle7"></span> 
+        <span v-for="(color,idx) in colors" :style={background:color} :data-color=color @click="useColors"  class="circle"></span>
       </section>
     </section>
 `,
   props: [],
   data() {
-    return {};
+    return {
+      colors: ['red', 'blue', 'green', 'teal', 'purple']
+    };
   },
   created() {},
   destroyed() {},
-  computed: {
-    useColors() {
-      console.log(color);
+  computed: {},
+  methods: {
+    useColors(ev) {
+      var noteColor = ev.target.dataset.color;
+      console.log(ev.target.dataset.color);
+      this.$emit('noteColor', noteColor);
     }
   },
-  methods: {},
   components: {}
 };

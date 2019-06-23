@@ -14,7 +14,9 @@ export default {
       <ul>
           <mail-filter @filterapp="setFilterrr"></mail-filter>
         <li class="flex space-between emails-titles"> 
-          <span> Sent From </span> <span @click="sortSubject"> subject  </span> <span @click="sortDate">Date Recived</span>
+          <span> Sent From </span> 
+          <span @click="sortSubject"> subject <i class="fas fa-sort-up"></i> </span> 
+          <span @click="sortDate">Date Recived <i class="fas fa-sort-up"></i></span>
         </li>
       <mail-prev 
       :idx="idx" 
@@ -35,7 +37,7 @@ export default {
       emails: null,
       currentEmailsState: 1,
       filter: null,
-      temp: [],
+      temp: []
     };
   },
   created() {
@@ -48,9 +50,9 @@ export default {
       this.currentEmailsState = state;
     });
   },
-  destroyed() { },
+  destroyed() {},
   computed: {
-    filterdEmails: function () {
+    filterdEmails: function() {
       this.temp = this.emails;
 
       if (!this.filter || this.filter.isRead === 'All') {
@@ -86,20 +88,25 @@ export default {
     sortSubject() {
       this.emails.sort((email1, email2) => {
         if (email1.subject.toLowerCase() > email2.subject.toLowerCase()) {
-          return 1
-        } else if (email1.subject.toLowerCase() < email2.subject.toLowerCase()) {
-          return -1
-        } else { return 0 }
+          return 1;
+        } else if (
+          email1.subject.toLowerCase() < email2.subject.toLowerCase()
+        ) {
+          return -1;
+        } else {
+          return 0;
+        }
       });
     },
     sortDate() {
       this.emails.sort((email1, email2) => {
         if (email1.sendAt > email2.sendAt) {
-          return 1
+          return 1;
         } else if (email1.sendAt < email2.sendAt) {
-          return -1
-
-        } else { return 0 }
+          return -1;
+        } else {
+          return 0;
+        }
       });
     }
   },

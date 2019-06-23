@@ -11,9 +11,7 @@ export default {
          <option value="Read">Read</option>
         <option value="UnRead">UnRead</option>
   </select>
-         <!-- <li class="flex space-between emails-titles"> 
-          <span> Sent From </span> <span @click="sortSubject"> subject  </span> <span>Date Recived</span>
-        </li> -->
+    
        </div>
      
 

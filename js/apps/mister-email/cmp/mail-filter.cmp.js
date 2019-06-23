@@ -3,9 +3,8 @@ export default {
   template: `
     <section class="mail-filter flex ">
         <div class="flex align-center row-reverse">
-            <input type="text" v-model="filterBy.txt" @input="emitFilter" placeholder="Search for mail"/>
-            <i class="fas fa-search"></i>
-            <i class="fas fa-hamburger"></i>
+            <input type="text" v-model="filterBy.txt" @input="emitFilter" placeholder="Search for mail" />
+            
    <select v-model="filterBy.isRead" @change="emitFilter($event)">
          <option value="All">All</option>
          <option value="Read">Read</option>

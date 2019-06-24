@@ -86,22 +86,7 @@ var notesDB = [
       todo3: ''
     }
   },
-  {
-    _id: '5d0bb6a527776acfdf3d66ef',
-    picture: '',
-    color: 'teal',
-    content: '',
-    type: 'noteVideo',
-    video: 'https://www.youtube.com/embed/KlFDwM9GnJI', //Should be http? https?
-    audio: '',
-    isDone: false,
-    isPin: false,
-    todos: {
-      todo1: '',
-      todo2: '',
-      todo3: ''
-    }
-  },
+
   {
     _id: '5d0bb6a55304d6ea02dce1ce',
     picture: '',
@@ -173,6 +158,22 @@ var notesDB = [
     content: 'Only 2 days LEFT',
     type: 'noteTxt',
     video: '',
+    audio: '',
+    isDone: false,
+    isPin: false,
+    todos: {
+      todo1: '',
+      todo2: '',
+      todo3: ''
+    }
+  },
+  {
+    _id: '5d0bb6a527776acfdf3d66ef',
+    picture: '',
+    color: 'teal',
+    content: '',
+    type: 'noteVideo',
+    video: 'https://www.youtube.com/embed/KlFDwM9GnJI', //Should be http? https?
     audio: '',
     isDone: false,
     isPin: false,

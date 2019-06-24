@@ -14,7 +14,6 @@ export default {
   </select>
 
        </div>
-       <counters-cmp></counters-cmp>
         </section>      
 
 `,

@@ -1,3 +1,5 @@
+import countersCmp from './counters.cmp.js';
+
 export default {
   name: 'Header',
   template: `
@@ -17,6 +19,7 @@ export default {
                 
               </div>
             </transition>
+            <counters-cmp></counters-cmp>
             <i @click="showRoutes" class="fas fa-th"></i>               
 
     </section>
@@ -35,5 +38,5 @@ export default {
       this.navOpen = !this.navOpen;
     }
   },
-  components: {}
+  components: { countersCmp }
 };

@@ -85,6 +85,8 @@ export default {
       this.newEmail.subject = 'RE:' + this.newEmail.subject;
     },
     backToMails() {
+      mailService.saveEmailDB();
+
       this.$router.push('/misterEmail');
     }
   },

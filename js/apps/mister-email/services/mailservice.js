@@ -6,7 +6,8 @@ const MAIL_KEY = 'emailsDB';
 export default {
   query,
   getById,
-  updateDB
+  updateDB,
+  saveEmailDB
 };
 
 function query() {
@@ -183,6 +184,10 @@ function getById(emailId) {
 
 function updateDB(newEmail) {
   emailsDB.unshift(newEmail);
+  storageService.store(MAIL_KEY, emailsDB);
+}
+
+function saveEmailDB() {
   storageService.store(MAIL_KEY, emailsDB);
 }
 

@@ -52,24 +52,22 @@ export default {
 
   created() {
     const mailId = this.$route.params.theMailId;
-    mailService.getById(mailId).then(email => {
-      this.email = email;
-      this.subject = this.email.subject;
-      //creating the returning mail
-      this.newEmail = {
-        _id: this.email._id,
-        body: this.email.body,
-        subject: this.email.subject,
-        name: 'oren&lior',
-        isRead: true,
-        sendAt: new Date().getHours() + ':' + new Date().getMinutes(),
-        isDeleted: false,
-        sendto: this.email.sendto,
-        isSent: true,
-        isFav: false
-      };
-    });
+    this.email = mailService.getById(mailId);
+    this.subject = this.email.subject;
+    this.newEmail = {
+      _id: this.email._id,
+      body: this.email.body,
+      subject: this.email.subject,
+      name: 'oren&lior',
+      isRead: true,
+      sendAt: new Date().getHours() + ':' + new Date().getMinutes(),
+      isDeleted: false,
+      sendto: this.email.sendto,
+      isSent: true,
+      isFav: false
+    };
   },
+  mounted() {},
   destroyed() {},
   computed: {},
   methods: {

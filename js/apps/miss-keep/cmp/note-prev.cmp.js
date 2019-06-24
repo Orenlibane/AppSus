@@ -10,12 +10,13 @@ import noteTodo from './note-todo.cmp.js';
 export default {
   name: 'notePrev',
   template: `
-    <section :style={background:note.color} class="note-prev flex column flex-space-around center">
+
+<section :style={background:note.color} class="note-prev flex column flex-space-around center">
+
 
     <component :note="note" :idx="idx" :is="currentNoteType"></component>
-
     </section>
-`,
+    `,
   props: ['note', 'idx'],
   data() {
     return {

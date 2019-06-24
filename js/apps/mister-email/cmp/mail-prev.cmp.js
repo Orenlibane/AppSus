@@ -4,6 +4,7 @@ import eventBus, { EMAILS_DB } from '../../../event-bus.js';
 export default {
   name: 'mailPrev',
   template: `
+          <transition name="appear">
     <li class="mail-prev flex align-center" :class="{ read: !email.isRead }" > 
         <span class="main-mail-spec flex align-center">             
             <i 
@@ -24,6 +25,9 @@ export default {
                       <i class="fas fa-envelope" v-else></i>
                     </span>
       </li>
+      </transition>
+
+    
 
 `,
   props: ['email', 'idx', 'emails'],

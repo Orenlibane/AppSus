@@ -177,7 +177,8 @@ var emailsDB = [
 
 function getById(emailId) {
   const email = emailsDB.find(email => email._id === emailId);
-  return Promise.resolve(email);
+  // return Promise.resolve(email);
+  return email;
 }
 
 function updateDB(newEmail) {

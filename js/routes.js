@@ -12,10 +12,5 @@ export default [
   },
   { path: '/missKeep', component: missKeepCmp },
   { path: '/missBook', component: missBook },
-  // {
-  // path: '/misterEmail/mails',
-  // component: mailList
-  // children: [{ path: 'misterEmail/mails/:theMailId', component: emailDet }]
-  // },
   { path: '/misterEmail/:theMailId', component: emailDet }
 ];

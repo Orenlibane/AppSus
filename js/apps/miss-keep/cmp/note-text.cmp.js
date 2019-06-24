@@ -21,6 +21,7 @@ export default {
           <note-editor-colors :note="note" :idx="idx" ></note-editor-colors>
 </div>
     </section>
+
 `,
   props: ['note', 'idx'],
   data() {

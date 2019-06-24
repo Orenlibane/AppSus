@@ -81,9 +81,9 @@ export default {
     }
   },
   methods: {
-    setFilterrr(filterBy) {
-      this.filter = filterBy;
-    },
+      setFilterrr(filterBy) {
+        this.filter = filterBy;
+      },
     sortSubject() {
       this.sort.subject = true;
       this.sort.date = false;

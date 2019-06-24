@@ -42,7 +42,7 @@ export default {
       noteTodo: false,
       newNote: {
         _id: null,
-        content: null,
+        content: '',
         type: 'noteTxt',
         color: null,
         picture: null,
@@ -105,7 +105,7 @@ export default {
       this.inputValue = '';
       this.newNote = {
         _id: null,
-        content: null,
+        content: '',
         type: this.currentState,
         color: 'yellow',
         picture: null,

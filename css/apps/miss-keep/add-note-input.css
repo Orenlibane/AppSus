@@ -12,6 +12,10 @@
     border: none;
 }
 
+.add-note input.note-fil {
+    width: 100%
+}
+
 .todo-model {
     padding: 10px;
     height: 250px;

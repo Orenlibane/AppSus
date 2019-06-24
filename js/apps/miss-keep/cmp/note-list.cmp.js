@@ -44,10 +44,14 @@ export default {
     filterdNotes: function() {
       return this.notes.filter(
         note =>
-          note.content.includes(this.filter.txt) ||
-          note.todos.todo1.includes(this.filter.txt) ||
-          note.todos.todo2.includes(this.filter.txt) ||
-          note.todos.todo3.includes(this.filter.txt)
+          note.content.toLowerCase().includes(this.filter.txt.toLowerCase()) ||
+          note.todos.todo1
+            .toLowerCase()
+            .includes(this.filter.txt.toLowerCase()) ||
+          note.todos.todo2
+            .toLowerCase()
+            .includes(this.filter.txt.toLowerCase()) ||
+          note.todos.todo3.toLowerCase().includes(this.filter.txt.toLowerCase())
       );
     }
   },

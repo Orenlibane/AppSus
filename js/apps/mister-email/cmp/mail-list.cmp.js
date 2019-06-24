@@ -59,16 +59,26 @@ export default {
           this.temp = this.emails;
         } else {
           this.temp = this.emails.filter(email =>
-            email.subject.includes(this.filter.txt)
+            email.subject.toLowerCase().includes(this.filter.txt.toLowerCase())
           );
         }
       } else if (this.filter.isRead === 'Read') {
         this.temp = this.emails.filter(
-          email => email.isRead && email.subject.includes(this.filter.txt)
+          email =>
+            email.isRead &&
+            email.subject.toLowerCase().includes(this.filter.txt.toLowerCase())
         );
       } else if (this.filter.isRead === 'UnRead') {
         this.temp = this.emails.filter(
-          email => !email.isRead && email.subject.includes(this.filter.txt)
+          email =>
+            !email.isRead &&
+            email.subject.toLowerCase().includes(this.filter.txt.toLowerCase())
+        );
+      } else if (this.filter.isRead === 'fav') {
+        this.temp = this.emails.filter(
+          email =>
+            email.isFav &&
+            email.subject.toLowerCase().includes(this.filter.txt.toLowerCase())
         );
       }
       if (this.currentEmailsState === 1) {
@@ -81,9 +91,9 @@ export default {
     }
   },
   methods: {
-      setFilterrr(filterBy) {
-        this.filter = filterBy;
-      },
+    setFilterrr(filterBy) {
+      this.filter = filterBy;
+    },
     sortSubject() {
       this.sort.subject = true;
       this.sort.date = false;

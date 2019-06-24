@@ -92,7 +92,7 @@ var notesDB = [
     color: 'teal',
     content: '',
     type: 'noteVideo',
-    video: 'https://www.youtube.com/embed/KlFDwM9GnJI',
+    video: 'http://www.youtube.com/embed/KlFDwM9GnJI', //Should be http? https?
     audio: '',
     isDone: false,
     isPin: false,

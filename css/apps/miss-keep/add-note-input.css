@@ -93,3 +93,8 @@
     color: white;
     background: black;
 }
+
+.add-note .mail-filter {
+    padding: 0;
+    border: none;
+}

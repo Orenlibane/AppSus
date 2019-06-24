@@ -32,7 +32,21 @@ function deleteNote(idx) {
 }
 
 function copyNote(noteToCopy) {
-  var newNoteToCopy = noteToCopy;
+  // var newNoteToCopy = noteToCopy;
+  // notesDB.push(newNoteToCopy);
+  // storageService.store(NOTES_KEY, notesDB);
+  var newNoteToCopy = {
+    audio: noteToCopy.audio,
+    color: noteToCopy.color,
+    content: noteToCopy.content,
+    isDone: noteToCopy.isDone,
+    isPin: noteToCopy.isPin,
+    picture: noteToCopy.picture,
+    type: noteToCopy.type,
+    video: noteToCopy.video,
+    todos: noteToCopy.todos,
+    _id: noteToCopy._id + '1'
+  };
   notesDB.push(newNoteToCopy);
   storageService.store(NOTES_KEY, notesDB);
 }

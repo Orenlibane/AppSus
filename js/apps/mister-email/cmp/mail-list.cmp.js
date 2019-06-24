@@ -86,7 +86,7 @@ export default {
       } else if (this.currentEmailsState === 2) {
         return this.temp.filter(email => email.isSent);
       } else if (this.currentEmailsState === 3) {
-        return this.temp.filter(email => email.isDeleted && !email.isSent);
+        return this.temp.filter(email => email.isDeleted);
       }
     }
   },

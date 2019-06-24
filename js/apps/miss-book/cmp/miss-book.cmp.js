@@ -8,7 +8,7 @@ export default {
         <header-cmp></header-cmp>
 <div class="under-construction flex both-align-center">
 
-<img src="/img/under-construction.jpg" alt=""/>
+<img src="img/under-construction.jpg" alt=""/>
 
 </div>
 

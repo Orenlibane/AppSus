@@ -3,7 +3,7 @@
     width: 100vw;
     height: 8vh;
     font-weight: bold;
-    font-size: 1.5rem;
+    font-size: 0.8rem;
 }
 
 .user {
@@ -14,7 +14,7 @@
 }
 
 .inforamtion {
-    font-size: 1.2rem;
+    font-size: 0.8rem;
     text-align: center;
     margin: 0 10px;
 }
@@ -27,12 +27,12 @@
 }
 
 .footer-cmp img {
-    height: 40px;
+    height: 30px;
     width: 70px;
 }
 
 .footer-cmp i {
-    font-size: 3rem;
+    font-size: 2rem;
     cursor: pointer;
     transition: all 0.5s ease-out;
 }

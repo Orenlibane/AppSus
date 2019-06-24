@@ -13,7 +13,8 @@ export default {
                     <i @click="changeNoteState('noteTxt')"   class="fas fa-font"></i> 
                     <i @click="changeNoteState('noteImg')"   class="fas fa-image"></i>
                     <i @click="changeNoteState('noteVideo')" class="fab fa-youtube"></i>
-                    <i @click="changeNoteState('noteAudio')" class="fas fa-volume-up"></i>    
+                    <i  class="fas fa-volume-up"></i>   
+                     <!-- @click="changeNoteState('noteAudio')" -->
                     <i @click="changeNoteState('noteTodo')" class="fas fa-list"></i>    
                     <button @click="emitNoteValue('dontCloseModal')">ADD ME</button>
 

@@ -60,3 +60,7 @@
 .note-todo ol {
     max-width: 180px;
 }
+
+.input-container .fa-volume-up {
+    cursor: not-allowed;
+}

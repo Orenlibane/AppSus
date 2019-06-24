@@ -1,5 +1,4 @@
 .footer-cmp {
-    /* background: #ccc; */
     width: 100vw;
     height: 8vh;
     font-weight: bold;
@@ -9,8 +8,6 @@
 .user {
     height: 100%;
     width: 33%;
-    /* border-left: 5px black solid;
-    border-right: 5px black solid; */
 }
 
 .inforamtion {

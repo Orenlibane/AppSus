@@ -1,6 +1,6 @@
 import noteService from '../services/noteservice.js';
 
-import eventBus, { NOTE_EMAIL } from '../../../event-bus.js';
+import eventBus, { NOTE_EMAIL, NOTES_DB } from '../../../event-bus.js';
 
 export default {
   name: 'note-editor',
@@ -62,6 +62,9 @@ export default {
     setDone(noteToSetAsDone) {
       noteToSetAsDone.isDone = !noteToSetAsDone.isDone;
       noteService.saveNotesToDb();
+
+      // eventBus.$emit(NOTES_DV, this.notes);
+      // storageService.store('emailsDB', this.emails);
     },
     pinTheNote(noteToPin, idx) {
       noteService.deleteNote(idx);

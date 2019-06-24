@@ -4,6 +4,10 @@
     overflow-y: scroll;
     border: 2px white solid;
     border: 1px black solid;
+    background: url('../../../img/texture2.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50% 100%;
 }
 
 .mail-list li {
@@ -14,8 +18,7 @@
     font-size: 1.5rem;
 }
 
-
-wd{
+wd {
     color: rgb(255, 229, 111);
 }
 
